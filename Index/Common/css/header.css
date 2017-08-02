@@ -58,16 +58,154 @@
     margin: 0 auto;
     position: relative;
     z-index: 4;
+    height: 100px;
 }
 .navigator .header .center .centerWrap .logo{
-	
+	background: url('../images/header/logo.png') no-repeat;
+    width: 280px;
+    height: 60px;
+    position: absolute;
+}
+.navigator .header .center .centerWrap .searchForm{
+    position: absolute;
+    left: 550px;
+    width: 58%;
+    height: 100%;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar {
+	padding-right: 40px;
+    position: absolute;
+    height: 87px;
+    width: 394px;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchBox{
+	float: right;
+    width: 100%;
+    height: 36px;
+    position: absolute;
+    margin-right: 70px;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchBox .searchKeyWords{
+	width: 301px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5px;
+    border: 1px solid #6b4185;
+    position: absolute;
+    color: #666;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchBox .searchSub{
+	width: 81px;
+    height: 38px;
+    border: 1px solid #6b4185;
+    line-height: 38px;
+    background-color: #6b4185;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    font-size: 16px;
+    color:#fff;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchHot{
+    top: 50px;
+    height: 18px;
+    overflow: hidden;
+    list-style-type: none;
+    position: absolute;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchHot li{
+	float: left;
+    margin-right: 7px;
 }
 
+.navigator .header .center .centerWrap .searchForm .searchBar .searchHot li a{
+	white-space: nowrap;
+    color: #666;
+    text-decoration: none;
+}
+.navigator .header .center .centerWrap .searchForm .trolley{
+    position: absolute;
+    left: 480px;
+    width: 168px;
+    height: 38px;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    background: url('../images/header/trolleyBg1.jpg') no-repeat 15px 7px #f2f2f2;
+}
+.navigator .header .center .centerWrap .searchForm .trolley a{
+    line-height: 38px;
+    text-indent: 60px;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    color: #666;
+    background: url('../images/header/trolleyBg2.png') 150px 13px no-repeat;
+}
+.navigator .header .center .centerWrap .searchForm .trolley span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    top: -5px;
+    right: 21px;
+    color: #fff;
+    font-size: 12px;
+    background: url('../images/header/trolleyBg3.png') no-repeat;
+}
+.navigator .header .bottom{
+    width: 100%;
+    min-width: 1200px;
+    background-color: #333;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 3;
+}
+.navigator .header .bottom .bottomWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
 
+.navigator .header .bottom .bottomWrap .category{
+    float: left;
+    font-size: 16px;
+    width: 220px;
+    background-color: ;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    background: url('../images/header/down.svg') no-repeat 150px 6px/20px 20px #654579;
+}
+.navigator .header .bottom .bottomWrap .category .title{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}  
+.navigator .header .bottom .bottomWrap .category .title .categoryDetail{
 
-
-
-
+}
+.navigator .header .bottom .bottomWrap .naviBar{
+    overflow: hidden;
+    padding-left: 30px;
+    list-style-type: none;
+}
+.navigator .header .bottom .bottomWrap .naviBar li{
+    float: left;
+    padding: 0 10px;
+    margin-right: 37px;
+}
+.navigator .header .bottom .bottomWrap .naviBar li a{
+   color: #fff;
+   font-size: 16px;
+}
+.navigator .header .bottom .bottomWrap .naviBar li a:hover{
+    opacity: 0.7;
+}
 
 
 
