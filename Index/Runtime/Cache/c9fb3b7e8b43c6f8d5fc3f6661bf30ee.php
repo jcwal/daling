@@ -38,13 +38,13 @@
 	<div class="center">
 		<div class="centerWrap">
 			<a href="#" class="logo"></a>
-			<form action="" method='get'>
+			<form action="" method='get' class="searchForm">
 				<div class="searchBar">
 					<div class="searchBox">
 						<input type="hidden" />
 						<input type="hidden" />
-						<input type="text" />
-						<input type="submit" value="搜索" />
+						<input type="text" class="searchKeyWords" />
+						<input type="submit" value="搜索" class="searchSub" />
 					</div>
 					<ul class="searchHot">
 						<li><a href="#">口红</a></li>
@@ -65,7 +65,28 @@
 			</form>
 		</div>
 	</div>
-	<div class="bottom"></div>
+	<div class="bottom">
+		<div class="bottomWrap">
+			<div class="category">
+				<p class="title">
+					全部分类
+				</p>
+				<div class="categoryDetail">
+					
+				</div>
+
+			</div>
+			<ul class="naviBar">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">极致美护</a></li>
+				<li><a href="#">全球零食</a></li>
+				<li><a href="#">创意生活</a></li>
+				<li><a href="#">时尚配饰</a></li>
+				<li><a href="#">尖货女装</a></li>
+				<li><a href="#">3C家电</a></li>
+			</ul>
+		</div>
+	</div>
 </header>
 
 		</div>
