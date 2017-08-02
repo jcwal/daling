@@ -2104,6 +2104,7 @@ INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.000264s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000287s ]
 
+<<<<<<< Updated upstream
 [ 2017-08-02T14:05:31+08:00 ] 0.0.0.0 /daling/index.php/ProductDetail
 INFO: [ route_check ] --START--
 INFO: CheckRoute Behavior ::run [ RunTime:0.000382s ]
@@ -2141,6 +2142,12 @@ INFO: [ route_check ] --END-- [ RunTime:0.000492s ]
 INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000218s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+=======
+[ 2017-08-02T11:37:49+08:00 ] 0.0.0.0 /daling/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+>>>>>>> Stashed changes
 INFO: [ view_parse ] --START--
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
@@ -2242,6 +2249,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.081679s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.081719s ]
 INFO: [ view_filter ] --START--
@@ -2262,6 +2270,24 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000243s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007870s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000341s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000274s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000441s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001983s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000723s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2017-08-02T11:39:47+08:00 ] 0.0.0.0 /daling/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000261s ]
+>>>>>>> Stashed changes
 INFO: [ view_parse ] --START--
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
@@ -2363,6 +2389,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.005724s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.005762s ]
 INFO: [ view_filter ] --START--
@@ -2769,6 +2796,73 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005142s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005174s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000198s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000251s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000115s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000308s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2017-08-02T11:43:13+08:00 ] 0.0.0.0 /daling/index.php/ShowList/showList.php
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000305s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000343s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+ERR: 无法加载模块:ShowList
+
+[ 2017-08-02T11:44:27+08:00 ] 0.0.0.0 /daling/index.php/ShowList/showList.php
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000365s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000475s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000304s ]
+ERR: 无法加载模块:ShowList
+
+[ 2017-08-02T11:45:15+08:00 ] 0.0.0.0 /daling/index.php/ProductList/index.php
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000312s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+ERR: 非法操作:index.php
+
+[ 2017-08-02T11:45:47+08:00 ] 0.0.0.0 /daling/index.php/ProductList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000352s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000233s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+ERR: 模板不存在[./Index/Tpl/ProductList/index.html]
+
+[ 2017-08-02T11:46:10+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000359s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -2865,6 +2959,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.006350s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.006387s ]
 INFO: [ view_filter ] --START--
@@ -2890,6 +2985,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004303s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000428s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000500s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000110s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001423s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000261s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000284s ]
+
+[ 2017-08-02T11:46:24+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000708s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -2986,6 +3108,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.005150s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.005186s ]
 INFO: [ view_filter ] --START--
@@ -3011,6 +3134,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004384s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000175s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000200s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000127s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000378s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2017-08-02T11:48:39+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000694s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000891s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3107,6 +3257,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.004750s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.004783s ]
 INFO: [ view_filter ] --START--
@@ -3132,6 +3283,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006552s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000233s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000184s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000133s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000380s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2017-08-02T11:49:05+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000331s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000378s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3228,6 +3406,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007212s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007258s ]
 INFO: [ view_filter ] --START--
@@ -3253,6 +3432,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013493s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000637s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000248s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000098s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001267s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000258s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000283s ]
+
+[ 2017-08-02T11:49:54+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000532s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3349,6 +3555,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.005377s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.005464s ]
 INFO: [ view_filter ] --START--
@@ -3374,6 +3581,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010217s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000243s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000166s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000094s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000812s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000466s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2017-08-02T11:50:01+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000601s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000680s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3470,6 +3704,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007288s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007339s ]
 INFO: [ view_filter ] --START--
@@ -3495,6 +3730,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008087s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000396s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000220s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000146s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001172s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000480s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-08-02T11:50:01+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000307s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000350s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3591,6 +3853,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.012352s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.012470s ]
 INFO: [ view_filter ] --START--
@@ -3616,6 +3879,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006374s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000167s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000149s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000086s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000274s ]
+
+[ 2017-08-02T11:50:05+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000681s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000749s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3712,6 +4002,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.010023s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.010084s ]
 INFO: [ view_filter ] --START--
@@ -3737,6 +4028,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006155s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000293s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000225s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000125s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001077s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000933s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001128s ]
+
+[ 2017-08-02T11:50:23+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000742s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000958s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3833,6 +4151,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.004847s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.004877s ]
 INFO: [ view_filter ] --START--
@@ -3858,6 +4177,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008677s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000275s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000251s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000142s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001272s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000541s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-08-02T13:52:53+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000651s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000788s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -3954,6 +4300,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.008220s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008271s ]
 INFO: [ view_filter ] --START--
@@ -3979,6 +4326,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006133s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000168s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000169s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000111s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000340s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2017-08-02T13:58:22+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000420s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4075,6 +4449,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.006266s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.006313s ]
 INFO: [ view_filter ] --START--
@@ -4100,6 +4475,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006021s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000437s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000921s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002215s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001139s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2017-08-02T14:25:45+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000567s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000647s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4196,6 +4598,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007183s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007228s ]
 INFO: [ view_filter ] --START--
@@ -4221,6 +4624,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007884s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000397s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000245s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000308s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001420s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000829s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000888s ]
+
+[ 2017-08-02T14:26:16+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000608s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000686s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4317,6 +4747,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.004757s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.004792s ]
 INFO: [ view_filter ] --START--
@@ -4342,6 +4773,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004394s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000357s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000329s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000103s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001098s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000764s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2017-08-02T14:28:11+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000860s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000989s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4438,6 +4896,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007025s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007074s ]
 INFO: [ view_filter ] --START--
@@ -4463,6 +4922,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008318s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000243s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000230s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000137s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000989s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000410s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-08-02T14:32:21+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000575s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000657s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4559,6 +5045,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.006561s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.006615s ]
 INFO: [ view_filter ] --START--
@@ -4584,6 +5071,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008848s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000309s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000277s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000569s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001781s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000320s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2017-08-02T14:32:23+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000712s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000797s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4680,6 +5194,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.005478s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.005523s ]
 INFO: [ view_filter ] --START--
@@ -4705,6 +5220,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006827s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000206s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000223s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000133s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000895s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-08-02T14:32:38+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000465s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000530s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4801,6 +5343,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.009618s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.009660s ]
 INFO: [ view_filter ] --START--
@@ -4826,6 +5369,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009152s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000545s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000262s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000151s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001389s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000421s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-08-02T14:34:17+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000720s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000833s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -4922,6 +5492,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.008139s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008201s ]
 INFO: [ view_filter ] --START--
@@ -4947,6 +5518,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005894s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000266s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000189s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000095s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000871s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000440s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-08-02T14:38:35+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000817s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000914s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5043,6 +5641,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.016868s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.016922s ]
 INFO: [ view_filter ] --START--
@@ -5068,6 +5667,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007107s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000185s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000199s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000116s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000782s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000457s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2017-08-02T14:54:14+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000451s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000511s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5164,6 +5790,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007552s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007612s ]
 INFO: [ view_filter ] --START--
@@ -5189,6 +5816,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006338s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000394s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000508s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000320s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002107s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001240s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001430s ]
+
+[ 2017-08-02T15:03:57+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000879s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000991s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003128s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5285,6 +5939,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.013579s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.013654s ]
 INFO: [ view_filter ] --START--
@@ -5310,6 +5965,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005727s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000250s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000233s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000133s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000996s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000442s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-08-02T15:05:15+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000924s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001110s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5406,6 +6088,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007491s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007543s ]
 INFO: [ view_filter ] --START--
@@ -5431,6 +6114,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008302s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008349s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000179s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000155s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000091s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000663s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000257s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000281s ]
+
+[ 2017-08-02T15:07:27+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001428s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001632s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5527,6 +6237,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.007445s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007491s ]
 INFO: [ view_filter ] --START--
@@ -5552,6 +6263,33 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008632s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000176s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000154s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000090s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000274s ]
+
+[ 2017-08-02T15:15:49+08:00 ] 0.0.0.0 /daling/index.php/ProductList/showList
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001101s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001198s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Constant THEME_NAME already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Core/View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 273 行.
+>>>>>>> Stashed changes
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 168 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
@@ -5648,6 +6386,7 @@ NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_ca
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 404 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 197 行.
 NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/XAMPP/xamppfiles/htdocs/daling/ThinkPHP/Lib/Template/ThinkTemplate.class.php 第 137 行.
+<<<<<<< Updated upstream
 INFO: ParseTemplate Behavior ::run [ RunTime:0.008397s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008482s ]
 INFO: [ view_filter ] --START--
@@ -5659,4 +6398,17 @@ INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
 INFO: [ view_end ] --START--
 INFO: ShowPageTrace Behavior ::run [ RunTime:0.000454s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000486s ]
+=======
+INFO: ParseTemplate Behavior ::run [ RunTime:0.003947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003995s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000167s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000150s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000088s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000251s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000274s ]
+>>>>>>> Stashed changes
 
