@@ -1,0 +1,29 @@
+img{
+	border: 0;
+}
+a{
+	text-decoration: none;
+	outline: none;
+	color:#000;
+}
+ul{
+	list-style-type: none;
+}
+.marginAuto{
+	margin: 0px auto;
+}
+.clearFloat:after{
+	content: "";
+	display: block;
+	clear: both;
+} 
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary { 
+    display:block;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,button,textarea,p,th,td{
+	padding:0;
+	margin:0;
+	font-family:Microsoft YaHei,sans-serif,Arial;
+	font-size: 12px;
+}

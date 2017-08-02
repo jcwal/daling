@@ -1,0 +1,52 @@
+.navigator .header .top{
+	width: auto;
+	background-color: #f2f2f2;
+
+}
+.navigator .header .top .topWrap{
+	width: 1200px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dadada;
+    z-index: 5;
+	position: relative;
+	height: 30px;
+	margin:auto;
+	margin-bottom: 30px;
+}
+.navigator .header .top .topWrap .consumerInfo{
+	float: left;
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+}
+.navigator .header .top .topWrap .loginBar{
+	position: absolute;
+    right: 40px;
+    list-style-type: none;
+    line-height: 32px;
+    font-size: 12px;
+}
+.navigator .header .top .topWrap .loginBar li{
+	float: left;
+	color: #666;
+	margin: 5px 0 0 10px;
+	border-right:1px solid #666;
+	text-align: center;
+	padding-right: 10px;
+	height: 20px;
+	line-height: 20px;
+}
+.navigator .header .top .topWrap .loginBar li:not(.tel) a:hover{
+	text-decoration: underline;
+	color:red;
+}
+.navigator .header .top .topWrap .loginBar .tel img{
+	float: left;
+}
+.navigator .header .top .topWrap .loginBar .tel a{
+	float: left;
+	display: inline-block;
+}
+.navigator .header .top .topWrap .loginBar .download{
+	border:0;
+}
