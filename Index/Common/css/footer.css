@@ -1,0 +1,146 @@
+
+*{margin:0;padding:0;}
+.container{width:100%;height:392px;font-size: 12px;color:#666;}	
+.footer.title{
+	width:100%;
+	height:79px;
+	line-height: 79px;
+	border-top:1px solid #d8d8d8;
+	border-bottom: 1px solid #e0e0e0;
+	box-shadow: 0 2px 2px #e0e0e0 ;	
+}
+.footer.list{
+	width:960px;
+	margin:0 auto;
+	list-style-type: none;
+	font-size: 14px;
+	
+}
+ul li:nth-child(1){
+	margin-left: 0;
+	float:left;
+}
+ul li:nth-child(2){
+	margin-left:130px;
+	float:left;
+}
+ul li:nth-child(3){
+	margin-left:130px;
+	float:left;
+}
+ul li:nth-child(4){
+	margin-left:130px;
+	float:left;
+}
+.icon_1{
+	width:22px;
+	height:41px;
+	margin-left:50px;
+	background-position: -2px -135px;
+	display: inline-block;
+	background-image:url("images/ico_arrow.png");
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.icon_2,.icon_3,.icon_4{
+	width:30px;
+	height:30px;
+	vertical-align: middle;
+	margin-right: 7px;
+	background-repeat: no-repeat;
+	background-image:url("images/ico-assure.png");
+	display: inline-block;
+}
+.icon_3{
+	background-position-x:-36px;
+}
+.icon_4{
+	background-position-x:-73px;
+}
+/*清除浮动*/
+.footer.list:after{
+	content: " ";
+    display: block;
+    clear: both;
+}
+.footer.middle{
+	width:1110px;
+	height:80px;
+	margin:0 auto;
+	padding:24px 0px 40px 42px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.middleLeft{
+	width:660px;
+	float:left;
+}
+.middleRight{
+	float:left;
+}
+.textTop{
+	line-height: 40px;
+	font-size:18px;
+	
+}
+.textContent{
+	line-height: 20px;
+	font-size: 14px;	
+}
+.footer.bottom{
+	text-align: center;
+	padding-bottom: 20px;
+	
+}
+.bottomLink{
+	padding:24px 0 0;
+	font-size:14px;
+}
+ a:link{
+	text-decoration:none;
+	color:#666;
+}
+a:hover{
+	text-decoration:underline;
+}
+.bottomSafe{
+	width:530px;
+	margin:24px auto 0;
+	font-size: 14px;
+}
+.info{
+	width:170px;
+	text-align:44px;
+	line-height: 44px;
+	float: left;
+	display: inline-block;
+}
+.bottomSafe a{
+	float: left;
+}
+.cert,.cnnic,.zfb{
+	width:114px;
+	height:39px;
+	margin-right: 2px;
+}
+.bottomSafe:after{
+	content: " ";
+    display: block;
+    clear: both;
+}
+.bottomMessage{
+	padding:20px 0 0;
+	font-size:14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
