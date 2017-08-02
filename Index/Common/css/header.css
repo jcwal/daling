@@ -50,3 +50,42 @@
 .navigator .header .top .topWrap .loginBar .download{
 	border:0;
 }
+.navigator .header .center {
+	width: auto;
+}
+.navigator .header .center .centerWrap{
+	width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4;
+}
+.navigator .header .center .centerWrap .logo{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
