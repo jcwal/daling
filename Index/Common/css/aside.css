@@ -1,0 +1,202 @@
+.aside {
+	width: 40px;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background: #333;
+	text-align: center;
+	color: #fff;
+	min-height: 480px;
+}
+.aside .aside_nav {
+	height: 100%;
+	width: 40px;
+	float: left;
+}
+.aside .aside_shopp {
+	width: 40px;
+	margin-top: 110px;
+	padding: 0 0 10px;
+	cursor:pointer;
+}
+.aside .aside_shopp:hover {
+	background: #e34755;
+}
+.aside .aside_wire {
+	width: 22px;
+	height: 1px;
+	margin: 0 0 14px 9px;
+	background-color: #515151;
+}
+.aside .aside_car {
+	background: url("../images/aside/ico_sidebar.png") -26px top ;
+	width: 33px;
+	height: 26px;
+	margin-bottom: 10px;
+}
+.aside .aside_text {
+	line-height: 16px;
+}
+.aside .aside_number {
+	width: 20px;
+	height: 20px;
+	background: #e34755;
+	border-radius: 50%;
+	margin-top: 7px;
+	line-height: 20px;
+	position: relative;
+	left: 25%;
+}
+/*钱的图标*/
+.aside .aside_money {
+	height: 37px;
+	padding-top: 5px;
+	cursor:pointer;
+	position: relative;
+}
+.aside .aside_money:hover {
+	background: #e34755;
+}
+.aside .aside_money:hover .aside_money_text {
+	display: block;
+}
+.aside .aside_money span {
+	display: block;
+	width: 33px;
+	height: 22px;
+	margin-bottom: 10px;
+	background: url("../images/aside/ico_sidebar.png") 6px top ;
+}
+.aside .aside_common {
+	position: absolute;
+	top: 0;
+	right: 40px;
+	width: 100px;
+	height: 42px;
+	text-align: center;
+	line-height: 40px;
+	background: black;
+	font-size: 10px;
+	display: none;
+}
+.aside .aside_common em {
+	position: absolute;
+	right: -15px;
+	top: 15px;
+	background: url("../images/aside/sj.png") no-repeat;
+	width: 20px;
+	height: 20px;	
+}
+/*收藏*/
+.aside .aside_collect {
+	height: 39px;
+	padding-top: 7px;
+	position: relative;
+	cursor:pointer;
+}
+.aside .aside_collect:hover {
+	background: #e34755;
+	
+}
+.aside .aside_collect span {
+	display: block;
+	background: url("../images/aside/ico_sidebar.png") -60px top ;
+	width: 33px;
+	height: 25px;
+	margin-bottom: 8px;
+}
+.aside .aside_collect:hover .aside_collect_text {
+	display: block;
+}
+.aside .aside_nav a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	background: yellow;
+	display: none;
+}
+/*内容*/
+.aside .aside_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 280px;
+	height: 100%;
+	display: none;
+}
+/*叉叉符号*/
+.aside .aside_remove {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 16px;
+	height: 16px;
+	background: url("../images/aside/login-close.png");
+	z-index: 1;
+}
+/*购物车里面的内容*/
+.aside .aside_car_content {
+	background: #f4f4f4;
+	color: #666;
+	height: 100%;
+	text-align: left;
+	display: none;
+}
+.aside .aside_car_content .head {
+	line-height: 50px;
+	text-indent: 20px;
+	text-align: center;
+}
+.cart-mini-ct {
+	height: 835px;
+	overflow-x: auto;
+}
+.aside .aside_content_table {
+	height: 200px;
+	background: url("../images/aside/cart_mini_empty.png") center 46px no-repeat;
+}
+/*奖劵里面的内容*/
+.aside .aside_money_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 280px;
+	height: 100%;
+	background: #474747;
+	display: none;
+}
+.head_common {
+	line-height: 50px;
+	text-align: center;
+	color: #e2e2e2;
+}
+.sb-unlogin {
+	height: 100%;
+}
+.sb-unlogin p {
+	line-height: 32px;
+	padding-top: 200px;
+}
+.sb-unlogin button {
+	width: 180px;
+	height: 30px;
+	background: #e14958;
+	border: 1px solid #e14958;
+	color: #fff;
+	display: inline-block;
+	padding: 0;
+	text-align: center;
+}
+.aside .aside_collect_content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 280px;
+	height: 100%;
+	background: #474747;
+	display: none;
+}

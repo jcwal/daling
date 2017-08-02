@@ -5,7 +5,9 @@
 		<title>达令</title>
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
 	</head>
 	<body>
 		<div class="navigator">
@@ -64,6 +66,63 @@
 	</div>
 	<div class="bottom"></div>
 </header>
+
+		</div>
+		<div class="asideBar">
+			<aside class="aside">
+	<div class="aside_nav">
+		<!--购物车-->
+		<div class="aside_shopp" onclick="shopp()" >
+			<div class="aside_wire"></div>
+			<div class="aside_car"></div>
+			<div class="aside_text">购<br />物<br />车</div>
+			<div class="aside_number">2</div>
+		</div>
+		<!--横线-->
+		<div class="aside_wire"></div>
+		<!--钱图标-->
+		<div class="aside_money" onclick="money()">
+			<span></span>
+			<strong class="aside_money_text aside_common">我的优惠劵<em></em></strong>
+		</div>
+		<!--收藏-->
+		<div class="aside_collect" onclick="collect()">
+			<span></span>
+			<strong class="aside_collect_text aside_common">我的收藏<em></em></strong>
+		</div>
+		<!--top图-->
+		<a href="#">
+			<img src="" alt="" />
+		</a>
+	</div>
+	<!--购物车里面的内容-->
+	<div class="aside_content">
+		<!--叉-->
+		<div class="aside_remove" onclick="remove()"></div>
+		<div class="aside_car_content">
+			<div class="head">我的购物车</div>
+			<div class="cart-mini-ct">
+				<div class="aside_content_table"></div>
+			</div>
+		</div>
+	</div>
+	<!--钱里面的内容-->
+	<div class="aside_money_content">
+		<div class="head_common">我的优惠劵</div>
+		<div class="sb-unlogin">
+			<p>登录后才能查看</p>
+			<button>登录</button>
+		</div>
+	</div>
+	<!--收藏里面的内容-->
+	<div class="aside_collect_content">
+		<div class="head_common">我的收藏</div>
+		<div class="sb-unlogin">
+			<p>登录后才能查看</p>
+			<button>登录</button>
+		</div>
+	</div>
+</aside>
 
 		</div>
 		<div class="footer">
@@ -127,4 +186,5 @@
 
 		</div>
 	</body>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
 </html>
