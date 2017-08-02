@@ -5,5 +5,7 @@ $('.indexSwiper .swiper-wrapper').css('width',function(){
 
 var mySwiper = new Swiper('.swiper-container', {
 	autoplay: 2000,
-	direction : 'horizontal'
+	direction : 'horizontal',
+	grabCursor : true,
+	autoplayDisableOnInteraction : true,
 })
