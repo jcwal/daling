@@ -7,10 +7,8 @@
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
-<<<<<<< Updated upstream
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/index.css" />
 		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
-=======
->>>>>>> Stashed changes
 	</head>
 	<body>
 		<div class="navigator">
@@ -91,6 +89,12 @@
 	</div>
 </header>
 
+		</div>
+		<div class="indexWrap">
+			<div class="indexSwiper">
+				
+			</div>
+			<div class="indexMain"></div>
 		</div>
 		<div class="asideBar">
 			<aside class="aside">

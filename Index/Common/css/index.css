@@ -1,0 +1,13 @@
+.indexWrap{
+	background-color: #f9f9f9;
+    padding-bottom: 50px;
+    min-width: 1200px;
+}
+.indexWrap .indexSwiper{
+	height: 481px; 
+}
+.indexWrap .indexMain{
+	width: 1200px;
+    margin: 0 auto;
+    padding-top: 90px
+}
