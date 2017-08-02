@@ -51,14 +51,7 @@
 
 		</div>
 		<div class="footer">
-			<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>达令</title>
-		<link rel="stylesheet" type="text/css" href="footer.css"/>
-	</head>
-	<body>
+			
 		<footer class="container">
 			<div class="footer title">
 				<ul class="footer list">
@@ -115,8 +108,6 @@
 				
 			</div>
 		</footer>
-	</body>
-</html>
 
 		</div>
 	</body>
