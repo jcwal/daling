@@ -1,0 +1,44 @@
+.productDetail {
+	width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	background: red;
+}
+.productDetail .detail_link {
+	height: 40px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	line-height: 40px;
+	margin: 10px 0;
+	background: yellow;
+}
+.productDetail .detail_link ul {
+	list-style: none;
+}
+.productDetail .detail_link li {
+	float: left;
+	padding-right: 14px;
+	color: #666;
+}
+.productDetail .detail_link li a {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.productDetail .detail_link li a span {
+	display: inline-block;
+	margin-top: -2px;
+	width: 20px;
+	height: 14px;
+	background: url("../images/productDetail/ico.png");
+	background-position:0 -45px ;
+	vertical-align: middle;
+}
+.productDetail .detail_link li span {
+	background: url("../images/productDetail/ico_arrow.png") -64px -85px no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	width: 7px;
+	height: 21px;
+}
+

@@ -8,6 +8,7 @@
 	text-align: center;
 	color: #fff;
 	min-height: 480px;
+	z-index: 100;
 }
 .aside .aside_nav {
 	height: 100%;
