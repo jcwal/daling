@@ -4,6 +4,7 @@ img{
 a{
 	text-decoration: none;
 	outline: none;
+	color: #666;
 }
 ul{
 	list-style-type: none;

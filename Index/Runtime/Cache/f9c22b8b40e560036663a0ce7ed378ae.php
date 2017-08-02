@@ -109,8 +109,237 @@
 				<div class="indexTitle">
 					<p>发现·好货</p>
 				</div>
-				<section class="indexNew"></section>
-				<section class="indexWorthBuy"></section>
+				<section class="indexNew">
+					<h2 class="title">
+						<div class="left">
+							<span class="text1">
+								今日上新
+							</span>
+							<span class="text2">
+								早上八点上新
+							</span>
+						</div>
+						<div class="right">
+							<a class="exchange" href='#'>
+								换一批
+							</a>
+							<span></span>
+						</div>
+					</h2>
+					<div class="box">
+						<ul class="up">
+							<li>
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>59
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>69</span>
+										</span>
+										<span class="collect">
+											<span>52</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>59
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>69</span>
+										</span>
+										<span class="collect">
+											<span>52</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>59
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>69</span>
+										</span>
+										<span class="collect">
+											<span>52</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>59
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>69</span>
+										</span>
+										<span class="collect">
+											<span>52</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="down">
+							<li class="left">
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>98
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>119</span>
+										</span>
+										<span class="collect">
+											<span>64</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 可爱动物造型餐具4件套 (花色 )
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="right">
+								<div class="pic">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="" />
+									</a>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>98
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>119</span>
+										</span>
+										<span class="collect">
+											<span>64</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											8折/
+										</span>
+										<a href="#" class="introduce">
+											 可爱动物造型餐具4件套 (花色 )
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="indexWorthBuy">
+					<h2 class="title">
+						<span class="text1">
+							神马值得买
+						</span>
+						<span class="text2">
+							帮你挑选全球好货
+						</span>
+					</h2>
+					<h3 class="subtitle">
+						<span></span>
+						全球好货
+					</h3>
+					<div class="box">
+						<ul>
+							<li><a href="#">
+								<img src="#" alt="" />
+							</a></li>
+							<li><a href="#">
+								<img src="#" alt="" />
+							</a></li>
+							<li><a href="#">
+								<img src="#" alt="" />
+							</a></li>
+							<li><a href="#">
+								<img src="#" alt="" />
+							</a></li>
+							<li><a href="#">
+								<img src="#" alt="" />
+							</a></li>
+						</ul>
+					</div>
+				</section>
 				<section class="indexGood"></section>
 				<section class="indexBuyAgain"></section>
 				<section class="indexDarkHorse"></section>

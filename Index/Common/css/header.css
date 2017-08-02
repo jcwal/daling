@@ -205,6 +205,7 @@
 }
 .navigator .header .bottom .bottomWrap .naviBar li a:hover{
     opacity: 0.7;
+    text-decoration: none;
 }
 
 
