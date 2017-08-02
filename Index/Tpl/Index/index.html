@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>达令</title>
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/index.css" />
-		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="navigator">
@@ -16,9 +18,31 @@
 		</div>
 		<div class="indexWrap">
 			<div class="indexSwiper">
-				
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="__ROOT__/Index/Common/images/index/banner1.gif" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="__ROOT__/Index/Common/images/index/banner2.jpg" alt="" />
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="indexMain"></div>
+			<div class="indexMain">
+				<div class="indexTitle">
+					<p>发现·好货</p>
+				</div>
+				<section class="indexNew"></section>
+				<section class="indexWorthBuy"></section>
+				<section class="indexGood"></section>
+				<section class="indexBuyAgain"></section>
+				<section class="indexDarkHorse"></section>
+				<div class="indexTitle">
+					<p>今日特卖·闪购</p>
+				</div>
+				<section class="indexSale"></section>
+			</div>
 		</div>
 		<div class="asideBar">
 			<include file='Public:aside' />
@@ -27,5 +51,6 @@
 			<include file='Public:footer' />
 		</div>
 	</body>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/index.js"></script>
 	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
 </html>

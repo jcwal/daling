@@ -4,7 +4,24 @@
     min-width: 1200px;
 }
 .indexWrap .indexSwiper{
+	width: 1200px;
 	height: 481px; 
+	margin: 0 auto;
+}
+.indexWrap .indexSwiper .swiper-container{
+	width: 1200px;
+	height: 480px;
+	overflow: hidden;
+	
+}
+.indexWrap .indexSwiper .swiper-container .swiper-wrapper{
+	height: 480px;
+	overflow: hidden;
+}
+.indexWrap .indexSwiper .swiper-container .swiper-wrapper .swiper-slide{
+	float: left;
+	width: 1200px;
+	height: 480px;
 }
 .indexWrap .indexMain{
 	width: 1200px;
