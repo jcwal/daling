@@ -26,6 +26,10 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,button,textarea,p,th,td{
 	font-family:Microsoft YaHei,sans-serif,Arial;
 
 }
+input,button{
+	outline:none;
+
+}
 html{
 	font-size: 12px;
 	color: #666;

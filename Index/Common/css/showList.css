@@ -1,12 +1,174 @@
 
+/*商品展示区*/
 .proList{
 	width:1200px;
 	margin:0 auto;
 	padding-bottom:50px;
+	position: relative;
 }
+/*商品展示头部搜索区域*/
 .proNav{
 	height:40px;
 	margin:10px 0;
 	line-height: 40px;
-	border:1px solid red;
 }
+#proHome,#proMenu,#proSearch{
+	float:left;
+	padding-right: 14px;
+}
+#proHome a{
+	margin-right: 14px;
+}
+#proHome a .home{
+	width:20px;
+	height:14px;
+	display: inline-block;
+	background:url("../images/footer/ico.png") 0 -45px no-repeat;
+}
+#proHome .angle,.proNav .angle{
+	width:7px;
+	height: 21px;
+	vertical-align: middle;
+	display: inline-block;
+	background:url("../images/footer/ico_arrow.png") -64px -85px no-repeat;
+}
+.proNav #proMenu .angle{
+	margin-left: 14px;
+}
+/*商品展示头部搜索区下拉菜单*/
+#proMenu a{
+	border:1px solid #ccc;
+	padding:0 24px 0 2px;
+	margin-top: 8px;	
+	display: inline-block;
+	height:23px;
+	width:55px;
+	line-height: 23px;
+	position: relative;
+	color: #666;
+}
+#proMenu a:hover{
+	text-decoration: underline;
+}
+#proMenu .up{
+	width:6px;
+	height:12px;
+	position: absolute;
+	right:6px;
+	top:12px;
+	background: url("../images/footer/up.png") no-repeat;
+}
+#proMenu .down{
+	width:6px;
+	height:12px;
+	position: absolute;
+	right:6px;
+	top:6px;
+	background: url("../images/footer/down.png") no-repeat;
+}
+.proMenuList{
+	position:absolute;
+	left:60px;
+	top:34px;
+	width:81px;
+	border:1px solid #ccc;
+	display: none;
+}
+.proMenuList ul{
+	margin-left: 4px;
+}
+/*头部搜索商品样式*/
+#proSearch{
+	border:1px solid #ccc;
+	padding:0 20px 0 2px;
+    height: 23px;
+    margin-top: 8px;
+    line-height: 23px;
+    position: relative;
+}
+#proSearch .inputBar{
+	border:0;
+	outline: none;
+	width:140px;
+	height:23px;
+	line-height: 23px;
+	padding:0 3px;
+}
+#proSearch .searchBar{
+	border:0;
+	outline: none;
+	width:13px;
+	height:12px;
+	position: absolute;
+	right:6px;
+	top:6px;
+	background:url("../images/footer/ico-sort.png") no-repeat; 
+	background-position: -38px 0;
+}
+.proNav::after{
+	content: " ";
+    display: block;
+    clear: both;
+}
+/*商品分类*/
+.proList .showPro{
+	border:1px solid #ccc;
+	padding:18px 20px 20px;
+}
+.proList .showPro>dl{
+	position: relative;
+
+}
+.proList .showPro dl>dt{
+	float:left;
+	width:70px;
+	font-weight:bold;
+	padding: 8px 0 10px;
+}
+.proList .showPro dl>a{
+	float:left;
+	height:24px;
+	padding: 8px 0 10px;
+	width:100px;
+	margin-right:20px;
+	color:#666;
+}
+.proList .showPro dl>a:hover{
+	text-decoration: underline;
+
+}
+
+.proList .showPro>dl::after{
+	content: " ";
+    display: block;
+    clear: both;
+}
+.proList .showPro .showProMul{
+	
+
+}
+.proList .showPro .showProMul .proMul{
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom:10px; 
+}
+
+.proList .showPro .showProMul .showProSure,.proList .showPro .showProMul .showProCancel{
+	width:68px;
+	height:22px;
+	border:0;
+	line-height:16px;
+	margin-right: 16px;
+	color:#fff;
+	background-color: #e14958;
+}
+
+
+
+
+
+
+
+
+
+
