@@ -36,7 +36,7 @@
 	margin-left: 14px;
 }
 /*商品展示头部搜索区下拉菜单*/
-#proMenu a{
+#proMenu .proMenuSearch{
 	border:1px solid #ccc;
 	padding:0 24px 0 2px;
 	margin-top: 8px;	
@@ -47,36 +47,45 @@
 	position: relative;
 	color: #666;
 }
-#proMenu a:hover{
+#proMenu .proMenuSearch:hover{
 	text-decoration: underline;
 }
 #proMenu .up{
-	width:6px;
+	width:10px;
 	height:12px;
 	position: absolute;
-	right:6px;
-	top:12px;
+	right:10px;
+	top:3px;
 	background: url("../images/footer/up.png") no-repeat;
 }
 #proMenu .down{
-	width:6px;
+	width:10px;
 	height:12px;
 	position: absolute;
-	right:6px;
-	top:6px;
+	right:10px;
+	top:10px;
 	background: url("../images/footer/down.png") no-repeat;
 }
 .proMenuList{
 	position:absolute;
-	left:60px;
-	top:34px;
+	left:59px;
+	top:33px;
 	width:81px;
 	border:1px solid #ccc;
+	background-color: #fff;
+	z-index: 1;
 	display: none;
 }
+/*极致美护--下拉按钮*/
 .proMenuList ul{
 	margin-left: 4px;
+	line-height: 23px;
 }
+.proMenuList ul li:hover{
+	text-decoration: underline;
+
+}
+
 /*头部搜索商品样式*/
 #proSearch{
 	border:1px solid #ccc;
@@ -115,12 +124,14 @@
 	position: relative;
 
 }
+/*所有商品类别总称样式*/
 .proList .showPro dl>dt{
 	float:left;
 	width:70px;
 	font-weight:bold;
 	padding: 8px 0 10px;
 }
+/*各类具体分类样式*/
 .proList .showPro dl>a{
 	float:left;
 	height:24px;
@@ -147,6 +158,7 @@
 	white-space: nowrap;
     text-overflow: ellipsis;
 }
+/*多选项*/
 .proList .showPro dl .showProMul label{
 	float:left;
 	height:24px;
@@ -193,34 +205,130 @@
 	background-color: #fdfdfd;
 	position:relative;
 }
-.proList .proChoice ul:nth-child(1){
+.proList .proChoice .choiceLeft{
+	
 	position: absolute;	
 }
-.proList .proChoice ul:nth-child(1) li{
+.proList .proChoice .choiceLeft li{
+	
 	float:left;
 	margin-right: 10px;
 }
 
-.proList .proChoice ul:nth-child(2){
+.proList .proChoice .choiceRight{
 	position: absolute;
 	right:0;
 }
-.proList .proChoice ul:nth-child(2) li{
+.proList .proChoice .choiceRight li{
 	float:left;
+	position: absolute;
 	margin-right: 10px;
 }
-.proList .proChoice ul>.silence a{
+/*排序栏默认项*/
+.proList .proChoice .choiceLeft>.silence a{
 	color: #e14958;
 }
-.proList .proChoice ul>.silence a span{
+/*排序栏各项规则箭头*/
+.proList .proChoice .choiceLeft .silence a .arrowDown,
+.proList .proChoice .choiceLeft .sale a .arrowDown,
+.proList .proChoice .choiceLeft .popular a .arrowDown,
+.proList .proChoice .choiceLeft .time a .arrowDown{
 	width:9px;
 	height:12px;
+	margin-right: 10px;
 	display: inline-block;
-	background:url() 
+	background:url("../images/footer/ico-sort.png") no-repeat;
+	
+}
+/*排序懒默认项箭头*/
+.proList .proChoice .choiceLeft .silence a .arrowDown{
+	background-position: -9px 2px;
+}
+/*排序栏---销量，人气，上架时间项箭头*/
+.proList .proChoice .choiceLeft .sale a .arrowDown,
+.proList .proChoice .choiceLeft .popular a .arrowDown,
+.proList .proChoice .choiceLeft .time a .arrowDown{
+	background-position: left 2px;	
+}
+.proList .proChoice .choiceLeft .sale a{
+	margin-left: 10px;
+}
+/*排序--价格--箭头*/
+.proList .proChoice .choiceLeft li:nth-child(3) a .priceArrow{
+	width:10px;
+	display: inline-block;
+	height:16px;
+	position: absolute;
+	margin-left:27px;
+	top:11px;
+}
+/*排序--价格--下箭头*/
+.priceArrow #up,.priceArrow #down{
+	width:10px;
+	height:8px;
+	position: absolute; 
+}
+.priceArrow #down{
+	margin-top: 6px;
+	background: url("../images/footer/down.png") no-repeat;
 }
 
 
-
+/*排序--价格--上箭头*/
+.priceArrow #up{
+	background: url("../images/footer/up.png") no-repeat;
+}
+/*商品总页数，当前页字体颜色*/
+.proList .proChoice ul:nth-child(2) li .warn{
+	color: #e14958;
+}
+.proList .ProSection{
+	margin-top: 20px;
+	margin-left: -20px;
+}
+.proList .ProSection .proData{
+	width:283px;
+	height:398px;
+	border:1px solid #e5e5e5;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	float:left;
+}
+/*商品图片*/
+.proList .ProSection .proData a img{
+	width:283px;
+	height:268px;
+}
+/*商品介绍以及价格*/
+.proList .ProSection .proData .proMessage{
+	padding:8px 26px 0;
+}
+/*商品价格*/
+.proList .ProSection .proData .proMessage #price{
+	padding-bottom: 8px;
+}
+/*商品卖价颜色*/
+.proList .ProSection .proData .proMessage #price .warn{
+	color: #e34755;
+}
+/*商品卖价字体大小*/
+.proList .ProSection .proData .proMessage #price .warn .newPrice{
+	font-size: 20px;	
+}
+.proList .ProSection .proData .proMessage #price .oldPrice{
+	text-decoration:line-through;
+}
+/*商品介绍*/
+.proList .ProSection .proData .proMessage a .warn{
+	color: #e34755;
+}
+.proList .ProSection .proData .proMessage a:hover{
+	text-decoration: underline;
+}
+.proList .ProSection .proData .proMessage p:nth-child(3){
+	padding-bottom:8px;
+	color:#999;
+}
 
 
 
