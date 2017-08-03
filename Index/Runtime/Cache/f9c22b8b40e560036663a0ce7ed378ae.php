@@ -565,6 +565,15 @@
 						<span></span>
 						买了又买
 					</h3>
+<<<<<<< HEAD
+					
+				</section>
+				<section class="indexDarkHorse"></section>
+				<div class="indexTitle">
+					<p>今日特卖·闪购</p>
+				</div>
+				<section class="indexSale"></section>
+=======
 					<div class="box">
 						<dl>
 							<dt>极致美护</dt>
@@ -1632,6 +1641,7 @@
 						</div>
 					</div>
 				</section>
+>>>>>>> master
 			</div>
 		</div>
 		<div class="asideBar">
