@@ -105,15 +105,11 @@
 	background:url("../images/footer/ico-sort.png") no-repeat; 
 	background-position: -38px 0;
 }
-.proNav::after{
-	content: " ";
-    display: block;
-    clear: both;
-}
 /*商品分类*/
 .proList .showPro{
 	border:1px solid #ccc;
 	padding:18px 20px 20px;
+	position: relative;
 }
 .proList .showPro>dl{
 	position: relative;
@@ -131,29 +127,39 @@
 	padding: 8px 0 10px;
 	width:100px;
 	margin-right:20px;
-	color:#666;
+}
+.proList .showPro dl>a{
+	/*display: none;*/
 }
 .proList .showPro dl>a:hover{
 	text-decoration: underline;
-
 }
 
-.proList .showPro>dl::after{
-	content: " ";
-    display: block;
-    clear: both;
+.proList .showPro dl .showProMul{
+	display: none;
+	float:left;
+	width:840px;
+	line-height: 14px;
+	border:1px solid #ccc;
+	padding:10px 20px;
+	margin-top: 10px;
+	margin-bottom: 14px;
+	white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.proList .showPro .showProMul{
-	
-
+.proList .showPro dl .showProMul label{
+	float:left;
+	height:24px;
+	padding: 8px 0 0px;
+	width:100px;
+	margin-right:20px;
 }
-.proList .showPro .showProMul .proMul{
+.proList .showPro dl .showProMul .proMul{
 	text-align: center;
-	padding-top: 14px;
-	padding-bottom:10px; 
+	margin-bottom: 10px;
+	
 }
-
-.proList .showPro .showProMul .showProSure,.proList .showPro .showProMul .showProCancel{
+.proList .showPro dl .showProMul .showProSure,.proList .showPro .showProMul .showProCancel{
 	width:68px;
 	height:22px;
 	border:0;
@@ -162,8 +168,56 @@
 	color:#fff;
 	background-color: #e14958;
 }
+.proList .showPro dl .selectMore,.proList .showPro dl .listMore{
+	border:0;
+	width:58px;
+	height:24px;
+	line-height: 24px;
+	border:1px solid #ccc;
+	position: absolute;
+	background-color: #fff;
+	
+}
+.proList .showPro dl .selectMore{
+	right:58px;
+}
+.proList .showPro dl .listMore{
+	right:-2px;
+}
+.proList .proChoice{
+	height:36px;
+	border:1px solid #ccc;
+	line-height: 36px;
+	padding: 0 15px;
+	margin-top: 20px;
+	background-color: #fdfdfd;
+	position:relative;
+}
+.proList .proChoice ul:nth-child(1){
+	position: absolute;	
+}
+.proList .proChoice ul:nth-child(1) li{
+	float:left;
+	margin-right: 10px;
+}
 
-
+.proList .proChoice ul:nth-child(2){
+	position: absolute;
+	right:0;
+}
+.proList .proChoice ul:nth-child(2) li{
+	float:left;
+	margin-right: 10px;
+}
+.proList .proChoice ul>.silence a{
+	color: #e14958;
+}
+.proList .proChoice ul>.silence a span{
+	width:9px;
+	height:12px;
+	display: inline-block;
+	background:url() 
+}
 
 
 
