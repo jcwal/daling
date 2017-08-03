@@ -97,10 +97,10 @@
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<img src="__ROOT__/Index/Common/images/index/banner1.gif" alt="" />
+							<img src="__ROOT__/Index/Common/images/index/banner1.gif" alt="达令" />
 						</div>
 						<div class="swiper-slide">
-							<img src="__ROOT__/Index/Common/images/index/banner2.jpg" alt="" />
+							<img src="__ROOT__/Index/Common/images/index/banner2.jpg" alt="达令" />
 						</div>
 					</div>
 				</div>
@@ -131,17 +131,17 @@
 							<li>
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>59
+											￥<span>59.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>69</span>
+											￥<span>69.00</span>
 										</span>
 										<span class="collect">
 											<span>52</span>人收藏
@@ -160,17 +160,17 @@
 							<li>
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>59
+											￥<span>59.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>69</span>
+											￥<span>69.00</span>
 										</span>
 										<span class="collect">
 											<span>52</span>人收藏
@@ -189,17 +189,17 @@
 							<li>
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>59
+											￥<span>59.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>69</span>
+											￥<span>69.00</span>
 										</span>
 										<span class="collect">
 											<span>52</span>人收藏
@@ -218,17 +218,17 @@
 							<li>
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>59
+											￥<span>59.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>69</span>
+											￥<span>69.00</span>
 										</span>
 										<span class="collect">
 											<span>52</span>人收藏
@@ -249,17 +249,17 @@
 							<li class="left">
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>98
+											￥<span>98.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>119</span>
+											￥<span>119.00</span>
 										</span>
 										<span class="collect">
 											<span>64</span>人收藏
@@ -278,17 +278,17 @@
 							<li class="right">
 								<div class="pic">
 									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="" />
+										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>98
+											￥<span>98.00
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>119</span>
+											￥<span>119.00</span>
 										</span>
 										<span class="collect">
 											<span>64</span>人收藏
@@ -323,25 +323,243 @@
 					<div class="box">
 						<ul>
 							<li><a href="#">
-								<img src="#" alt="" />
+								<img src="__ROOT__/Index/Common/images/index/thailand.jpg" alt="达令" />
 							</a></li>
 							<li><a href="#">
-								<img src="#" alt="" />
+								<img src="__ROOT__/Index/Common/images/index/australian.jpg" alt="达令" />
 							</a></li>
 							<li><a href="#">
-								<img src="#" alt="" />
+								<img src="__ROOT__/Index/Common/images/index/japan.jpg" alt="达令" />
 							</a></li>
 							<li><a href="#">
-								<img src="#" alt="" />
+								<img src="__ROOT__/Index/Common/images/index/france.jpg" alt="达令" />
 							</a></li>
 							<li><a href="#">
-								<img src="#" alt="" />
+								<img src="__ROOT__/Index/Common/images/index/korea.jpg" alt="达令" />
 							</a></li>
 						</ul>
 					</div>
 				</section>
-				<section class="indexGood"></section>
-				<section class="indexBuyAgain"></section>
+				<section class="indexGood">
+					<h3 class="subtitle">
+						<span></span>
+						大家都说好
+					</h3>
+					<div class="box">
+						<div class="tab">
+							<ul>
+								<li class="current">全部商品</li>
+								<li>极致美护</li>
+								<li>全球零食</li>
+								<li>创意生活</li>
+								<li>时尚配饰</li>
+								<li>3C数码</li>
+							</ul>
+						</div>
+						<div class="list">
+							<ul class="item1">
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="pic">
+										<a href="#">
+											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										</a>
+									</div>
+									<div class="text">
+										<div class="textUp">
+											<span class="discount">
+												￥<span>46.90</span>
+											</span>
+											<span class="originPrice">
+												￥<span>180.00</span>
+											</span>
+										</div>
+										<div class="textMid">
+											<a href="#">
+												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											</a>
+										</div>
+										<div class="textDown">
+											<a href="#">
+												<span class="userImg"></span>
+												<span class="userComment">
+													<span class="detail">“挺不错的，主要是方便”</span>
+													<span class="repute">共有26295条评论 好评率98% >></span>
+												</span>
+												<span class="bg"></span>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="indexBuyAgain">
+					<h3 class="subtitle">
+						<span></span>
+						买了又买
+					</h3>
+				</section>
 				<section class="indexDarkHorse"></section>
 				<div class="indexTitle">
 					<p>今日特卖·闪购</p>

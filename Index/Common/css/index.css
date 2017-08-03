@@ -25,13 +25,13 @@
 	width: 1200px;
 	height: 480px;
 }
-/*首页主内容*/
+/*首页主-内容*/
 .indexWrap .indexMain{
 	width: 1200px;
     margin: 0 auto;
     padding-top: 90px
 }
-/*首页主内容标题*/
+/*首页-主内容-标题*/
 .indexWrap .indexMain .indexTitle{
 	width: 430px;
     height: 1px;
@@ -48,11 +48,25 @@
     padding: 0 10px;
     background-color: #f9f9f9;
 }
-/*首页主内容模块*/
+/*首页-主内容-模块*/
 .indexWrap .indexMain section{
 	width: 1200px;
 }
-/*首页主内容上新*/
+/*首页-主内容-模块-副标题*/
+.indexWrap .indexMain section .subtitle{
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 36px;
+}
+.indexWrap .indexMain section .subtitle span{
+    background: url(../images/index/icoSubtitle.png) no-repeat;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    display: inline-block;
+}
+/*首页-主内容-上新*/
 .indexWrap .indexMain .indexNew {
 	height: 734px;
 }
@@ -254,7 +268,7 @@
 .indexWrap .indexMain .indexNew .box .down li .text .textDown .introduce:hover{
 	text-decoration: underline;
 }
-/*首页主内容值得买*/
+/*首页-主内容-值得买*/
 .indexWrap .indexMain .indexWorthBuy {
 	height: 356px;
 }
@@ -281,19 +295,6 @@
     padding-left: 28px;
     font-size: 14px;
 }
-.indexWrap .indexMain .indexWorthBuy .subtitle{
-	line-height: 36px;
-    font-size: 16px;
-    font-weight: 400;
-    padding-left: 36px;
-}
-.indexWrap .indexMain .indexWorthBuy .subtitle span{
-	background: url(../images/index/icoSubtitle.png) no-repeat;
-    width: 11px;
-    height: 11px;
-    margin-right: 8px;
-    display: inline-block;
-}
 .indexWrap .indexMain .indexWorthBuy .box{
 	background-color: #fff;
     padding-bottom: 52px;
@@ -305,6 +306,171 @@
     overflow: hidden;
 
 }
+.indexWrap .indexMain .indexWorthBuy .box ul{
+    margin-left: 30px;
+}
+.indexWrap .indexMain .indexWorthBuy .box ul li{
+    float: left;
+    width: 208px;
+    margin: 0 10px;
+}
+.indexWrap .indexMain .indexWorthBuy .box ul li a,
+.indexWrap .indexMain .indexWorthBuy .box ul li a img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.indexWrap .indexMain .indexWorthBuy .box ul li:hover{
+    box-shadow: 1px 1px 4px 2px lightgray ;
+}
+/*首页-主内容-都说好*/
+.indexWrap .indexMain .indexGood{ 
+    margin:45px 0 42px -6px;
+}
+.indexWrap .indexMain .indexGood .box{
+    background-color: #fff;
+    height: 1037px;
+    width: 100%;
+}
+.indexWrap .indexMain .indexGood .box .tab{
+    padding-top: 42px;
+    border-bottom: solid 1px #e5e5e5;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 36px;
+    margin-bottom: 40px;
+}
+.indexWrap .indexMain .indexGood .box .tab ul{
+    list-style-type: none;
+}
+.indexWrap .indexMain .indexGood .box .tab ul li{
+    float: left;
+    margin-right: 10px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #e5e5e5;
+    border-bottom: none 0;
+    height: 29px;
+    line-height: 29px;
+    cursor: pointer;
+}
+.indexWrap .indexMain .indexGood .box .tab ul .current{
+    border: 1px solid #e14958;
+    border-bottom: none 0;
+    background-color: #e14958;
+    color: #fff;
+}
+.indexWrap .indexMain .indexGood .box .list{
+    margin-left: -33px;
+    width: 100%;
+    height: 100%;
+}
+.indexWrap .indexMain .indexGood .box .list ul{
+    width: 100%;
+    height: 100%;
+}
+.indexWrap .indexMain .indexGood .box .list ul li{
+    float: left;
+    width: 280px;
+    margin-left: 100px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+}
+.indexWrap .indexMain .indexGood .box .list ul li:hover{
+    box-shadow: 1px 1px 6px 2px lightgray ;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .pic{
+    width: 280px;
+    height: 280px;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .pic a,
+.indexWrap .indexMain .indexGood .box .list ul li .pic a img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text{
+    padding-left: 12px;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textUp{
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textUp .discount{
+    color: #e14958;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textUp .discount span{
+    font-size: 20px;
+    color: #e14958;   
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textUp .originPrice{
+    text-decoration: line-through;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textMid{
+    margin-bottom: 10px;
+    height: 38px;
+    overflow: hidden;
+    line-height: 18px;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textMid a:hover{
+    text-decoration: underline;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown{
+    position: relative;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown a{
+
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown a .userImg{
+    width: 35px;
+    height: 35px;
+    float: left;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 7px;
+    display: inline-block;
+    background: url('../product-images/indextestpic4.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown a .userComment{
+    position: absolute;
+    z-index: 2;
+    left: 56px;
+    top: 6px;
+    width: 180px;
+    line-height: 20px;
+    display: inline-block;   
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown a .userComment .detail{
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.indexWrap .indexMain .indexGood .box .list ul li .text .textDown a .bg{
+    width: 256px;
+    height: 50px;
+    background-color: #fffcdb;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    border-radius: 25px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
 
 
 
