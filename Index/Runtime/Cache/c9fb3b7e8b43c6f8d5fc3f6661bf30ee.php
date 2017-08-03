@@ -9,8 +9,9 @@
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/productDetail.css" />
 		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
 	</head>
-	<body>
+	<body ng-app="myapp" ng-controller="mycontroller">
 		<div class="navigator">
 			<header class="header">
 	<div class="top">
@@ -173,13 +174,13 @@
 								<dt>购买数量</dt>
 								<dd>
 									<div class="number">
-										<a href="#" class="btn-reduce">
+										<a href="javascript:;" class="btn-reduce" ng-click="reduce()">
 											<span class="ico-u-5"></span>
 										</a>
-										<a href="#" class="btn-add">
+										<a href="javascript:;" class="btn-add" ng-click="add()">
 											<span class="ico-d-5"></span>
 										</a>
-										<input value="1" />
+										<input value="1" ng-value="num"/>
 									</div>
 								</dd>
 							</dl>
@@ -734,6 +735,7 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/productDetail.js"></script>
 </html>
 <!--/**
  *                             _ooOoo_
