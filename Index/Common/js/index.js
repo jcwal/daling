@@ -8,4 +8,10 @@ var mySwiper = new Swiper('.swiper-container', {
 	direction : 'horizontal',
 	grabCursor : true,
 	autoplayDisableOnInteraction : true,
+	pagination : '.swiper-pagination',
+	paginationClickable:true,
+	prevButton:'.swiper-button-prev',
+	nextButton:'.swiper-button-next',
 })
+
+//

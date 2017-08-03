@@ -8,15 +8,17 @@
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper-3.4.2.min.css" />
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
 	</head>
 	<body>
 		<div class="navigator">
 			<include file='Public:header' />
 		</div>
-		<div class="indexWrap">
+		<div class="indexWrap" ng-app='indexApp' ng-controller='indexController'>
 			<div class="indexSwiper">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -27,6 +29,9 @@
 							<img src="__ROOT__/Index/Common/images/index/banner2.jpg" alt="达令" />
 						</div>
 					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+    				<div class="swiper-button-next"></div>
 				</div>
 			</div>
 			<div class="indexMain">

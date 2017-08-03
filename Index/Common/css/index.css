@@ -14,10 +14,9 @@
 	width: 1200px;
 	height: 480px;
 	overflow: hidden;
-	
+	position: relative;
 }
 .indexWrap .indexSwiper .swiper-container .swiper-wrapper{
-	height: 480px;
 	overflow: hidden;
 }
 .indexWrap .indexSwiper .swiper-container .swiper-wrapper .swiper-slide{
