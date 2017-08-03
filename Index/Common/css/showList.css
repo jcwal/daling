@@ -206,11 +206,9 @@
 	position:relative;
 }
 .proList .proChoice .choiceLeft{
-	
 	position: absolute;	
 }
 .proList .proChoice .choiceLeft li{
-	
 	float:left;
 	margin-right: 10px;
 }
@@ -221,7 +219,6 @@
 }
 .proList .proChoice .choiceRight li{
 	float:left;
-	position: absolute;
 	margin-right: 10px;
 }
 /*排序栏默认项*/
@@ -279,7 +276,7 @@
 	background: url("../images/footer/up.png") no-repeat;
 }
 /*商品总页数，当前页字体颜色*/
-.proList .proChoice ul:nth-child(2) li .warn{
+.proList .proChoice .choiceRight li .warn{
 	color: #e14958;
 }
 .proList .ProSection{
@@ -292,7 +289,7 @@
 	border:1px solid #e5e5e5;
 	margin-left: 20px;
 	margin-bottom: 20px;
-	float:left;
+	/*float:left;*/
 }
 /*商品图片*/
 .proList .ProSection .proData a img{

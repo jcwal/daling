@@ -3,12 +3,25 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>商品列表</title>
+
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/showList.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.jquery.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script>
+
 	</head>
 	<body>
+		<div class="navigator">
+			<include file='Public:header' />
+		</div>
 		<section class="proList">
 			<div class="proNav">
 				<div id="proHome">
@@ -234,5 +247,11 @@
 				</div>	
 			</div>	
 		</section>
+		<div class="asideBar">
+			<include file='Public:aside' />
+		</div>
+		<div class="footer">
+			<include file='Public:footer' />
+		</div>
 	</body>
 </html>
