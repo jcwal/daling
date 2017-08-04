@@ -175,7 +175,6 @@
     float: left;
     font-size: 16px;
     width: 220px;
-    background-color: ;
     position: relative;
     z-index: 100;
     cursor: pointer;
@@ -186,9 +185,144 @@
     color: #fff;
     font-size: 16px;
 }  
-.navigator .header .bottom .bottomWrap .category .title .categoryDetail{
-
+.navigator .header .bottom .bottomWrap .category .categoryDetail{
+    background-color: #e8e3eb;
+    width: 220px;
+    position: absolute;
+    color: #666;
+    height: 479px;
 }
+.navigator .header .bottom .bottomWrap .category .categoryDetail a:hover{
+    text-decoration: underline;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl{
+    padding: 25px 20px 0;
+    border: 1px solid #e8e3eb;
+    height: 93px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl:hover{
+    background: #fff;
+    border-top: 1px solid #654579;
+    border-bottom: 1px solid #654579;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryShelter{
+    right: 0px;
+    background:transparent;
+    z-index: 10;
+    width: 1px;
+    height: 25%;
+    position: absolute;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl:nth-of-type(1) .categoryShelter{
+    top: 0; 
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl:nth-of-type(2) .categoryShelter{
+    top: 120px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl:nth-of-type(3) .categoryShelter{
+    top: 240px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl:nth-of-type(4) .categoryShelter{
+    top: 360px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl dt{
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 16px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl dt img{
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categorySort{
+    line-height: 22px;
+    height: 43px;
+    position: relative;
+    padding-right: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px dotted #d9d9d9;
+    width: 168px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categorySort .sortBox{
+    height: 44px;
+    overflow: hidden;
+    font-size: 12px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categorySort .sortBox a{
+    white-space: nowrap;
+    margin-right: 6px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop{
+    width: 600px;
+    min-height: 443px;
+    overflow: hidden;
+    position: absolute;
+    left: 219px;
+    top: 0px;
+    background-color: #fff;
+    padding: 20px 40px 15px;
+    border: 1px solid #654579;
+    display: none;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropTitle{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .brand{
+    margin-left: -13px;
+    padding-bottom: 40px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .brand a{
+    float: left;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .brand a img{
+    width: 140px;
+    height: 70px;
+    margin-left: 13px;
+    vertical-align: middle;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail {
+    overflow: hidden;
+    font-size: 12px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .brandAd{
+    float: right;
+    width: 293px;
+    height: 270px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .brandAd a,
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .brandAd a img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item{
+    margin-bottom: 20px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item:last-of-type{
+    margin-bottom: 0px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item .itemTitle{
+    float: left;
+    width: 80px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item .itemDetail{
+    overflow: hidden;
+    width: 208px;
+    line-height: 22px;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item .itemDetail a{
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.navigator .header .bottom .bottomWrap .category .categoryDetail dl .categoryDrop .dropBox .dropDetail .item
 .navigator .header .bottom .bottomWrap .naviBar{
     overflow: hidden;
     padding-left: 30px;
