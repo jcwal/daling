@@ -231,15 +231,10 @@
 								</li>
 							</ul>
 						</div>
-<<<<<<< HEAD
-						<div class="content">
-							<div class="content_info">
-=======
 						<!--商品内容-->
 						<div class="content">
 							<div class="content_info">
 								<!--商品参数-->
->>>>>>> master
 								<div class="content_info_1">
 									<dl>
 										<dt>商品参数</dt>
@@ -256,11 +251,6 @@
 										</dd>
 									</dl>
 								</div>
-<<<<<<< HEAD
-							</div>
-						</div>
-					</div>
-=======
 								<!--商品展示-->
 								<div class="content_info_2">
 									<dl>
@@ -620,7 +610,6 @@
 							<i class="scroll-down scrolls"></i>
 						</div>
 					</div>
->>>>>>> master
 				</div>
 			</div>
 			

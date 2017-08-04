@@ -13,7 +13,6 @@
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
-
 	</head>
 	<body>
 		<div class="navigator">
@@ -71,17 +70,472 @@
 		</div>
 	</div>
 	<div class="bottom">
-		<div class="bottomWrap">
+		<div class="bottomWrap clearFloat">
 			<div class="category">
 				<p class="title">
 					全部分类
 				</p>
 				<div class="categoryDetail">
-					
+					<dl>
+						<dt>
+							<img src="__ROOT__/Index/Common/images/header/categoryIcon1.png" alt="达令" />
+							极致美护
+						</dt>
+						<dd class="categoryShelter"></dd>
+						<dd class="categorySort">
+							<div class="sortBox">
+								<a href="#">面膜</a>
+								<a href="#">化妆水</a>
+								<a href="#">洁面</a>
+								<a href="#">防嗮</a>
+								<a href="#">面霜/乳液</a>
+								<a href="#">卸妆</a>
+								<a href="#">精华</a>
+							</div>
+						</dd>
+						<dd class="categoryDrop">
+							<div class="dropBox">
+								<div class="dropTitle">
+									极致美护
+								</div>
+								<div class="brand clearFloat">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-1.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-2.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-3.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-4.jpg" alt="达令" />
+									</a>
+								</div>
+								<div class="dropDetail clearFloat">
+									<div class="brandAd">
+										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd1.jpg" alt="达令" /></a>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">面部护肤</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">面膜</a>
+											<a href="#">化妆水</a>
+											<a href="#">洁面</a>
+											<a href="#">防嗮</a>
+											<a href="#">面霜/乳液</a>
+											<a href="#">精华</a>
+											<a href="#">眼部护理</a>
+											<a href="#">护肤套装</a>
+											<a href="#">唇部护理</a>
+											<a href="#">精油</a>
+											<a href="#">美妆工具</a>
+											<a href="#">男士专区</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">彩妆香氛</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">卸妆</a>
+											<a href="#">女士香水</a>
+											<a href="#">隔离/底妆</a>
+											<a href="#">唇膏口红</a>
+											<a href="#">眼妆/腮红</a>
+											<a href="#">美甲</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">个护保健</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">沐浴/体乳</a>
+											<a href="#">洗发/护发</a>
+											<a href="#">口腔护理</a>
+											<a href="#">美体护理</a>
+											<a href="#">手足护理</a>
+											<a href="#">驱蚊凝露</a>
+											<a href="#">女性卫生</a>
+											<a href="#">保健品</a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="__ROOT__/Index/Common/images/header/categoryIcon2.png" alt="达令" />
+							全球零食
+						</dt>
+						<dd class="categoryShelter"></dd>
+						<dd class="categorySort">
+							<div class="sortBox">
+								<a href="#">饼干</a>
+								<a href="#">威化</a>
+								<a href="#">麦片</a>
+								<a href="#">糖果</a>
+								<a href="#">巧克力</a>
+								<a href="#">膨化食品</a>
+								<a href="#">咖啡</a>
+							</div>
+						</dd>
+						<dd class="categoryDrop clearFloat">
+							<div class="dropBox clearFloat">
+								<div class="dropTitle">
+									全球零食
+								</div>
+								<div class="brand clearFloat">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-1.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-2.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-3.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-4.jpg" alt="达令" />
+									</a>
+								</div>
+								<div class="dropDetail clearFloat">
+									<div class="brandAd">
+										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd2.jpg" alt="达令" /></a>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">饼干/糕点</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">饼干</a>
+											<a href="#">威化</a>
+											<a href="#">糕点</a>
+											<a href="#">曲奇</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">咖啡/冲饮</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">蜂蜜</a>
+											<a href="#">麦片</a>
+											<a href="#">咖啡</a>
+											<a href="#">冲引粉奶茶</a>
+											<a href="#">茶/花果茶</a>
+											<a href="#">养生柚子茶</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">糖果/巧克力</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">糖果</a>
+											<a href="#">巧克力</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">休闲食品</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">膨化零食</a>
+											<a href="#">薯片玉米片</a>
+											<a href="#">海味即食</a>
+											<a href="#">果冻/布丁</a>
+											<a href="#">肉松/肉干</a>
+											<a href="#">蜜饯</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">坚果/果干</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">坚果</a>
+											<a href="#">果干</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">饮料/酒水</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">饮料</a>
+											<a href="#">酒</a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="__ROOT__/Index/Common/images/header/categoryIcon3.png" alt="达令" />
+							创意生活
+						</dt>
+						<dd class="categoryShelter"></dd>
+						<dd class="categorySort">
+							<div class="sortBox">
+								<a href="#">水杯/保温杯</a>
+								<a href="#">随身小物件</a>
+								<a href="#">玩偶</a>
+								<a href="#">钥匙挂件</a>
+							</div>
+						</dd>
+						<dd class="categoryDrop clearFloat">
+							<div class="dropBox clearFloat">
+								<div class="dropTitle">
+									创意生活
+								</div>
+								<div class="brand clearFloat">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-1.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-2.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-3.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-4.jpg" alt="达令" />
+									</a>
+								</div>
+								<div class="dropDetail clearFloat">
+									<div class="brandAd">
+										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd3.jpg" alt="达令" /></a>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">厨房伴侣</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">水杯/保温杯</a>
+											<a href="#">厨房配件</a>
+											<a href="#">厨房清洁</a>
+											<a href="#">水壶/净水壶</a>
+											<a href="#">茶具</a>
+											<a href="#">咖啡具/酒具</a>
+											<a href="#">餐具</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">创意礼物</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">随身小物件</a>
+											<a href="#">玩偶</a>
+											<a href="#">钥匙挂件</a>
+											<a href="#">其他创意礼品</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">品质生活</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">衣物清洁</a>
+											<a href="#">居室清洁</a>
+											<a href="#">卫浴清洁</a>
+											<a href="#">伞/雨具</a>
+											<a href="#">除臭/芳香</a>
+											<a href="#">收纳用品</a>
+											<a href="#">卫浴用品</a>
+											<a href="#">驱蚊/防蚊</a>
+											<a href="#">纸品湿巾</a>
+											<a href="#">汽车用品</a>
+											<a href="#">宠物用品</a>
+											<a href="#">健身器材</a>
+											<a href="#">户外用品</a>
+											<a href="#">家居服</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">温馨家居</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">床品套件</a>
+											<a href="#">抱枕靠垫</a>
+											<a href="#">被子/毯子</a>
+											<a href="#">毛巾浴巾</a>
+											<a href="#">创意家居</a>
+											<a href="#">香薰/蜡烛</a>
+											<a href="#">装饰摆件</a>
+											<a href="#">墙贴/装饰贴</a>
+											<a href="#">相框/照片墙</a>
+											<a href="#">钟表</a>
+											<a href="#">其他家居用品</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">趣味文具</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">记事本</a>
+											<a href="#">笔</a>
+											<a href="#">文具收纳</a>
+											<a href="#">其他办公文具</a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<img src="__ROOT__/Index/Common/images/header/categoryIcon4.png" alt="达令" />
+							时尚配饰
+						</dt>
+						<dd class="categoryShelter"></dd>
+						<dd class="categorySort">
+							<div class="sortBox">
+								<a href="#">奢侈品</a>
+								<a href="#">配饰</a>
+								<a href="#">箱包</a>
+								<a href="#">项链</a>
+								<a href="#">手链</a>
+								<a href="#">耳饰</a>
+								<a href="#">戒指</a>
+								<a href="#">太阳镜</a>
+							</div>
+						</dd>
+						<dd class="categoryDrop clearFloat">
+							<div class="dropBox clearFloat">
+								<div class="dropTitle">
+									时尚配饰
+								</div>
+								<div class="brand clearFloat">
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-1.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-2.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-3.jpg" alt="达令" />
+									</a>
+									<a href="#">
+										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-4.jpg" alt="达令" />
+									</a>
+								</div>
+								<div class="dropDetail clearFloat">
+									<div class="brandAd">
+										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd4.jpg" alt="达令" /></a>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">时尚配饰</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">奢侈品</a>
+											<a href="#">配饰</a>
+											<a href="#">箱包</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">饰品</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">项链</a>
+											<a href="#">手链</a>
+											<a href="#">耳饰</a>
+											<a href="#">戒指</a>
+											<a href="#">太阳镜</a>
+											<a href="#">腕表</a>
+											<a href="#">发饰</a>
+											<a href="#">“鹿”小物</a>
+											<a href="#">随身小物件</a>
+											<a href="#">毛衣链</a>
+											<a href="#">其它配饰</a>
+											<a href="#">镜架</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">脚链</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">脚链</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">轻奢</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">轻奢大包</a>
+											<a href="#">轻奢小包</a>
+											<a href="#">轻奢钱包</a>
+											<a href="#">轻奢手包</a>
+											<a href="#">轻奢手包</a>
+											<a href="#">轻奢手表</a>
+											<a href="#">轻奢眼镜</a>
+											<a href="#">轻奢饰品</a>
+											<a href="#">轻奢腰带</a>
+											<a href="#">轻奢配件</a>
+											<a href="#">轻奢鞋履</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">包袋</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">双肩包</a>
+											<a href="#">单肩包</a>
+											<a href="#">手提包</a>
+											<a href="#">钱包</a>
+											<a href="#">拉杆箱</a>
+											<a href="#">功能包</a>
+											<a href="#">零钱包</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">服饰配件</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">丝巾</a>
+											<a href="#">帽子</a>
+											<a href="#">袜子</a>
+											<a href="#">手套</a>
+											<a href="#">贴身衣物</a>
+											<a href="#">腰带</a>
+											<a href="#">其它服配</a>
+											<a href="#">围巾</a>
+											<a href="#">围巾</a>
+										</div>	
+									</div>
+									<div class="item">
+										<div class="itemTitle">
+											<a href="#">鞋履</a>
+										</div>
+										<div class="itemDetail">
+											<a href="#">运动鞋</a>
+											<a href="#">拖鞋</a>
+											<a href="#">鞋</a>
+											<a href="#">钱包</a>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</dd>
+					</dl>
 				</div>
 
 			</div>
-			<ul class="naviBar">
+			<ul class="naviBar clearFloat">
 				<li><a href="#">首页</a></li>
 				<li><a href="#">极致美护</a></li>
 				<li><a href="#">全球零食</a></li>
@@ -95,7 +549,7 @@
 </header>
 
 		</div>
-		<div class="indexWrap">
+		<div class="indexWrap" ng-app='indexApp' ng-controller='indexController'>
 			<div class="indexSwiper">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -139,6 +593,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -168,6 +626,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -197,6 +659,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -226,6 +692,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -257,6 +727,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -286,6 +760,10 @@
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
 									</a>
+									<span class="joinTrolley">
+										加入购物车
+										<span></span>
+									</span>
 								</div>
 								<div class="text">
 									<div class="textUp">
@@ -565,16 +1043,7 @@
 						<span></span>
 						买了又买
 					</h3>
-<<<<<<< HEAD
-					
-				</section>
-				<section class="indexDarkHorse"></section>
-				<div class="indexTitle">
-					<p>今日特卖·闪购</p>
-				</div>
-				<section class="indexSale"></section>
-=======
-					<div class="box">
+					<div class="box clearFloat">
 						<dl>
 							<dt>极致美护</dt>
 							<dd class="clearFloat current">
@@ -1641,7 +2110,6 @@
 						</div>
 					</div>
 				</section>
->>>>>>> master
 			</div>
 		</div>
 		<div class="asideBar">
@@ -1764,4 +2232,5 @@
 	</body>
 	<script type="text/javascript" src="__ROOT__/Index/common/js/index.js"></script>
 	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/header.js"></script>
 </html>

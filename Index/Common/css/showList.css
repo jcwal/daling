@@ -68,12 +68,12 @@
 }
 .proMenuList{
 	position:absolute;
-	left:59px;
-	top:33px;
+	left:58px;
+	top:32px;
 	width:81px;
 	border:1px solid #ccc;
 	background-color: #fff;
-	z-index: 1;
+	z-index: 10;
 	display: none;
 }
 /*极致美护--下拉按钮*/
@@ -139,13 +139,48 @@
 	width:100px;
 	margin-right:20px;
 }
-.proList .showPro dl>a{
+/*极致美护*/
+.proList .showPro .recommend{
+	/*display: none;*/
+}
+/*全球零食*/
+.proList .showPro .snacks{
+	display: none;
+}
+/*创意生活*/
+.proList .showPro .life{
+	display: none;
+}
+/*时尚配饰*/
+.proList .showPro .jewel{
+	display: none;
+}
+/*尖货女装*/
+.proList .showPro .clothing{
+	display: none;
+}
+/*3C家电*/
+.proList .showPro .machine{
+	display: none;
+}
+.proList .showPro dl:nth-child(1)>a{
+	/*display: none;*/
+}
+.proList .showPro dl:nth-child(3)>a{
+	/*display: none;*/
+}
+.proList .showPro dl:nth-child(4)>a{
+	/*display: none;*/
+}
+.proList .showPro dl:nth-child(5)>a{
+	/*display: none;*/
+}
+.proList .showPro dl:nth-child(6)>a{
 	/*display: none;*/
 }
 .proList .showPro dl>a:hover{
 	text-decoration: underline;
 }
-
 .proList .showPro dl .showProMul{
 	display: none;
 	float:left;
@@ -154,10 +189,17 @@
 	border:1px solid #ccc;
 	padding:10px 20px;
 	margin-top: 10px;
-	margin-bottom: 14px;
-	white-space: nowrap;
-    text-overflow: ellipsis;
+	margin-bottom: 14px;	
 }
+
+.proList .showPro .life dl:nth-child(2) .showProMul{
+	/*display: block;*/
+}
+.proList .showPro dl:nth-child(6) .showProMul{
+	/*display: block;*/
+}
+
+
 /*多选项*/
 .proList .showPro dl .showProMul label{
 	float:left;
@@ -185,17 +227,21 @@
 	width:58px;
 	height:24px;
 	line-height: 24px;
+	color: #666;
 	border:1px solid #ccc;
 	position: absolute;
 	background-color: #fff;
 	
 }
 .proList .showPro dl .selectMore{
-	right:58px;
+	right:80px;
 }
 .proList .showPro dl .listMore{
-	right:-2px;
+	right:20px;
+	background:url("../images/footer/right.png") no-repeat -2px 4px; 
+
 }
+/*排序栏*/
 .proList .proChoice{
 	height:36px;
 	border:1px solid #ccc;
@@ -270,7 +316,6 @@
 	background: url("../images/footer/down.png") no-repeat;
 }
 
-
 /*排序--价格--上箭头*/
 .priceArrow #up{
 	background: url("../images/footer/up.png") no-repeat;
@@ -289,7 +334,7 @@
 	border:1px solid #e5e5e5;
 	margin-left: 20px;
 	margin-bottom: 20px;
-	/*float:left;*/
+	float:left;
 }
 /*商品图片*/
 .proList .ProSection .proData a img{
@@ -326,8 +371,49 @@
 	padding-bottom:8px;
 	color:#999;
 }
+/*页脚分页*/
 
 
+.proList .changePage{
+	float: right;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.proList .changePage ul{
+	float:left;
 
+}
+.proList .changePage ul li{
+	text-align: center;
+    height: 28px;
+    width:28px;
+    border:1px solid #e5e5e5;
+    line-height: 28px;
+    float: left;
+    margin-left: 10px;
+    
+}
+.proList .changePage ul li:nth-child(1){
+	background-color: #e5e5e5;
+    color: #fff;
+    cursor: default;
+}
+/*页脚分页--上/下一页*/
+.proList .changePage a{
+	width:48px;
+	text-align: center;
+    height: 28px;
+    border:1px solid #e5e5e5;
+    line-height: 28px;
+    float: left;
+    margin-left: 10px;
+}
+/*页脚分页--上一页*/
+.proList .changePage a:nth-child(1){
+	display: none;
+}
+a:hover{
+	text-decoration: underline;
+}
 
 
