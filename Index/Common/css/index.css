@@ -6,9 +6,10 @@
 }
 /*swiper样式*/
 .indexWrap .indexSwiper{
-	width: 1200px;
+	width: 100%;
 	height: 481px; 
 	margin: 0 auto;
+    background: rgb(255,247,237);
 }
 .indexWrap .indexSwiper .swiper-container{
 	width: 1200px;
@@ -137,6 +138,32 @@
 .indexWrap .indexMain .indexNew .box {
 	width: 100%;
 	height:660px;
+}
+.indexWrap .indexMain .indexNew .box .joinTrolley{
+    width: 283px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #895ca5;
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.indexWrap .indexMain .indexNew .box .joinTrolley span{
+    background: url('../images/index/icons.png');
+    background-position: left -88px;
+    width: 18px;
+    margin-top: -5px;
+    display: inline-block;
+    height: 16px;
+    margin-left: 7px;
+    vertical-align: middle;
 }
 .indexWrap .indexMain .indexNew .box .up{
 	margin-left: -20px;
