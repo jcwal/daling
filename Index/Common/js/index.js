@@ -23,8 +23,8 @@ var mySwiper = new Swiper('.swiper-container', {
 	},
 })
 //初始化页面
-var indexApp = angular.module('indexApp',[]);
-indexApp.controller('indexController',function($scope,$http,$interval,$location){
+var app = angular.module('myapp',[]);
+app.controller('indexController',function($scope,$http,$interval,$location){
 	//ajax获取数据，初始化页面
 	$http({
 		method:'GET',
