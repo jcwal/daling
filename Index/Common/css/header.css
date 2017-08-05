@@ -127,6 +127,14 @@
     transform: translate(0,-50%);
     right: 18px;
 }
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .telHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: -115px;
+}
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .pwdHint{
     color:red;
     font-size: 12px;
@@ -135,13 +143,37 @@
     transform: translate(0,-50%);
     right: 30px;
 }
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .pwdHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: -104px;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .pwdRHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: -104px;
+}
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .verifyHint{
     color:red;
     font-size: 12px;
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
-    right: 6px;
+    right: 40px;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .verifyHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: -93px;
 }
 /*登陆*/
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm {
@@ -204,6 +236,14 @@
     width: 145px;
     margin-right: 16px;
 }
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel div .verifyImg{
+    position: absolute;
+    width: 100px;
+    height: 28px;
+    top:50%;
+    transform: translate(0,-50%);
+    border: 0;
+}
 .loginPass{
     background: #e14958;
 }
@@ -259,6 +299,9 @@
 }
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .registerAgreement a{
     color: #00F;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm .registerAgreement a:hover{
+    text-decoration: underline;
 }
 /*注册协议*/
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .agreementDetail{
@@ -323,6 +366,7 @@
     padding-right: 20px;
 }
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .agreementDetail .detailBox .detailBtn button{
+    cursor: pointer;
     float: right;
     width: 142px;
     height: 38px;

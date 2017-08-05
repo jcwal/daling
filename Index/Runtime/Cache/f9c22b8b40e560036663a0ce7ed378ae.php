@@ -54,7 +54,7 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入您的手机号" id='usernameLogin' ng-model='usernameLogin' />
-						<span class="telHint">
+						<span class="telHint" ng-hide='telHintL()'>
 							*请输入正确的号码
 						</span>
 					</div>
@@ -63,7 +63,7 @@
 							<span></span>
 						</span>
 						<input type="password" placeholder="请输入您的密码" id='passwordLogin' ng-model='passwordLogin' />
-						<span class="pwdHint">
+						<span class="pwdHint" ng-hide='pwdHintL()'>
 							*请输入您的密码
 						</span>
 					</div>
@@ -72,9 +72,9 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入验证码" id='verifyLogin' ng-model='verifyLogin' />
-						<img src="" alt="" class="verifyImg" />
-						<span class="verifyHint">
-							*请输入正确的验证码
+						<img src="__APP__/Header/verify" alt="达令" class="verifyImg" ng-click='changeVerify()' />
+						<span class="verifyHint" ng-hide='verifyHintL()'>
+							*请输入验证码
 						</span>
 					</div>
 					<button id="submitLogin" ng-click='loginSub()' ng-class='classLogin()' ng-disabled='judgeLogin()' >登陆</button>
@@ -85,24 +85,37 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入您的手机号" id='usernameRegister' ng-model='usernameRegister' />
+						<span class="telHint" ng-hide='telHintR()'>
+							*请输入正确的号码
+						</span>
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="password" placeholder="请输入您的密码" id='passwordRegister' ng-model='passwordRegister' />
+						<span class="pwdHint" ng-hide='pwdHintR()'>
+							*请输入您的密码
+						</span>
 					</div>
 					<div class="passwordRepeat">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat' ng-model='passwordRegisterReapeat' />
+						<span class="pwdRHint" ng-hide='pwdRHintR()'>
+							*两次输入不一致
+						</span>
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入验证码" id='verifyRegister' ng-model='verifyRegister' />
+						<img src="__APP__/Header/verify" alt="达令" class="verifyImg" ng-click='changeVerify()' />
+						<span class="verifyHint" ng-hide='verifyHintR()'>
+							*请输入验证码
+						</span>
 					</div>
 					<div class="registerAgreement">
 						<input type="checkbox" ng-model='registerAgreement' />
@@ -275,7 +288,7 @@
 							<p>北京普缇客科技有限公司版权所有，在现有法律法规允许的范围内，保留最终的解释权利。</p>
 						</div>
 						<div class="detailBtn">
-							<button>同意并继续</button>
+							<button ng-click='agreement()'>同意并继续</button>
 						</div>
 					</div>
 					<div class="mask"></div>
