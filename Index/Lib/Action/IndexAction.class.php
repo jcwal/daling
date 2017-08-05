@@ -1,5 +1,4 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {
     public function index(){
 		$this->display('index');
@@ -8,5 +7,8 @@ class IndexAction extends Action {
 		$Index = D("Index");
     	$arr = $Index->initial();
 		$this->ajaxReturn($arr);
+	}
+	public function book(){
+		$this->display('book');
 	}
 }
