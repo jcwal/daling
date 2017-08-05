@@ -68,8 +68,8 @@
     opacity: 0.4;
 }
 .navigator .header .loginRegisterWrap .loginRegisterInner{
-    width: 410px;
-    height: 430px;
+    width: 450px;
+    height: 480px;
     margin: -235px 0 0 -235px;
     position: fixed;
     padding: 20px 30px;
@@ -117,6 +117,31 @@
     background-image: url('../images/header/arrow.png');
     background-position: 0 18px;
     background-repeat: no-repeat;
+}
+/*提示*/
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .telHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 18px;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .pwdHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 30px;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .verifyHint{
+    color:red;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 6px;
 }
 /*登陆*/
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm {
@@ -179,8 +204,10 @@
     width: 145px;
     margin-right: 16px;
 }
-#submitLogin{
-    /*background: #e14958;*/
+.loginPass{
+    background: #e14958;
+}
+#submitLogin{   
     width: 320px;
     height: 40px;
     margin-top: 16px;
@@ -196,6 +223,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
+    cursor: pointer;
 }
 /*注册*/
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm{

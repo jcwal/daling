@@ -8,4 +8,7 @@ class IndexAction extends Action {
     	$arr = $Index->initial();
 		$this->ajaxReturn($arr);
 	}
+	public function book(){
+		$this->display('book');
+	}
 }

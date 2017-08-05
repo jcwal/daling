@@ -53,53 +53,63 @@
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入您的用户名" id='usernameLogin'/>
+						<input type="text" placeholder="请输入您的手机号" id='usernameLogin' ng-model='usernameLogin' />
+						<span class="telHint">
+							*请输入正确的号码
+						</span>
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请输入您的密码" id='passwordLogin'/>
+						<input type="password" placeholder="请输入您的密码" id='passwordLogin' ng-model='passwordLogin' />
+						<span class="pwdHint">
+							*请输入您的密码
+						</span>
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入验证码" id='verifyLogin'/>
+						<input type="text" placeholder="请输入验证码" id='verifyLogin' ng-model='verifyLogin' />
+						<img src="" alt="" class="verifyImg" />
+						<span class="verifyHint">
+							*请输入正确的验证码
+						</span>
 					</div>
-					<button id="submitLogin">登陆</button>
+					<button id="submitLogin" ng-click='loginSub()' ng-class='classLogin()' ng-disabled='judgeLogin()' >登陆</button>
 				</div>
 				<div class="registerForm">
 					<div class="username">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入您的用户名" id='usernameRegister'/>
+						<input type="text" placeholder="请输入您的手机号" id='usernameRegister' ng-model='usernameRegister' />
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请输入您的密码" id='passwordRegister'/>
+						<input type="password" placeholder="请输入您的密码" id='passwordRegister' ng-model='passwordRegister' />
 					</div>
 					<div class="passwordRepeat">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat'/>
+						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat' ng-model='passwordRegisterReapeat' />
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入验证码" id='verifyRegister'/>
+						<input type="text" placeholder="请输入验证码" id='verifyRegister' ng-model='verifyRegister' />
 					</div>
 					<div class="registerAgreement">
-						<input type="checkbox" />
+						<input type="checkbox" ng-model='registerAgreement' />
 						我已阅读并同意
 						<a href="#">《达令用户注册协议》</a>
 					</div>
-					<button id="submitRegister">注册</button>
+					<button id="submitRegister" ng-click='registerSub()' ng-class='classRegister()' ng-disabled='judgeRegister()'>注册</button>
 				</div>
 
 				<div class="agreementDetail">

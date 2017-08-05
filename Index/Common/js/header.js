@@ -57,14 +57,39 @@ $('.navigator .header .loginRegisterWrap .panelTab .tabRegister').on('click',fun
 	$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').removeClass('active');
 });
 app.controller('headerController',function($scope,$http){
+	$scope.usernameLogin = '';
+	$scope.passwordLogin = '';
+	$scope.verifyLogin = '';
+	$scope.usernameRegister = '';
+	$scope.passwordRegister = '';
+	$scope.passwordRegisterReapeat = '';
+	$scope.verifyRegister = '';
+	$scope.registerAgreement = false;
 	$scope.loginSub = function(){
-
+		console.log($scope.usernameLogin.length);
 	};
 	$scope.registerSub = function(){
-
+		console.log(11);
 	};
-	$scope.judge = function(){
-		
+	$scope.classLogin = function(){
+		if($scope.usernameLogin != '' && $scope.passwordLogin != '' && $scope.verifyLogin != '' && $scope.usernameLogin.length == 11){
+			return 'loginPass';
+		}else{
+			return '';
+		};
+	};
+	$scope.classRegister = function(){
+		if($scope.usernameRegister != '' && $scope.passwordRegister != '' && $scope.passwordRegisterReapeat != '' && $scope.verifyRegister != '' && $scope.usernameRegister.length == 11 && $scope.registerAgreement == true && $scope.passwordRegister === $scope.passwordRegisterReapeat){
+			return 'loginPass';
+		}else{
+			return '';
+		};
+	};
+	$scope.judgeLogin = function(){
+		return !($scope.usernameLogin != '' && $scope.passwordLogin != '' && $scope.verifyLogin != '' && $scope.usernameLogin.length == 11);
+	};
+	$scope.judgeRegister = function(){
+		return !($scope.usernameRegister != '' && $scope.passwordRegister != '' && $scope.passwordRegisterReapeat != '' && $scope.verifyRegister != '' && $scope.usernameRegister.length == 11 && $scope.registerAgreement == true && $scope.passwordRegister === $scope.passwordRegisterReapeat);
 	};
 });
 
