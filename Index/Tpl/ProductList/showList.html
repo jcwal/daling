@@ -11,16 +11,17 @@
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/showList.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+		
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script>
 	</head>
-	<body>
+	<body ng-app="myapp">
 		<div class="navigator">
 			<include file='Public:header' />
 		</div>
-		<section class="proList">
+		<section class="proList" ng-controller="myctrl">
 			<div class="proNav">
 				<div id="proHome">
 					<a href=""><span class="home"></span></a>
@@ -43,17 +44,17 @@
 			</div>
 			<div class="proMenuList">
 				<ul>
-					<li class="single">3C家电</li>
-					<li class="single">尖货女装</li>
-					<li class="single">时尚配饰</li>
-					<li class="single">创意生活</li>
-					<li class="single">全球零食</li>
-					<li class="single">极致美护</li>
+					<li class="single" ng-click="myVar='machine'">3C家电</li>
+					<li class="single" ng-click="myVar='clothing'" >尖货女装</li>
+					<li class="single" ng-click="myVar='jewel'">时尚配饰</li>
+					<li class="single" ng-click="myVar='life'">创意生活</li>
+					<li class="single" ng-click="myVar='snacks'">全球零食</li>
+					<li class="single" >极致美护</li>
 				</ul>
 			</div>	
-			<nav class="showPro">
+			<nav class="showPro" ng-switch="myVar">
 				<!-- 极致美护对应的商品分类 -->
-				<div class="recommend">
+				<div class="recommend"  ng-switch-default>
 					<dl>
 						<dt>达令力荐：</dt>
 						<a href="##"><dd>告别干燥深补水</dd></a>
@@ -207,7 +208,7 @@
 				</div>	
 
 				<!-- 全球零食 -->
-				<div class="snacks">
+				<div class="snacks" ng-switch-when="snacks">
 					<dl>
 						<dt>达令力荐：</dt>
 						<a href="##"><dd>宿舍宵夜吃起来</dd></a>
@@ -322,7 +323,7 @@
 				</div>
 
 				<!-- 创意生活 -->
-				<div class="life">
+				<div class="life" ng-switch-when="life">
 					<dl>
 						<dt>达令力荐：</dt>
 						<a href="##"><dd>给女票贴心の礼</dd></a>
@@ -431,7 +432,7 @@
 
 
 				<!-- 时尚配饰 -->
-				<div class="jewel">
+				<div class="jewel" ng-switch-when="jewel">
 					<dl>
 						<dt>达令力荐：</dt>
 						<a href="##"><dd>个性心机配饰</dd></a>
@@ -543,7 +544,7 @@
 				</div>
 
 				<!-- 尖货女装 -->
-				<div class="clothing">
+				<div class="clothing" ng-switch-when="clothing">
 					<dl>
 						<dt>分类：</dt>
 						<a href="##"><dd>裙装</dd></a>
@@ -621,7 +622,7 @@
 				</div>
 
 				<!-- 3C家电 -->
-				<div class="machine">
+				<div class="machine" ng-switch-when="machine">
 					<dl>
 						<dt>分类：</dt>
 						<a href="##"><dd>家用电器</dd></a>
@@ -754,6 +755,8 @@
 			<include file='Public:footer' />
 		</div>
 	</body>
+	<script src="__ROOT__/Index/Common/js/header.js" type="text/javascript"></script>
+	<script src="__ROOT__/Index/Common/js/aside.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		
 

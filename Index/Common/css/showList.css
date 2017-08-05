@@ -144,25 +144,25 @@
 	/*display: none;*/
 }
 /*全球零食*/
-.proList .showPro .snacks{
+/*.proList .showPro .snacks{
 	display: none;
-}
+}*/
 /*创意生活*/
-.proList .showPro .life{
+/*.proList .showPro .life{
 	display: none;
-}
+}*/
 /*时尚配饰*/
-.proList .showPro .jewel{
+/*.proList .showPro .jewel{
 	display: none;
-}
+}*/
 /*尖货女装*/
-.proList .showPro .clothing{
+/*.proList .showPro .clothing{
 	display: none;
-}
+}*/
 /*3C家电*/
-.proList .showPro .machine{
+/*.proList .showPro .machine{
 	display: none;
-}
+}*/
 .proList .showPro dl:nth-child(1)>a{
 	/*display: none;*/
 }
