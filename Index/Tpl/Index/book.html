@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>达令</title>
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/book.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery.fly.min.js"></script>
+	</head>
+	<body ng-app="myapp">
+		<div class="navigator">
+			<include file='Public:header' />
+		</div>
+		<!--消费者协议说明书-->
+		<div class="da-consumer">
+			<p>尊敬的客户：</p>
+			<p>您好!</p>
+			<p>
+				在您选购境外商品前，麻烦您仔细阅读此文，同意本文所告知内容后再进行下单购买：<br />
+				1.您在本（公司）网站上购买的境外商品为产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看网站的翻译或者在线联系我们的客服。<br />
+				2.您购买的境外商品适用的品质、健康、标识等项目使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此可能产生的危害或损失以及其他风险，将由您个人承担。<br />
+				
+    				3.您在本（公司）网站上购买保税区发货的境外商品时，自动视为由达令极速免税店代您向海关进行申报和代缴税款。<br />
+    
+			</p>
+		</div>
+		
+		<include file='Public:aside' />
+		<div class="footer">
+			<include file='Public:footer' />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('myapp',[]);
+	</script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/header.js"></script>
+</html>
+<!--/**
+ *                             _ooOoo_
+ *                            o8888888o
+ *                            88" . "88
+ *                            (| -_- |)
+ *                            O\  =  /O
+ *                         ____/`---'\____
+ *                       .'  \\|     |//  `.
+ *                      /  \\|||  :  |||//  \
+ *                     /  _||||| -:- |||||-  \
+ *                     |   | \\\  -  /// |   |
+ *                     | \_|  ''\---/''  |   |
+ *                     \  .-\__  `-`  ___/-. /
+ *                   ___`. .'  /--.--\  `. . __
+ *                ."" '<  `.___\_<|>_/___.'  >'"".
+ *               | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *               \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *          ======`-.____`-.___\_____/___.-`____.-'======
+ *                             `=---='
+ *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *                     佛祖保佑        永无BUG
+ *            佛曰:
+ *                   写字楼里写字间，写字间里程序员；
+ *                   程序人员写程序，又拿程序换酒钱。
+ *                   酒醒只在网上坐，酒醉还来网下眠；
+ *                   酒醉酒醒日复日，网上网下年复年。
+ *                   但愿老死电脑间，不愿鞠躬老板前；
+ *                   奔驰宝马贵者趣，公交自行程序员。
+ *                   别人笑我忒疯癫，我笑自己命太贱；
+ *                   不见满街漂亮妹，哪个归得程序员？
+*/-->

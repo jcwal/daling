@@ -2,18 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>商品列表</title>
-
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/showList.css" />
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
-		<!-- <script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script> -->
+		<title>达令</title>
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/book.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery.fly.min.js"></script>
 	</head>
 	<body ng-app="myapp">
 		<div class="navigator">
@@ -796,735 +795,21 @@
 </header>
 
 		</div>
-		<div class="proList" ng-controller="myctrl">
-			<div class="proNav">
-				<div id="proHome">
-					<a href=""><span class="home"></span></a>
-					<span class="angle"></span>	
-				</div>
-				<div id="proMenu">
-					<a href="##" class="proMenuSearch">
-						<span class="initVal">极致美护</span>
-						<span class="up"></span>
-						<span class="down"></span>
-					</a>
-					<span class="angle"></span>	
-				</div>
-
-				<div id="proSearch">
-					<input class="inputBar" type="text" />
-					<button class="searchBar"></button>
-				</div>	
-				<div class="clearFloat"></div>
-			</div>
-			<div class="proMenuList">
-				<ul>
-					<li class="single" ng-click="myVar='machine'">3C家电</li>
-					<li class="single" ng-click="myVar='clothing'" >尖货女装</li>
-					<li class="single" ng-click="myVar='jewel'">时尚配饰</li>
-					<li class="single" ng-click="myVar='life'">创意生活</li>
-					<li class="single" ng-click="myVar='snacks'">全球零食</li>
-					<li class="single" >极致美护</li>
-				</ul>
-			</div>	
-			<nav class="showPro" ng-switch="myVar">
-				<!-- 极致美护对应的商品分类 -->
-				<div class="recommend"  ng-switch-default>
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>告别干燥深补水</dd></a>
-						<a href="##"><dd>轻松卸妆神器</dd></a>
-						<a href="##"><dd>清新女神妆</dd></a>
-						<a href="##"><dd>晒不黑的秘密</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 告别干燥深补水
-							</label>
-							
-							<label for=""><input type="checkbox" /> 轻松卸妆神器</label>
-							
-							<label for=""><input type="checkbox" /> 清新女神妆</label>
-							
-							<label for=""><input type="checkbox" /> 晒不黑的秘密</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>个护保健</dd></a>
-						<a href="##"><dd>彩妆香氛</dd></a>
-						<a href="##"><dd>面部护肤</dd></a>
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>功效：</dt>
-						<a href="##"><dd>修饰肤色</dd></a>
-						<a href="##"><dd>舒缓肌肤</dd></a>
-						<a href="##"><dd>祛痘</dd></a>
-						<a href=""><dd>提亮</dd></a>
-						<a href=""><dd>去黑眼圈</dd></a>
-						<a href=""><dd>控油</dd></a>
-						<a href=""><dd>淡香水</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 防晒</label>
-							<label for=""><input type="checkbox" /> 滋润</label>
-							<label for=""><input type="checkbox" /> 花调香</label>
-							<label for=""><input type="checkbox" /> 抗皱</label>
-							<label for=""><input type="checkbox" /> 香气持久</label>
-							<label for=""><input type="checkbox" /> 淡化唇色</label>
-							<label for=""><input type="checkbox" /> 深层清洁</label>
-							<label for=""><input type="checkbox" /> 遮瑕</label>
-							<label for=""><input type="checkbox" /> 清新</label>
-							<label for=""><input type="checkbox" /> 祛黑头</label>
-							<label for=""><input type="checkbox" /> 提亮肤色</label>
-							<label for=""><input type="checkbox" /> 祛斑</label>
-							<label for=""><input type="checkbox" /> 抗氧化</label>
-							<label for=""><input type="checkbox" /> 定妆</label>
-							<label for=""><input type="checkbox" /> 缓解疲劳</label>
-							<label for=""><input type="checkbox" /> 果调香</label>
-							<label for=""><input type="checkbox" /> 美白</label>
-							<label for=""><input type="checkbox" /> 祛角质</label>
-							<label for=""><input type="checkbox" /> 去细纹</label>
-							<label for=""><input type="checkbox" /> 修饰肤色</label>
-							<label for=""><input type="checkbox" /> 舒缓肌肤</label>
-							<label for=""><input type="checkbox" /> 祛痘</label>
-							<label for=""><input type="checkbox" /> 提亮</label>
-							<label for=""><input type="checkbox" /> 去黑眼圈</label>
-							<label for=""><input type="checkbox" /> 控油</label>
-							<label for=""><input type="checkbox" /> 淡香水</label>
-							<label for=""><input type="checkbox" /> 祛斑祛印</label>
-							<label for=""><input type="checkbox" /> 隔离</label>
-							<label for=""><input type="checkbox" /> 保湿</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href=""><dd>韩国</dd></a>
-						<a href=""><dd>日本</dd></a>
-						<a href=""><dd>欧美</dd></a>
-						<a href=""><dd>港台</dd></a>
-						<a href=""><dd>东南亚</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 韩国</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<label for=""><input type="checkbox" /> 欧美</label>
-							<label for=""><input type="checkbox" /> 港台</label>
-							<label for=""><input type="checkbox" /> 东南亚</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href=""><dd>Innisfree</dd></a>
-						<a href=""><dd>mistine</dd></a>
-						<a href=""><dd>Shiseido资深堂</dd></a>
-						<a href=""><dd>ETUDE HOUSE</dd></a>
-						<a href=""><dd>科颜氏</dd></a>
-						<a href=""><dd>the saem</dd></a>
-						<a href=""><dd>Estee Lauder</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> Innisfree</label>
-							<label for=""><input type="checkbox" /> mistine</label>
-							<label for=""><input type="checkbox" /> Shiseido资深堂</label>
-							<label for=""><input type="checkbox" /> ETUDE HOU</label>
-							<label for=""><input type="checkbox" /> 科颜氏</label>
-							<label for=""><input type="checkbox" /> the saem</label>
-							<label for=""><input type="checkbox" /> Estee Lauder</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-							
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-				</div>	
-
-				<!-- 全球零食 -->
-				<div class="snacks" ng-switch-when="snacks">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>宿舍宵夜吃起来</dd></a>
-						<a href="##"><dd>困乏提神好物</dd></a>
-						<a href="##"><dd>办公室抽屉必备</dd></a>
-						<a href="##"><dd>超人气甜品</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 宿舍宵夜吃起来</label>
-							<label for=""><input type="checkbox" /> 困乏提神好物</label>
-							
-							<label for=""><input type="checkbox" /> 办公室抽屉必备</label>
-							<label for=""><input type="checkbox" /> 超人气甜品</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>休闲零食</dd></a>
-						<a href="##"><dd>咖啡/冲饮</dd></a>
-						<a href="##"><dd>饼干/糕点</dd></a>
-						<a href="##"><dd>饮料/酒水</dd></a>
-						<a href="##"><dd>果干/坚果</dd></a>
-						<a href="##"><dd>糖果/巧克力</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>韩国</dd></a>
-						<a href="##"><dd>台湾</dd></a>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>东南亚</dd></a>
-						<a href="##"><dd>日本</dd></a>
-						<a href="##"><dd>澳洲</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 韩国</label>
-							<label for=""><input type="checkbox" /> 台湾</label>
-							
-							<label for=""><input type="checkbox" /> 美国</label>
-							
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 东南亚</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<label for=""><input type="checkbox" /> 澳洲</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>百草味</dd></a>
-						<a href="##"><dd>喜善花房</dd></a>
-						<a href="##"><dd>雪之恋</dd></a>
-						<a href="##"><dd>Richese</dd></a>
-						<a href="##"><dd>海太</dd></a>
-						<a href="##"><dd>维奕</dd></a>
-						<a href="##"><dd>丽芝士纳宝帝</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 百草味</label>
-							<label for=""><input type="checkbox" /> 喜善花房</label>
-							<label for=""><input type="checkbox" /> 雪之恋</label>
-							<label for=""><input type="checkbox" /> Richese</label>
-							<label for=""><input type="checkbox" /> 海太</label>
-							<label for=""><input type="checkbox" /> 维奕</label>
-							<label for=""><input type="checkbox" /> 丽芝士纳宝帝</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-				<!-- 创意生活 -->
-				<div class="life" ng-switch-when="life">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>给女票贴心の礼</dd></a>
-						<a href="##"><dd>收纳不再将就</dd></a>
-						<a href="##"><dd>执伞邂逅浪漫</dd></a>
-						<a href="##"><dd>厨房最佳伴侣</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 给女票贴心の礼</label>
-							<label for=""><input type="checkbox" /> 收纳不再将就</label>
-							<label for=""><input type="checkbox" /> 执伞邂逅浪漫</label>
-							<label for=""><input type="checkbox" /> 厨房最佳伴侣</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>品质生活</dd></a>
-						<a href="##"><dd>趣味文具</dd></a>
-						<a href="##"><dd>厨房伴侣</dd></a>
-						<a href="##"><dd>温馨家居</dd></a>
-						<a href="##"><dd>个人护理</dd></a>
-						<a href="##"><dd>创意礼物</dd></a>
-						<a href="##"><dd>创意家居</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>亚洲</dd></a>
-						<a href="##"><dd>其他</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 美国</label>
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 亚洲</label>
-							<label for=""><input type="checkbox" /> 其他</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>子夏</dd></a>
-						<a href="##"><dd>为睡纺</dd></a>
-						<a href="##"><dd>欧布蓝尼</dd></a>
-						<a href="##"><dd>趣淘</dd></a>
-						<a href="##"><dd>锦仕</dd></a>
-						<a href="##"><dd>飞利浦</dd></a>
-						<a href="##"><dd>新米粒</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 子夏</label>
-							<label for=""><input type="checkbox" /> 为睡纺</label>
-							<label for=""><input type="checkbox" /> 欧布蓝尼</label>
-							<label for=""><input type="checkbox" /> 趣淘</label>
-							<label for=""><input type="checkbox" /> 锦仕</label>
-							<label for=""><input type="checkbox" /> 飞利浦</label>
-							<label for=""><input type="checkbox" /> 新米粒</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-
-				</div>
-
-
-				<!-- 时尚配饰 -->
-				<div class="jewel" ng-switch-when="jewel">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>个性心机配饰</dd></a>
-						<a href="##"><dd>触手可及的奢华</dd></a>
-						<a href="##"><dd>出街就要潮酷帅</dd></a>
-						<a href="##"><dd>玩转潮流包包</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 个性心机配饰</label>
-							<label for=""><input type="checkbox" /> 触手可及的奢华</label>
-							<label for=""><input type="checkbox" /> 出街就要潮酷帅</label>
-							<label for=""><input type="checkbox" /> 玩转潮流包包</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>鞋履</dd></a>
-						<a href="##"><dd>服饰配件</dd></a>
-						<a href="##"><dd>包袋</dd></a>
-						<a href="##"><dd>轻奢</dd></a>
-						<a href="##"><dd>饰品</dd></a>
-						<a href="##"><dd>脚链</dd></a>
-						<a href="##"><dd>时尚配饰</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>澳洲</dd></a>
-						<a href="##"><dd>亚洲</dd></a>
-						<a href="##"><dd>其他</dd></a>
-						<a href="##"><dd>日本</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 美国</label>
-							<label for=""><input type="checkbox" /> 澳洲</label>
-							<label for=""><input type="checkbox" /> 亚洲</label>
-							<label for=""><input type="checkbox" /> 其他</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>茉</dd></a>
-						<a href="##"><dd>美丽公主</dd></a>
-						<a href="##"><dd>新米粒</dd></a>
-						<a href="##"><dd>澳洲Pica Lela</dd></a>
-						<a href="##"><dd>SexeMara</dd></a>
-						<a href="##"><dd>沐七</dd></a>
-						<a href="##"><dd>IKEWA</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 茉</label>
-							<label for=""><input type="checkbox" /> 美丽公主</label>
-							<label for=""><input type="checkbox" /> 新米粒</label>
-							<label for=""><input type="checkbox" /> 澳洲Pica Lela</label>
-							<label for=""><input type="checkbox" /> SexeMara</label>
-							<label for=""><input type="checkbox" /> 沐七</label>
-							<label for=""><input type="checkbox" /> IKEWA</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-				<!-- 尖货女装 -->
-				<div class="clothing" ng-switch-when="clothing">
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>裙装</dd></a>
-						<a href="##"><dd>针织裙</dd></a>
-						<a href="##"><dd>半身裙</dd></a>
-						<a href="##"><dd>裤装</dd></a>
-						<a href="##"><dd>休闲服</dd></a>
-						<a href="##"><dd>皮裤</dd></a>
-						<a href="##"><dd>打底裤</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 裙装</label>
-							<label for=""><input type="checkbox" /> 针织裙</label>
-							<label for=""><input type="checkbox" /> 半身裙</label>
-							<label for=""><input type="checkbox" /> 裤装</label>
-							<label for=""><input type="checkbox" /> 休闲服</label>
-							<label for=""><input type="checkbox" /> 皮裤</label>
-							<label for=""><input type="checkbox" /> 打底裤</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>WRZS</dd></a>
-						<a href="##"><dd>AFDP</dd></a>
-						<a href="##"><dd>凡品丹妮</dd></a>
-						<a href="##"><dd>七格格</dd></a>
-						<a href="##"><dd>HAPPY HOST</dd></a>
-						<a href="##"><dd>慕帛</dd></a>
-						<a href="##"><dd>LUNA LIMTED</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> WRZS</label>
-							<label for=""><input type="checkbox" /> AFDP</label>
-							<label for=""><input type="checkbox" /> 凡品丹妮</label>
-							<label for=""><input type="checkbox" /> 七格格</label>
-							<label for=""><input type="checkbox" /> HAPPY HOST</label>
-							<label for=""><input type="checkbox" /> 慕帛</label>
-							<label for=""><input type="checkbox" /> LUNA LIMTED</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat" onclick="listMore()"></div>
-					</dl>
-				</div>
-
-				<!-- 3C家电 -->
-				<div class="machine" ng-switch-when="machine">
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>家用电器</dd></a>
-						<a href="##"><dd>3C数码</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>金顶</dd></a>
-						<a href="##"><dd>飞利浦</dd></a>
-						<a href="##"><dd>韩恰</dd></a>
-						<a href="##"><dd>IVR</dd></a>
-						<a href="##"><dd>魔胄</dd></a>
-						<a href="##"><dd>慕帛</dd></a>
-						<a href="##"><dd>福库CUCKOO</dd></a>
-						<a href="##"><dd>锦仕</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 金顶</label>
-							<label for=""><input type="checkbox" /> 飞利浦</label>
-							<label for=""><input type="checkbox" /> 韩恰</label>
-							<label for=""><input type="checkbox" /> IVR</label>
-							<label for=""><input type="checkbox" /> 魔胄</label>
-							<label for=""><input type="checkbox" /> 慕帛</label>
-							<label for=""><input type="checkbox" /> 福库CUCKOO</label>
-							<label for=""><input type="checkbox" /> 锦仕</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()"> 更多</button>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-			</nav>
-			<div class="proChoice">
-				<ul class="choiceLeft">
-					<li>排序：</li>
-					<li class="silence">
-						<a href="">默认<span class="arrowDown"></span></a>
-					</li>
-					<li><a href="">价格
-						<span class="priceArrow">
-							<span id="up"></span>
-							<span id="down"></span>
-						</span></a>
-					</li>
-					<li class="sale">
-						<a href="">销量<span class="arrowDown"></span></a>
-					</li>
-					<li class="popular">
-						<a href="">人气<span class="arrowDown"></span></a>
-					</li>
-					<li class="time">
-						<a href="">上架时间<span class="arrowDown"></span></a>
-					</li>
-					<li class="cargo"><input type="checkbox"/>只看有货</li>
-				</ul>
-				<ul class="choiceRight">
-					<li>共<span class="warn">100</span>个商品 &nbsp;|</li>
-					<li> &nbsp;<span class="warn">1</span>/10页</li>
-					<li>下一页</li>
-				</ul>
-			</div>
-			<div class="ProSection">
-				<div class="proData">
-					<a href=""><img src="__ROOT__/Index/Common/images/footer/proImg.jpg" alt="" /></a>
-					<div class="proMessage">
-						<p id="price">
-							<span class="warn">￥
-								<span class="newPrice">299</span>
-							</span>
-							<span class="oldPrice">￥399.00</span>
-						</p>
-						
-						<a><span class="warn">7折/</span>[韩国.打造轻薄自然妆感]Sulwhasoo2017限量气垫BB霜喜鹊登芝（粉色 13号浅淘）</a>
-						<p>
-							<span>76人收藏 &nbsp;|</span>
-							<span> &nbsp;3条评论</span>
-						</p>
-					</div>
-				</div>
-				<div class="clearFloat"></div>	
-			</div>	
-			<div class="pageBox">
-				<div class="changePage">
-					<a href="##">上一页</a>
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>...</li>
-						<li>100</li>
-						<div class="clearFloat"></div>
-					</ul>
-					<a href="##">下一页</a>
-					<div class="clearFloat"></div>
-				</div>	
-			</div>
-			<div class="clearFloat"></div>	
+		<!--消费者协议说明书-->
+		<div class="da-consumer">
+			<p>尊敬的客户：</p>
+			<p>您好!</p>
+			<p>
+				在您选购境外商品前，麻烦您仔细阅读此文，同意本文所告知内容后再进行下单购买：<br />
+				1.您在本（公司）网站上购买的境外商品为产地直销商品，仅限个人自用不得进行再销售，商品本身可能无中文标签，您可以查看网站的翻译或者在线联系我们的客服。<br />
+				2.您购买的境外商品适用的品质、健康、标识等项目使用标准符合原产国使用标准，但是可能与我国标准有所不同，所以在使用过程中由此可能产生的危害或损失以及其他风险，将由您个人承担。<br />
+				
+    				3.您在本（公司）网站上购买保税区发货的境外商品时，自动视为由达令极速免税店代您向海关进行申报和代缴税款。<br />
+    
+			</p>
 		</div>
-		<div class="asideBar">
-			<aside class="aside">
+		
+		<aside class="aside">
 	<div class="aside_nav">
 		<!--购物车-->
 		<div class="aside_shopp" onclick="shopp()" >
@@ -1580,7 +865,6 @@
 	</div>
 </aside>
 
-		</div>
 		<div class="footer">
 			
 <footer class="container">
@@ -1642,54 +926,40 @@
 
 		</div>
 	</body>
-	
-	<script src="__ROOT__/Index/Common/js/aside.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		// 点击极致美护框下拉列表呈现
-		  $("#proMenu").click(function(){
-				$(".proMenuList").css(
-					"display",'block',
-					)
-			});
-  // 点击列表中内容，下拉列表消失，框中的字换成点击选中内容
-	$("li.single").click(function(){
-		$(".initVal").html($(this).html());
-		$(".proMenuList").css(
-		"display",'none',
-		)
-		})
-
-	// 点击多选按钮，当前列消失，多选项display：block,
-		function selectMore(){
-	      $(".selectMore").click(function(){
-	      		$(this).siblings("a").toggle();
-	      		$(this).next("button").toggle();
-	      		$(this).prev("dd").toggle();
-	      		// 确定，取消键display:block(点击更多按钮时这两个节点的display:none)
-	      		$(this).prev("dd").children(".proMul").css(
-	      			'display','block',
-	      			);
-	      })
-  		};
-  		// 点击更多按钮，多选框display:block同时移除所有input
-  	function listMore(){
-	    $(".listMore").click(function(){
-	    	$(this).html("收起");
-	    	$(this).siblings("dd").toggle();
-	    	$(this).siblings("dd").children("label").children("input").remove();
-	    	$(this).siblings("dd").children(".proMul").css(
-	    		'display','none',
-	    		);
-	    })
-  }
-
-	var app=angular.module("myapp",[]);
-	 app.controller("myctrl",function($scope){
-	  	
-	 })
-
-		
-
+		var app = angular.module('myapp',[]);
 	</script>
-	<script src="__ROOT__/Index/Common/js/header.js" type="text/javascript"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/header.js"></script>
 </html>
+<!--/**
+ *                             _ooOoo_
+ *                            o8888888o
+ *                            88" . "88
+ *                            (| -_- |)
+ *                            O\  =  /O
+ *                         ____/`---'\____
+ *                       .'  \\|     |//  `.
+ *                      /  \\|||  :  |||//  \
+ *                     /  _||||| -:- |||||-  \
+ *                     |   | \\\  -  /// |   |
+ *                     | \_|  ''\---/''  |   |
+ *                     \  .-\__  `-`  ___/-. /
+ *                   ___`. .'  /--.--\  `. . __
+ *                ."" '<  `.___\_<|>_/___.'  >'"".
+ *               | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *               \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *          ======`-.____`-.___\_____/___.-`____.-'======
+ *                             `=---='
+ *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *                     佛祖保佑        永无BUG
+ *            佛曰:
+ *                   写字楼里写字间，写字间里程序员；
+ *                   程序人员写程序，又拿程序换酒钱。
+ *                   酒醒只在网上坐，酒醉还来网下眠；
+ *                   酒醉酒醒日复日，网上网下年复年。
+ *                   但愿老死电脑间，不愿鞠躬老板前；
+ *                   奔驰宝马贵者趣，公交自行程序员。
+ *                   别人笑我忒疯癫，我笑自己命太贱；
+ *                   不见满街漂亮妹，哪个归得程序员？
+*/-->

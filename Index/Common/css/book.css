@@ -1,0 +1,10 @@
+.da-consumer {
+    	width: 800px;
+    margin: 0 auto;
+    padding: 88px 0;
+}
+.da-consumer p {
+	font-size: 14px;
+    line-height: 25px;
+    margin: 10px 0;
+}

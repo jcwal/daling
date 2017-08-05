@@ -8,17 +8,20 @@
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/common/css/productDetail.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/swiper-3.4.2.min.css" />
 		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery.fly.min.js"></script>
 	</head>
-	<body ng-app="myapp" ng-controller="mycontroller">
+	<body ng-app="myapp">
 		<div class="navigator">
 			<include file='Public:header' />
 		</div>
 		
 		
 		<!--商品展示-->
-		<div class="productDetail">
+		<div class="productDetail" ng-controller="mycontroller">
 			<div class="detail_link">
 				<ul>
 					<li>
@@ -104,13 +107,13 @@
 										<a href="javascript:;" class="btn-add" ng-click="add()">
 											<span class="ico-d-5"></span>
 										</a>
-										<input value="1" ng-value="num"/>
+										<input value="" ng-model="num"/>
 									</div>
 								</dd>
 							</dl>
-							<div class="goods-btn afterfl">
+							<div class="goods-btn afterfl" id="Bt1">
 								<a href="#">立即购买</a>
-								<a href="#">添加到购物车</a>
+								<a href="javascript:;">添加到购物车</a>
 							</div>
 							<div class="goods-tips afterfl">
 								<span class="mr20">
@@ -128,32 +131,35 @@
 					</div>
 					<!--内容区-->
 					<div class="detail-content">
-						<div class="tag">
-							<div class="tag_right">
-								<a href="">立即购买</a>
-								<a href="">添加到购物车</a>￥
-								<span>139.00</span>
-							</div>	
-							<ul class="afterfl">
-								<li>
-									<span class="ico">
-										<span></span>
-									</span>
-									<a href="">商品信息</a>
-								</li>
-								<li>
-									<span class="ico">
-										<span></span>
-									</span>
-									<a href="">用户评论(<span>207</span>)</a>
-								</li>
-								<li>
-									<span class="ico">
-										<span></span>
-									</span>
-									<a href="">售后服务</a>
-								</li>
-							</ul>
+						<div class="tag" id="tags">
+							<div class="tag_1">
+								<div class="tag_right">
+									
+									<a href="javascript:;" >立即购买</a>
+									<a href="javascript:;" id="Bt2">添加到购物车</a>￥
+									<span>139.00</span>
+								</div>	
+								<ul class="afterfl">
+									<li class="li_1" id="li1">
+										<span class="ico">
+											<span></span>
+										</span>
+										<a href="javascript:;">商品信息</a>
+									</li>
+									<li  class="li_2" id="li2">
+										<span class="ico">
+											<span></span>
+										</span>
+										<a href="javascript:;">用户评论(<span>207</span>)</a>
+									</li>
+									<li  class="li_3" id="li3">
+										<span class="ico">
+											<span></span>
+										</span>
+										<a href="javascript:;">售后服务</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 						<!--商品内容-->
 						<div class="content">
@@ -499,14 +505,48 @@
 						<div class="title">
 							<p>大家都在买</p>
 						</div>
-						<ul>
+						<!--<div class="swiper-container">
+							<div class="swiper-wrapper">
+						    		<div class="swiper-slide" style="height: 0;">
+						    			<a href="">
+										<div class="img-ct cover-img"></div>
+										<p class="goods-price">¥66.00
+											<span class="old-price">¥00.00</span>
+										</p>
+										<p class="goods-title">1</p>
+									</a>
+						    		</div>
+						    		<div class="swiper-slide" style="height: 0;">
+						    			<a href="">
+										<div class="img-ct cover-img"></div>
+										<p class="goods-price">¥66.00
+											<span class="old-price">¥00.00</span>
+										</p>
+										<p class="goods-title">1</p>
+									</a>
+						    		</div>
+						    		<div class="swiper-slide" style="height: 0;">
+						    			<a href="">
+										<div class="img-ct cover-img"></div>
+										<p class="goods-price">¥66.00
+											<span class="old-price">¥00.00</span>
+										</p>
+										<p class="goods-title">1</p>
+									</a>
+						    		</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+    							<div class="swiper-button-next"></div>
+	    						
+						</div>-->
+						<ul style="height: 400px;overflow: hidden;">
 							<li class="active">
 								<a href="">
 									<div class="img-ct cover-img"></div>
 									<p class="goods-price">¥66.00
 										<span class="old-price">¥00.00</span>
 									</p>
-									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+									<p class="goods-title">1</p>
 								</a>
 							</li>
 							<li class="active">
@@ -515,16 +555,43 @@
 									<p class="goods-price">¥66.00
 										<span class="old-price">¥00.00</span>
 									</p>
-									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+									<p class="goods-title">2</p>
 								</a>
 							</li>
-							<li style="display: none;">
+							<li>
 								<a href="">
 									<div class="img-ct cover-img"></div>
 									<p class="goods-price">¥66.00
 										<span class="old-price">¥00.00</span>
 									</p>
-									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+									<p class="goods-title">3</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">4</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">5</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">6</p>
 								</a>
 							</li>
 						</ul>
@@ -547,8 +614,14 @@
 			<include file='Public:footer' />
 		</div>
 	</body>
-	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript">
+		var srcs = "__ROOT__/Index/Common/images/productDetail/product.jpg";
+	</script>
 	<script type="text/javascript" src="__ROOT__/Index/common/js/productDetail.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/header.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	
+	
 </html>
 <!--/**
  *                             _ooOoo_
