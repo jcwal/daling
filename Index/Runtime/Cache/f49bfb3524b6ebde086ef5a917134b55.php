@@ -10,24 +10,14 @@
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/showList.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
-		
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
-<<<<<<< HEAD
 		<!-- <script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script> -->
 	</head>
 	<body ng-app="myapp">
 		<div class="navigator">
-			<header class="header">
-=======
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script>
-	</head>
-	<body ng-app="myapp">
-		<div class="navigator">
 			<header class="header" ng-controller='headerController'>
->>>>>>> master
 	<div class="top">
 		<div class="topWrap">
 			<div class="consumerInfo">
@@ -35,34 +25,21 @@
 			</div>
 			<ul class="loginBar">
 				<li class="login">
-<<<<<<< HEAD
-					<a href="#">登陆</a>
-				</li>
-				<li class="register">
-					<a href="#">注册</a>
-=======
 					<a href="javascript:void(0)">登陆</a>
 				</li>
 				<li class="register">
 					<a href="javascript:void(0)">注册</a>
->>>>>>> master
 				</li>
 				<li class="tel">
 					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
 					<a >400-080-1888</a>
 				</li>
 				<li class="download">
-<<<<<<< HEAD
-					<a href="#">下载达令app</a>
-=======
 					<a href="javascript:void(0)">下载达令app</a>
->>>>>>> master
 				</li>
 			</ul>
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
 	<div class="loginRegisterWrap">
 		<div class="loginRegisterInner">
 			<div class="loginRegisterPanel clearFloat">
@@ -77,53 +54,63 @@
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入您的用户名" id='usernameLogin'/>
+						<input type="text" placeholder="请输入您的手机号" id='usernameLogin' ng-model='usernameLogin' />
+						<span class="telHint">
+							*请输入正确的号码
+						</span>
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请输入您的密码" id='passwordLogin'/>
+						<input type="password" placeholder="请输入您的密码" id='passwordLogin' ng-model='passwordLogin' />
+						<span class="pwdHint">
+							*请输入您的密码
+						</span>
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入验证码" id='verifyLogin'/>
+						<input type="text" placeholder="请输入验证码" id='verifyLogin' ng-model='verifyLogin' />
+						<img src="" alt="" class="verifyImg" />
+						<span class="verifyHint">
+							*请输入正确的验证码
+						</span>
 					</div>
-					<button id="submitLogin" ng-click='loginSub()' ng-disable='judge()'>登陆</button>
+					<button id="submitLogin" ng-click='loginSub()' ng-class='classLogin()' ng-disabled='judgeLogin()' >登陆</button>
 				</div>
 				<div class="registerForm">
 					<div class="username">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入您的用户名" id='usernameRegister'/>
+						<input type="text" placeholder="请输入您的手机号" id='usernameRegister' ng-model='usernameRegister' />
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请输入您的密码" id='passwordRegister'/>
+						<input type="password" placeholder="请输入您的密码" id='passwordRegister' ng-model='passwordRegister' />
 					</div>
 					<div class="passwordRepeat">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat'/>
+						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat' ng-model='passwordRegisterReapeat' />
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
-						<input type="text" placeholder="请输入验证码" id='verifyRegister'/>
+						<input type="text" placeholder="请输入验证码" id='verifyRegister' ng-model='verifyRegister' />
 					</div>
 					<div class="registerAgreement">
-						<input type="checkbox" />
+						<input type="checkbox" ng-model='registerAgreement' />
 						我已阅读并同意
 						<a href="#">《达令用户注册协议》</a>
 					</div>
-					<button id="submitRegister" ng-click='registerSub()' ng-disable='judge()'>注册</button>
+					<button id="submitRegister" ng-click='registerSub()' ng-class='classRegister()' ng-disabled='judgeRegister()'>注册</button>
 				</div>
 
 				<div class="agreementDetail">
@@ -299,7 +286,6 @@
 			
 		<div class="mask"></div>
 	</div>
->>>>>>> master
 	<div class="center">
 		<div class="centerWrap">
 			<a href="#" class="logo"></a>
@@ -810,7 +796,7 @@
 </header>
 
 		</div>
-		<section class="proList" ng-controller="myctrl">
+		<div class="proList" ng-controller="myctrl">
 			<div class="proNav">
 				<div id="proHome">
 					<a href=""><span class="home"></span></a>
@@ -866,11 +852,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -926,13 +908,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 					<dl>
@@ -954,11 +931,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 					<dl>
@@ -985,13 +958,8 @@
 							</div>
 							
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 					<dl>
@@ -1009,11 +977,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 				</div>	
@@ -1039,11 +1003,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1084,11 +1044,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1116,13 +1072,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1141,11 +1092,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 				</div>
@@ -1170,11 +1117,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1208,11 +1151,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1240,13 +1179,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1265,11 +1199,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 
@@ -1296,11 +1226,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1338,13 +1264,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1372,13 +1293,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1397,11 +1313,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 				</div>
@@ -1431,11 +1343,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1463,13 +1371,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1488,13 +1391,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<div class="clearFloat" onclick="listMore()"></div>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
->>>>>>> master
 					</dl>
 				</div>
 
@@ -1533,13 +1431,8 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
 						<button class="listMore" onclick="listMore()"> 更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore"> 更多</button>
->>>>>>> master
 						<!-- 清除浮动 -->
 						<div class="clearFloat"></div>
 					</dl>
@@ -1558,11 +1451,7 @@
 								<button class="showProCancel">取消</button>
 							</div>
 						</dd>
-<<<<<<< HEAD
 						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
 						<div class="clearFloat"></div>
 					</dl>
 				</div>
@@ -1633,12 +1522,13 @@
 				</div>	
 			</div>
 			<div class="clearFloat"></div>	
-		</section>
+		</div>
 		<div class="asideBar">
 			<aside class="aside">
 	<div class="aside_nav">
 		<!--购物车-->
 		<div class="aside_shopp" onclick="shopp()" >
+			<!--<div class="animate"></div>-->
 			<div class="aside_wire"></div>
 			<div class="aside_car"></div>
 			<div class="aside_text">购<br />物<br />车</div>
@@ -1752,10 +1642,9 @@
 
 		</div>
 	</body>
-	<script src="__ROOT__/Index/Common/js/header.js" type="text/javascript"></script>
+	
 	<script src="__ROOT__/Index/Common/js/aside.js" type="text/javascript"></script>
 	<script type="text/javascript">
-<<<<<<< HEAD
 		// 点击极致美护框下拉列表呈现
 		  $("#proMenu").click(function(){
 				$(".proMenuList").css(
@@ -1799,9 +1688,8 @@
 	  	
 	 })
 
-=======
->>>>>>> master
 		
 
 	</script>
+	<script src="__ROOT__/Index/Common/js/header.js" type="text/javascript"></script>
 </html>

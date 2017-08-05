@@ -14,15 +14,9 @@
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
 	</head>
-<<<<<<< HEAD
-	<body>
-		<div class="navigator">
-			<header class="header">
-=======
 	<body ng-app='myapp'>
 		<div class="navigator">
 			<header class="header" ng-controller='headerController'>
->>>>>>> master
 	<div class="top">
 		<div class="topWrap">
 			<div class="consumerInfo">
@@ -30,34 +24,21 @@
 			</div>
 			<ul class="loginBar">
 				<li class="login">
-<<<<<<< HEAD
-					<a href="#">登陆</a>
-				</li>
-				<li class="register">
-					<a href="#">注册</a>
-=======
 					<a href="javascript:void(0)">登陆</a>
 				</li>
 				<li class="register">
 					<a href="javascript:void(0)">注册</a>
->>>>>>> master
 				</li>
 				<li class="tel">
 					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
 					<a >400-080-1888</a>
 				</li>
 				<li class="download">
-<<<<<<< HEAD
-					<a href="#">下载达令app</a>
-=======
 					<a href="javascript:void(0)">下载达令app</a>
->>>>>>> master
 				</li>
 			</ul>
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
 	<div class="loginRegisterWrap">
 		<div class="loginRegisterInner">
 			<div class="loginRegisterPanel clearFloat">
@@ -304,7 +285,6 @@
 			
 		<div class="mask"></div>
 	</div>
->>>>>>> master
 	<div class="center">
 		<div class="centerWrap">
 			<a href="#" class="logo"></a>
@@ -815,11 +795,7 @@
 </header>
 
 		</div>
-<<<<<<< HEAD
-		<div class="indexWrap" ng-app='indexApp' ng-controller='indexController'>
-=======
 		<div class="indexWrap"  ng-controller='indexController'>
->>>>>>> master
 			<div class="indexSwiper">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -2387,6 +2363,7 @@
 	<div class="aside_nav">
 		<!--购物车-->
 		<div class="aside_shopp" onclick="shopp()" >
+			<!--<div class="animate"></div>-->
 			<div class="aside_wire"></div>
 			<div class="aside_car"></div>
 			<div class="aside_text">购<br />物<br />车</div>
