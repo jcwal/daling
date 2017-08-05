@@ -26,3 +26,60 @@ if($('.indexWrap').length > 0){
 		$('.navigator .header .category .categoryDetail').hide();
 	});
 };
+//login&register
+$('.navigator .header .top .loginBar .login a').on('click',function(){
+	$('.navigator .header .loginRegisterWrap').show();
+	$('.navigator .header .loginRegisterWrap .loginForm').show();
+	$('.navigator .header .loginRegisterWrap .registerForm').hide();
+	$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').addClass('active');
+	$('.navigator .header .loginRegisterWrap .panelTab .tabRegister').removeClass('active');
+});
+$('.navigator .header .top .loginBar .register a').on('click',function(){
+	$('.navigator .header .loginRegisterWrap').show();
+	$('.navigator .header .loginRegisterWrap .loginForm').hide();
+	$('.navigator .header .loginRegisterWrap .registerForm').show();
+	$('.navigator .header .loginRegisterWrap .panelTab .tabRegister').addClass('active');
+	$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').removeClass('active');
+});
+$('.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .close').on('click',function(){
+	$('.navigator .header .loginRegisterWrap').hide();
+});
+$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').on('click',function(){
+	$('.navigator .header .loginRegisterWrap .loginForm').show();
+	$('.navigator .header .loginRegisterWrap .registerForm').hide();
+	$('.navigator .header .loginRegisterWrap .panelTab .tabRegister').removeClass('active');
+	$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').addClass('active');
+});
+$('.navigator .header .loginRegisterWrap .panelTab .tabRegister').on('click',function(){
+	$('.navigator .header .loginRegisterWrap .loginForm').hide();
+	$('.navigator .header .loginRegisterWrap .registerForm').show();
+	$('.navigator .header .loginRegisterWrap .panelTab .tabRegister').addClass('active');
+	$('.navigator .header .loginRegisterWrap .panelTab .tabLogin').removeClass('active');
+});
+app.controller('headerController',function($scope,$http){
+	$scope.loginSub = function(){
+
+	};
+	$scope.registerSub = function(){
+
+	};
+	$scope.judge = function(){
+		
+	};
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
