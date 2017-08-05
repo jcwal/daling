@@ -349,6 +349,7 @@
 /*内容区*/
 .productDetail .main .main_left .detail-content .tag .tag_right {
 	float: right;
+	display: none;
 }
 .productDetail .main .main_left .detail-content .tag .tag_right a:nth-child(1) {
 	display: inline-block;
@@ -392,6 +393,10 @@
 	border-top: 3px solid #999;
 	position: relative;
 }
+.productDetail .main .main_left .detail-content .tag ul .li_1{
+	border: 1px solid #fff;
+	border-top: 3px solid #fff;
+}
 .productDetail .main .main_left .detail-content .tag ul li a{
 	display: block;
 	padding: 0 30px;
@@ -425,11 +430,12 @@
 .productDetail .main .main_left .detail-content .tag ul li:nth-child(1){
 	border-bottom: 1px solid #fff;
 }
-.productDetail .main .main_left .detail-content .tag ul li:nth-child(2){
+
+.productDetail .main .main_left .detail-content .tag ul .li_2{
 	border-color: #FFFFFF;
 	border-bottom-color: #999;
 }
-.productDetail .main .main_left .detail-content .tag ul li:nth-child(3){
+.productDetail .main .main_left .detail-content .tag ul .li_3{
 	border-color: #FFFFFF;
 	border-bottom-color: #999;
 }
@@ -638,7 +644,7 @@
 .productDetail .main .main_right .sidebar-buying ul li {
 	padding-bottom: 16px;
 }
-.productDetail .active {
+.active {
 	display: block;
 }
 .productDetail .main .main_right .sidebar-buying li .img-ct {
@@ -685,6 +691,39 @@
 	background: url("../images/productDetail/ico_arrow.png") 0 -2px no-repeat;
     margin-left: 16px;
 }
+.Stick {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    z-index: 100;
+}
+.Stick1 {
+    	position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.Animate{
+	width:10px;
+	height:10px;
+	background-color: red;
+	margin-top: -10px;
+	margin-left: 165px;
+	position:absolute;	
+}
+.u-flyer {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 9999;
+}
+
+
 /*// ┏┓　　　┏┓
 // ┏┛┻━━━┛┻┓
 // ┃　　　　　　　┃ 　

@@ -2,32 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>商品列表</title>
-
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/showList.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
-		
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
-<<<<<<< HEAD
-		<!-- <script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script> -->
+		<title>达令</title>
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/productDetail.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
 	</head>
-	<body ng-app="myapp">
-		<div class="navigator">
-			<header class="header">
-=======
-		<script type="text/javascript" src="__ROOT__/Index/Common/js/showList.js"></script>
-	</head>
-	<body ng-app="myapp">
+	<body ng-app="myapp" ng-controller="mycontroller">
 		<div class="navigator">
 			<header class="header" ng-controller='headerController'>
->>>>>>> master
 	<div class="top">
 		<div class="topWrap">
 			<div class="consumerInfo">
@@ -35,34 +21,21 @@
 			</div>
 			<ul class="loginBar">
 				<li class="login">
-<<<<<<< HEAD
-					<a href="#">登陆</a>
-				</li>
-				<li class="register">
-					<a href="#">注册</a>
-=======
 					<a href="javascript:void(0)">登陆</a>
 				</li>
 				<li class="register">
 					<a href="javascript:void(0)">注册</a>
->>>>>>> master
 				</li>
 				<li class="tel">
 					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
 					<a >400-080-1888</a>
 				</li>
 				<li class="download">
-<<<<<<< HEAD
-					<a href="#">下载达令app</a>
-=======
 					<a href="javascript:void(0)">下载达令app</a>
->>>>>>> master
 				</li>
 			</ul>
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
 	<div class="loginRegisterWrap">
 		<div class="loginRegisterInner">
 			<div class="loginRegisterPanel clearFloat">
@@ -299,7 +272,6 @@
 			
 		<div class="mask"></div>
 	</div>
->>>>>>> master
 	<div class="center">
 		<div class="centerWrap">
 			<a href="#" class="logo"></a>
@@ -810,831 +782,532 @@
 </header>
 
 		</div>
-		<section class="proList" ng-controller="myctrl">
-			<div class="proNav">
-				<div id="proHome">
-					<a href=""><span class="home"></span></a>
-					<span class="angle"></span>	
-				</div>
-				<div id="proMenu">
-					<a href="##" class="proMenuSearch">
-						<span class="initVal">极致美护</span>
-						<span class="up"></span>
-						<span class="down"></span>
-					</a>
-					<span class="angle"></span>	
-				</div>
-
-				<div id="proSearch">
-					<input class="inputBar" type="text" />
-					<button class="searchBar"></button>
-				</div>	
-				<div class="clearFloat"></div>
-			</div>
-			<div class="proMenuList">
+		
+		
+		<!--商品展示-->
+		<div class="productDetail">
+			<div class="detail_link">
 				<ul>
-					<li class="single" ng-click="myVar='machine'">3C家电</li>
-					<li class="single" ng-click="myVar='clothing'" >尖货女装</li>
-					<li class="single" ng-click="myVar='jewel'">时尚配饰</li>
-					<li class="single" ng-click="myVar='life'">创意生活</li>
-					<li class="single" ng-click="myVar='snacks'">全球零食</li>
-					<li class="single" >极致美护</li>
-				</ul>
-			</div>	
-			<nav class="showPro" ng-switch="myVar">
-				<!-- 极致美护对应的商品分类 -->
-				<div class="recommend"  ng-switch-default>
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>告别干燥深补水</dd></a>
-						<a href="##"><dd>轻松卸妆神器</dd></a>
-						<a href="##"><dd>清新女神妆</dd></a>
-						<a href="##"><dd>晒不黑的秘密</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 告别干燥深补水
-							</label>
-							
-							<label for=""><input type="checkbox" /> 轻松卸妆神器</label>
-							
-							<label for=""><input type="checkbox" /> 清新女神妆</label>
-							
-							<label for=""><input type="checkbox" /> 晒不黑的秘密</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>个护保健</dd></a>
-						<a href="##"><dd>彩妆香氛</dd></a>
-						<a href="##"><dd>面部护肤</dd></a>
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>功效：</dt>
-						<a href="##"><dd>修饰肤色</dd></a>
-						<a href="##"><dd>舒缓肌肤</dd></a>
-						<a href="##"><dd>祛痘</dd></a>
-						<a href=""><dd>提亮</dd></a>
-						<a href=""><dd>去黑眼圈</dd></a>
-						<a href=""><dd>控油</dd></a>
-						<a href=""><dd>淡香水</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 防晒</label>
-							<label for=""><input type="checkbox" /> 滋润</label>
-							<label for=""><input type="checkbox" /> 花调香</label>
-							<label for=""><input type="checkbox" /> 抗皱</label>
-							<label for=""><input type="checkbox" /> 香气持久</label>
-							<label for=""><input type="checkbox" /> 淡化唇色</label>
-							<label for=""><input type="checkbox" /> 深层清洁</label>
-							<label for=""><input type="checkbox" /> 遮瑕</label>
-							<label for=""><input type="checkbox" /> 清新</label>
-							<label for=""><input type="checkbox" /> 祛黑头</label>
-							<label for=""><input type="checkbox" /> 提亮肤色</label>
-							<label for=""><input type="checkbox" /> 祛斑</label>
-							<label for=""><input type="checkbox" /> 抗氧化</label>
-							<label for=""><input type="checkbox" /> 定妆</label>
-							<label for=""><input type="checkbox" /> 缓解疲劳</label>
-							<label for=""><input type="checkbox" /> 果调香</label>
-							<label for=""><input type="checkbox" /> 美白</label>
-							<label for=""><input type="checkbox" /> 祛角质</label>
-							<label for=""><input type="checkbox" /> 去细纹</label>
-							<label for=""><input type="checkbox" /> 修饰肤色</label>
-							<label for=""><input type="checkbox" /> 舒缓肌肤</label>
-							<label for=""><input type="checkbox" /> 祛痘</label>
-							<label for=""><input type="checkbox" /> 提亮</label>
-							<label for=""><input type="checkbox" /> 去黑眼圈</label>
-							<label for=""><input type="checkbox" /> 控油</label>
-							<label for=""><input type="checkbox" /> 淡香水</label>
-							<label for=""><input type="checkbox" /> 祛斑祛印</label>
-							<label for=""><input type="checkbox" /> 隔离</label>
-							<label for=""><input type="checkbox" /> 保湿</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href=""><dd>韩国</dd></a>
-						<a href=""><dd>日本</dd></a>
-						<a href=""><dd>欧美</dd></a>
-						<a href=""><dd>港台</dd></a>
-						<a href=""><dd>东南亚</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 韩国</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<label for=""><input type="checkbox" /> 欧美</label>
-							<label for=""><input type="checkbox" /> 港台</label>
-							<label for=""><input type="checkbox" /> 东南亚</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href=""><dd>Innisfree</dd></a>
-						<a href=""><dd>mistine</dd></a>
-						<a href=""><dd>Shiseido资深堂</dd></a>
-						<a href=""><dd>ETUDE HOUSE</dd></a>
-						<a href=""><dd>科颜氏</dd></a>
-						<a href=""><dd>the saem</dd></a>
-						<a href=""><dd>Estee Lauder</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> Innisfree</label>
-							<label for=""><input type="checkbox" /> mistine</label>
-							<label for=""><input type="checkbox" /> Shiseido资深堂</label>
-							<label for=""><input type="checkbox" /> ETUDE HOU</label>
-							<label for=""><input type="checkbox" /> 科颜氏</label>
-							<label for=""><input type="checkbox" /> the saem</label>
-							<label for=""><input type="checkbox" /> Estee Lauder</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-							
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-				</div>	
-
-				<!-- 全球零食 -->
-				<div class="snacks" ng-switch-when="snacks">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>宿舍宵夜吃起来</dd></a>
-						<a href="##"><dd>困乏提神好物</dd></a>
-						<a href="##"><dd>办公室抽屉必备</dd></a>
-						<a href="##"><dd>超人气甜品</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 宿舍宵夜吃起来</label>
-							<label for=""><input type="checkbox" /> 困乏提神好物</label>
-							
-							<label for=""><input type="checkbox" /> 办公室抽屉必备</label>
-							<label for=""><input type="checkbox" /> 超人气甜品</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>休闲零食</dd></a>
-						<a href="##"><dd>咖啡/冲饮</dd></a>
-						<a href="##"><dd>饼干/糕点</dd></a>
-						<a href="##"><dd>饮料/酒水</dd></a>
-						<a href="##"><dd>果干/坚果</dd></a>
-						<a href="##"><dd>糖果/巧克力</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>韩国</dd></a>
-						<a href="##"><dd>台湾</dd></a>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>东南亚</dd></a>
-						<a href="##"><dd>日本</dd></a>
-						<a href="##"><dd>澳洲</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 韩国</label>
-							<label for=""><input type="checkbox" /> 台湾</label>
-							
-							<label for=""><input type="checkbox" /> 美国</label>
-							
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 东南亚</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<label for=""><input type="checkbox" /> 澳洲</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>百草味</dd></a>
-						<a href="##"><dd>喜善花房</dd></a>
-						<a href="##"><dd>雪之恋</dd></a>
-						<a href="##"><dd>Richese</dd></a>
-						<a href="##"><dd>海太</dd></a>
-						<a href="##"><dd>维奕</dd></a>
-						<a href="##"><dd>丽芝士纳宝帝</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 百草味</label>
-							<label for=""><input type="checkbox" /> 喜善花房</label>
-							<label for=""><input type="checkbox" /> 雪之恋</label>
-							<label for=""><input type="checkbox" /> Richese</label>
-							<label for=""><input type="checkbox" /> 海太</label>
-							<label for=""><input type="checkbox" /> 维奕</label>
-							<label for=""><input type="checkbox" /> 丽芝士纳宝帝</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-				<!-- 创意生活 -->
-				<div class="life" ng-switch-when="life">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>给女票贴心の礼</dd></a>
-						<a href="##"><dd>收纳不再将就</dd></a>
-						<a href="##"><dd>执伞邂逅浪漫</dd></a>
-						<a href="##"><dd>厨房最佳伴侣</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 给女票贴心の礼</label>
-							<label for=""><input type="checkbox" /> 收纳不再将就</label>
-							<label for=""><input type="checkbox" /> 执伞邂逅浪漫</label>
-							<label for=""><input type="checkbox" /> 厨房最佳伴侣</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>品质生活</dd></a>
-						<a href="##"><dd>趣味文具</dd></a>
-						<a href="##"><dd>厨房伴侣</dd></a>
-						<a href="##"><dd>温馨家居</dd></a>
-						<a href="##"><dd>个人护理</dd></a>
-						<a href="##"><dd>创意礼物</dd></a>
-						<a href="##"><dd>创意家居</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>亚洲</dd></a>
-						<a href="##"><dd>其他</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 美国</label>
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 亚洲</label>
-							<label for=""><input type="checkbox" /> 其他</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>子夏</dd></a>
-						<a href="##"><dd>为睡纺</dd></a>
-						<a href="##"><dd>欧布蓝尼</dd></a>
-						<a href="##"><dd>趣淘</dd></a>
-						<a href="##"><dd>锦仕</dd></a>
-						<a href="##"><dd>飞利浦</dd></a>
-						<a href="##"><dd>新米粒</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 子夏</label>
-							<label for=""><input type="checkbox" /> 为睡纺</label>
-							<label for=""><input type="checkbox" /> 欧布蓝尼</label>
-							<label for=""><input type="checkbox" /> 趣淘</label>
-							<label for=""><input type="checkbox" /> 锦仕</label>
-							<label for=""><input type="checkbox" /> 飞利浦</label>
-							<label for=""><input type="checkbox" /> 新米粒</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-
-				</div>
-
-
-				<!-- 时尚配饰 -->
-				<div class="jewel" ng-switch-when="jewel">
-					<dl>
-						<dt>达令力荐：</dt>
-						<a href="##"><dd>个性心机配饰</dd></a>
-						<a href="##"><dd>触手可及的奢华</dd></a>
-						<a href="##"><dd>出街就要潮酷帅</dd></a>
-						<a href="##"><dd>玩转潮流包包</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 个性心机配饰</label>
-							<label for=""><input type="checkbox" /> 触手可及的奢华</label>
-							<label for=""><input type="checkbox" /> 出街就要潮酷帅</label>
-							<label for=""><input type="checkbox" /> 玩转潮流包包</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>鞋履</dd></a>
-						<a href="##"><dd>服饰配件</dd></a>
-						<a href="##"><dd>包袋</dd></a>
-						<a href="##"><dd>轻奢</dd></a>
-						<a href="##"><dd>饰品</dd></a>
-						<a href="##"><dd>脚链</dd></a>
-						<a href="##"><dd>时尚配饰</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>地区：</dt>
-						<a href="##"><dd>欧洲</dd></a>
-						<a href="##"><dd>美国</dd></a>
-						<a href="##"><dd>澳洲</dd></a>
-						<a href="##"><dd>亚洲</dd></a>
-						<a href="##"><dd>其他</dd></a>
-						<a href="##"><dd>日本</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 欧洲</label>
-							<label for=""><input type="checkbox" /> 美国</label>
-							<label for=""><input type="checkbox" /> 澳洲</label>
-							<label for=""><input type="checkbox" /> 亚洲</label>
-							<label for=""><input type="checkbox" /> 其他</label>
-							<label for=""><input type="checkbox" /> 日本</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>茉</dd></a>
-						<a href="##"><dd>美丽公主</dd></a>
-						<a href="##"><dd>新米粒</dd></a>
-						<a href="##"><dd>澳洲Pica Lela</dd></a>
-						<a href="##"><dd>SexeMara</dd></a>
-						<a href="##"><dd>沐七</dd></a>
-						<a href="##"><dd>IKEWA</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 茉</label>
-							<label for=""><input type="checkbox" /> 美丽公主</label>
-							<label for=""><input type="checkbox" /> 新米粒</label>
-							<label for=""><input type="checkbox" /> 澳洲Pica Lela</label>
-							<label for=""><input type="checkbox" /> SexeMara</label>
-							<label for=""><input type="checkbox" /> 沐七</label>
-							<label for=""><input type="checkbox" /> IKEWA</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-				<!-- 尖货女装 -->
-				<div class="clothing" ng-switch-when="clothing">
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>裙装</dd></a>
-						<a href="##"><dd>针织裙</dd></a>
-						<a href="##"><dd>半身裙</dd></a>
-						<a href="##"><dd>裤装</dd></a>
-						<a href="##"><dd>休闲服</dd></a>
-						<a href="##"><dd>皮裤</dd></a>
-						<a href="##"><dd>打底裤</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 裙装</label>
-							<label for=""><input type="checkbox" /> 针织裙</label>
-							<label for=""><input type="checkbox" /> 半身裙</label>
-							<label for=""><input type="checkbox" /> 裤装</label>
-							<label for=""><input type="checkbox" /> 休闲服</label>
-							<label for=""><input type="checkbox" /> 皮裤</label>
-							<label for=""><input type="checkbox" /> 打底裤</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>WRZS</dd></a>
-						<a href="##"><dd>AFDP</dd></a>
-						<a href="##"><dd>凡品丹妮</dd></a>
-						<a href="##"><dd>七格格</dd></a>
-						<a href="##"><dd>HAPPY HOST</dd></a>
-						<a href="##"><dd>慕帛</dd></a>
-						<a href="##"><dd>LUNA LIMTED</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> WRZS</label>
-							<label for=""><input type="checkbox" /> AFDP</label>
-							<label for=""><input type="checkbox" /> 凡品丹妮</label>
-							<label for=""><input type="checkbox" /> 七格格</label>
-							<label for=""><input type="checkbox" /> HAPPY HOST</label>
-							<label for=""><input type="checkbox" /> 慕帛</label>
-							<label for=""><input type="checkbox" /> LUNA LIMTED</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()">更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore">更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<div class="clearFloat" onclick="listMore()"></div>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<div class="clearFloat"></div>
->>>>>>> master
-					</dl>
-				</div>
-
-				<!-- 3C家电 -->
-				<div class="machine" ng-switch-when="machine">
-					<dl>
-						<dt>分类：</dt>
-						<a href="##"><dd>家用电器</dd></a>
-						<a href="##"><dd>3C数码</dd></a>
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>品牌：</dt>
-						<a href="##"><dd>金顶</dd></a>
-						<a href="##"><dd>飞利浦</dd></a>
-						<a href="##"><dd>韩恰</dd></a>
-						<a href="##"><dd>IVR</dd></a>
-						<a href="##"><dd>魔胄</dd></a>
-						<a href="##"><dd>慕帛</dd></a>
-						<a href="##"><dd>福库CUCKOO</dd></a>
-						<a href="##"><dd>锦仕</dd></a>
-						<!-- 多选内容 -->
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 金顶</label>
-							<label for=""><input type="checkbox" /> 飞利浦</label>
-							<label for=""><input type="checkbox" /> 韩恰</label>
-							<label for=""><input type="checkbox" /> IVR</label>
-							<label for=""><input type="checkbox" /> 魔胄</label>
-							<label for=""><input type="checkbox" /> 慕帛</label>
-							<label for=""><input type="checkbox" /> 福库CUCKOO</label>
-							<label for=""><input type="checkbox" /> 锦仕</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-						<button class="listMore" onclick="listMore()"> 更多</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
-						<button class="listMore"> 更多</button>
->>>>>>> master
-						<!-- 清除浮动 -->
-						<div class="clearFloat"></div>
-					</dl>
-					<dl>
-						<dt>价格：</dt>
-						<a href=""><dd>0-50</dd></a>
-						<a href=""><dd>50-100</dd></a>
-						<a href=""><dd>500以上</dd></a>
-						<dd class="showProMul">
-							<label for=""><input type="checkbox" /> 0-50</label>
-							<label for=""><input type="checkbox" /> 50-100</label>
-							<label for=""><input type="checkbox" /> 500以上</label>
-							<div class="clearFloat"></div>
-							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
-							</div>
-						</dd>
-<<<<<<< HEAD
-						<button class="selectMore" onclick="selectMore()">+ &nbsp;多选</button>
-=======
-						<button class="selectMore">+ &nbsp;多选</button>
->>>>>>> master
-						<div class="clearFloat"></div>
-					</dl>
-				</div>
-
-			</nav>
-			<div class="proChoice">
-				<ul class="choiceLeft">
-					<li>排序：</li>
-					<li class="silence">
-						<a href="">默认<span class="arrowDown"></span></a>
+					<li>
+						<a href="#">
+							<span></span>
+						</a>
+						<span></span>
 					</li>
-					<li><a href="">价格
-						<span class="priceArrow">
-							<span id="up"></span>
-							<span id="down"></span>
-						</span></a>
+					<li>
+						<a href="#">3C家电</a>
+						<span></span>
 					</li>
-					<li class="sale">
-						<a href="">销量<span class="arrowDown"></span></a>
+					<li>
+						<a href="#">家用电器</a>
+						<span></span>
 					</li>
-					<li class="popular">
-						<a href="">人气<span class="arrowDown"></span></a>
+					<li>
+						<a href="#">剃须刀/电吹风</a>
+						<span></span>
 					</li>
-					<li class="time">
-						<a href="">上架时间<span class="arrowDown"></span></a>
-					</li>
-					<li class="cargo"><input type="checkbox"/>只看有货</li>
-				</ul>
-				<ul class="choiceRight">
-					<li>共<span class="warn">100</span>个商品 &nbsp;|</li>
-					<li> &nbsp;<span class="warn">1</span>/10页</li>
-					<li>下一页</li>
+					<li>[荷兰飞利浦PHILIPS] 飞利浦PHILIPS电吹风HP8220/05(白红)</li>
 				</ul>
 			</div>
-			<div class="ProSection">
-				<div class="proData">
-					<a href=""><img src="__ROOT__/Index/Common/images/footer/proImg.jpg" alt="" /></a>
-					<div class="proMessage">
-						<p id="price">
-							<span class="warn">￥
-								<span class="newPrice">299</span>
-							</span>
-							<span class="oldPrice">￥399.00</span>
-						</p>
-						
-						<a><span class="warn">7折/</span>[韩国.打造轻薄自然妆感]Sulwhasoo2017限量气垫BB霜喜鹊登芝（粉色 13号浅淘）</a>
-						<p>
-							<span>76人收藏 &nbsp;|</span>
-							<span> &nbsp;3条评论</span>
-						</p>
+			<!--商品主要内容-->
+			<div class="main">
+				<div class="main_left afterfl">
+					<!--商品简介-->
+					<div class="main_intro">
+						<!--商品图片-->
+						<div class="main_show">
+							<div class="main_show_photo">
+								<img src="http://img.cdn.daling.com/data/files/mobile/2015/10/09/14443745634172.jpg" alt="" />
+							</div>
+							<div class="share">
+								<div class="fx">
+									<a href="#"><span></span>分享</a>
+								</div>
+								<div class="sc"><a href=""><span></span>收藏</a></div>
+								<div class="xf_box">
+									<div class="title">
+										<span class="title_photo"></span>消费者告知书<span class="title_photo2"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--商品功能区-->
+						<div class="goods-data">
+							<h1 class="clearfix">[荷兰 · 干发护发也能两全] 飞利浦 飞利浦PHILIPS电吹风HP8220/05(白红)</h1>
+							<dl class="goods-price afterfl">
+								<dt>达令价</dt>
+								<dd>
+									<div class="afterfl">
+										<div class="fl">￥<span class="f30 bold">139.00</span></div>
+									</div>
+									<p>海外现时售价
+										<span>¥199.00</span>
+										<span class="price-off">7折</span>
+									</p>
+								</dd>
+							</dl>
+							<dl class="goods-function afterfl">
+								<ul>
+									<li>评分
+										<span>
+											<span class="__web-inspector-hide-shortcut__ icon-star"></span>
+											<span class="icon-star"></span>
+											<span class="icon-star"></span>
+											<span class="icon-star"></span>
+											<span class="icon-half-star"></span>
+										</span>
+									</li>
+									<li>评论：207条</li>
+									<li>收藏：<span>355</span></li>
+								</ul>
+							</dl>
+							<dl class="goods-number afterfl">
+								<dt>购买数量</dt>
+								<dd>
+									<div class="number">
+										<a href="javascript:;" class="btn-reduce" ng-click="reduce()">
+											<span class="ico-u-5"></span>
+										</a>
+										<a href="javascript:;" class="btn-add" ng-click="add()">
+											<span class="ico-d-5"></span>
+										</a>
+										<input value="1" ng-value="num"/>
+									</div>
+								</dd>
+							</dl>
+							<div class="goods-btn afterfl">
+								<a href="#">立即购买</a>
+								<a href="#">添加到购物车</a>
+							</div>
+							<div class="goods-tips afterfl">
+								<span class="mr20">
+									<span class="ico-mark-1"></span>正品保障
+								</span>
+								<span class="mr20">
+									<span class="ico-mark-2"></span>24小时发货
+								</span>
+								<span class="mr20">
+									<span class="ico-mark-3"></span>满55元快递包邮
+								</span>
+							</div>
+							
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="detail-content">
+						<div class="tag">
+							<div class="tag_right">
+								<a href="">立即购买</a>
+								<a href="">添加到购物车</a>￥
+								<span>139.00</span>
+							</div>	
+							<ul class="afterfl">
+								<li>
+									<span class="ico">
+										<span></span>
+									</span>
+									<a href="">商品信息</a>
+								</li>
+								<li>
+									<span class="ico">
+										<span></span>
+									</span>
+									<a href="">用户评论(<span>207</span>)</a>
+								</li>
+								<li>
+									<span class="ico">
+										<span></span>
+									</span>
+									<a href="">售后服务</a>
+								</li>
+							</ul>
+						</div>
+						<!--商品内容-->
+						<div class="content">
+							<div class="content_info">
+								<!--商品参数-->
+								<div class="content_info_1">
+									<dl>
+										<dt>商品参数</dt>
+										<dd>
+											<span>品 牌：[荷兰飞利浦PHILIPS]</span>
+											<span>材 质：PVC等 </span>
+											<span>尺 寸：电线长度1.5m</span>
+											<span>商品毛重：0.663kg</span>
+											<span>颜 色：白红</span>
+											<span>产品档位：六档</span>
+											<span>电源线长度：1.5米</span>
+											<span>额定功率：1600w </span>
+											<span>风嘴类型：集风嘴, 卷发扩散风嘴（附件）</span>
+										</dd>
+									</dl>
+								</div>
+								<!--商品展示-->
+								<div class="content_info_2">
+									<dl>
+										<dt>商品信息</dt>
+										<dd>
+											<img src="http://img.cdn.daling.com/data/files/mobile/2016/01/21/14533709096532.jpg" alt="" />
+										</dd>
+									</dl>
+								</div>
+								<!--用户评论-->
+								<div class="content_info_3">
+									<dl>
+										<dt>用户评论</dt>
+										<dd>
+											<div class="comment-tag">
+												<ul class="afterfl">
+													<li>
+														<span class="first_line"></span>
+														<p class="afterfl">
+															<span class="item">好评率：</span>
+															<span class="percent">96%</span>
+														</p>
+														<p class="afterfl">
+															<span class="item">评分：</span>
+															<span>
+																<span class="icon-star"></span>
+																<span class="icon-star"></span>
+																<span class="icon-star"></span>
+																<span class="icon-star"></span>
+																<span class="icon-half-star"></span>
+															</span>
+														</p>
+														<span class="line"></span>
+													</li>
+													<li>
+														<span class="line"></span>
+														<label for="">
+															<input type="radio" name="comment"/>全部评价：207 条
+														</label>
+													</li>
+													<li>
+														<span class="line"></span>
+														<label for="">
+															<input type="radio"  name="comment"/>好评：199 条
+														</label>
+													</li>
+													<li>
+														<span class="line"></span>
+														<label for="">
+															<input type="radio"  name="comment"/>中评：7 条
+														</label>
+													</li>
+													<li>
+														<span class="line"></span>
+														<label for="">
+															<input type="radio"  name="comment"/>差评：1条
+														</label>
+													</li>
+												</ul>
+											</div>
+											<!--评价内容-->
+											<div>
+												<div class="comment-table">
+													<ul>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>达令_1a826459641</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														<li class="afterfl">
+															<div class="face">
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
+																<p>爱鹿一生520</p>
+															</div>
+															<div class="data afterfl">
+																<div class="infos afterfl">
+																	<div class="rate">评分：
+																		<span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																			<span class="icon-star"></span>
+																		</span>
+																	</div>
+																	<div class="time">评论时间：
+																		<span>2017-07-23 10:42:54</span>
+																	</div>
+																</div>
+																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+															</div>
+														</li>
+														
+													</ul>
+												</div>
+												<div class="pagination afterfl">
+													<div class="page afterfl">
+														<ul>
+															<li>1</li>
+															<li>2</li>
+															<li>3</li>
+															<li>...</li>
+															<li>21</li>
+														</ul>
+														<a href="">下一页</a>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</div>
+								<!--售后服务-->
+								<div class="content_info_4 afterfl">
+									<dt>售后服务</dt>
+									<dd>
+										客服电话： 400-080-1888，客服时间：周一至周日 09:00-18:00<br />
+										配送服务： 限大陆地区；申通或中通随机发货！订单满55元包邮；首单免运费！<br /> 
+										发货时间： 周一到周日全天发货，17点前付款当日发货 <br />
+										相关服务： 该商品非质量问题不退不换 <br />
+										微信服务： 微信号：ymallll，及时服务时间：周一至周日 09:00-18:00 <br />
+									</dd>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="clearFloat"></div>	
-			</div>	
-			<div class="pageBox">
-				<div class="changePage">
-					<a href="##">上一页</a>
-					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>...</li>
-						<li>100</li>
-						<div class="clearFloat"></div>
-					</ul>
-					<a href="##">下一页</a>
-					<div class="clearFloat"></div>
-				</div>	
+				<div class="main_right">
+					<div class="sidebar-buying">
+						<div class="title">
+							<p>大家都在买</p>
+						</div>
+						<ul>
+							<li class="active">
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+								</a>
+							</li>
+							<li class="active">
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+								</a>
+							</li>
+							<li style="display: none;">
+								<a href="">
+									<div class="img-ct cover-img"></div>
+									<p class="goods-price">¥66.00
+										<span class="old-price">¥00.00</span>
+									</p>
+									<p class="goods-title">飞科FH6355电吹风冷热风可折叠吹风机家用(粉色)</p>
+								</a>
+							</li>
+						</ul>
+						<!--切换按钮-->
+						<div class="scroll">
+							<i class="scroll-up scrolls"></i>
+							<i class="scroll-down scrolls"></i>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="clearFloat"></div>	
-		</section>
-		<div class="asideBar">
+			
+		</div>
+		
+		
+		<!--<div class="asideBar">-->
 			<aside class="aside">
 	<div class="aside_nav">
 		<!--购物车-->
@@ -1690,7 +1363,7 @@
 	</div>
 </aside>
 
-		</div>
+		<!--</div>-->
 		<div class="footer">
 			
 <footer class="container">
@@ -1752,56 +1425,37 @@
 
 		</div>
 	</body>
-	<script src="__ROOT__/Index/Common/js/header.js" type="text/javascript"></script>
-	<script src="__ROOT__/Index/Common/js/aside.js" type="text/javascript"></script>
-	<script type="text/javascript">
-<<<<<<< HEAD
-		// 点击极致美护框下拉列表呈现
-		  $("#proMenu").click(function(){
-				$(".proMenuList").css(
-					"display",'block',
-					)
-			});
-  // 点击列表中内容，下拉列表消失，框中的字换成点击选中内容
-	$("li.single").click(function(){
-		$(".initVal").html($(this).html());
-		$(".proMenuList").css(
-		"display",'none',
-		)
-		})
-
-	// 点击多选按钮，当前列消失，多选项display：block,
-		function selectMore(){
-	      $(".selectMore").click(function(){
-	      		$(this).siblings("a").toggle();
-	      		$(this).next("button").toggle();
-	      		$(this).prev("dd").toggle();
-	      		// 确定，取消键display:block(点击更多按钮时这两个节点的display:none)
-	      		$(this).prev("dd").children(".proMul").css(
-	      			'display','block',
-	      			);
-	      })
-  		};
-  		// 点击更多按钮，多选框display:block同时移除所有input
-  	function listMore(){
-	    $(".listMore").click(function(){
-	    	$(this).html("收起");
-	    	$(this).siblings("dd").toggle();
-	    	$(this).siblings("dd").children("label").children("input").remove();
-	    	$(this).siblings("dd").children(".proMul").css(
-	    		'display','none',
-	    		);
-	    })
-  }
-
-	var app=angular.module("myapp",[]);
-	 app.controller("myctrl",function($scope){
-	  	
-	 })
-
-=======
->>>>>>> master
-		
-
-	</script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/productDetail.js"></script>
 </html>
+<!--/**
+ *                             _ooOoo_
+ *                            o8888888o
+ *                            88" . "88
+ *                            (| -_- |)
+ *                            O\  =  /O
+ *                         ____/`---'\____
+ *                       .'  \\|     |//  `.
+ *                      /  \\|||  :  |||//  \
+ *                     /  _||||| -:- |||||-  \
+ *                     |   | \\\  -  /// |   |
+ *                     | \_|  ''\---/''  |   |
+ *                     \  .-\__  `-`  ___/-. /
+ *                   ___`. .'  /--.--\  `. . __
+ *                ."" '<  `.___\_<|>_/___.'  >'"".
+ *               | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *               \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *          ======`-.____`-.___\_____/___.-`____.-'======
+ *                             `=---='
+ *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *                     佛祖保佑        永无BUG
+ *            佛曰:
+ *                   写字楼里写字间，写字间里程序员；
+ *                   程序人员写程序，又拿程序换酒钱。
+ *                   酒醒只在网上坐，酒醉还来网下眠；
+ *                   酒醉酒醒日复日，网上网下年复年。
+ *                   但愿老死电脑间，不愿鞠躬老板前；
+ *                   奔驰宝马贵者趣，公交自行程序员。
+ *                   别人笑我忒疯癫，我笑自己命太贱；
+ *                   不见满街漂亮妹，哪个归得程序员？
+*/-->
