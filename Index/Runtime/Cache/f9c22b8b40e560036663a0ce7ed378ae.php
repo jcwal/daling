@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/sweetalert.css">
+		<script src="__ROOT__/Index/Common/js/sweetalert.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
@@ -20,7 +22,7 @@
 	<div class="top">
 		<div class="topWrap">
 			<div class="consumerInfo">
-				<a href="#">消费者告知书</a>
+				<a href="__APP__/Index/book">消费者告知书</a>
 			</div>
 			<ul class="loginBar">
 				<li class="login">
@@ -28,6 +30,28 @@
 				</li>
 				<li class="register">
 					<a href="javascript:void(0)">注册</a>
+				</li>
+				<li class="tel">
+					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
+					<a >400-080-1888</a>
+				</li>
+				<li class="download">
+					<a href="javascript:void(0)">下载达令app</a>
+				</li>
+			</ul>
+			<ul class="loginedBar">
+				<li class="welcome">
+					欢迎您，<span></span>
+					<a href="javascript:void(0)">[退出]</a>
+				</li>
+				<li class="order">
+					<a href="javascript:void(0)">我的订单</a>
+				</li>
+				<li class="trolley">
+					<a href="javascript:void(0)">购物车</a>
+				</li>
+				<li class="collect">
+					<a href="javascript:void(0)">我的收藏</a>
 				</li>
 				<li class="tel">
 					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
@@ -54,7 +78,7 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入您的手机号" id='usernameLogin' ng-model='usernameLogin' />
-						<span class="telHint">
+						<span class="telHint" ng-hide='telHintL()'>
 							*请输入正确的号码
 						</span>
 					</div>
@@ -63,7 +87,7 @@
 							<span></span>
 						</span>
 						<input type="password" placeholder="请输入您的密码" id='passwordLogin' ng-model='passwordLogin' />
-						<span class="pwdHint">
+						<span class="pwdHint" ng-hide='pwdHintL()'>
 							*请输入您的密码
 						</span>
 					</div>
@@ -72,10 +96,14 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入验证码" id='verifyLogin' ng-model='verifyLogin' />
-						<img src="" alt="" class="verifyImg" />
-						<span class="verifyHint">
-							*请输入正确的验证码
+						<img src="__APP__/Header/verify" alt="达令" class="verifyImg" ng-click='changeVerify()' />
+						<span class="verifyHint" ng-hide='verifyHintL()'>
+							*请输入验证码
 						</span>
+					</div>
+					<div class="withoutLogin">
+						<input type="checkbox"  ng-model='withoutLogin' />
+						七天之内自动登陆<span>(公共场所勿选)</span>
 					</div>
 					<button id="submitLogin" ng-click='loginSub()' ng-class='classLogin()' ng-disabled='judgeLogin()' >登陆</button>
 				</div>
@@ -85,24 +113,37 @@
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入您的手机号" id='usernameRegister' ng-model='usernameRegister' />
+						<span class="telHint" ng-hide='telHintR()'>
+							*请输入正确的号码
+						</span>
 					</div>
 					<div class="password">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="password" placeholder="请输入您的密码" id='passwordRegister' ng-model='passwordRegister' />
+						<span class="pwdHint" ng-hide='pwdHintR()'>
+							*请输入您的密码
+						</span>
 					</div>
 					<div class="passwordRepeat">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="password" placeholder="请确认您的密码" id='passwordRegisterReapeat' ng-model='passwordRegisterReapeat' />
+						<span class="pwdRHint" ng-hide='pwdRHintR()'>
+							*两次输入不一致
+						</span>
 					</div>
 					<div class="verify">
 						<span class="iconBox">
 							<span></span>
 						</span>
 						<input type="text" placeholder="请输入验证码" id='verifyRegister' ng-model='verifyRegister' />
+						<img src="__APP__/Header/verify" alt="达令" class="verifyImg" ng-click='changeVerify()' />
+						<span class="verifyHint" ng-hide='verifyHintR()'>
+							*请输入验证码
+						</span>
 					</div>
 					<div class="registerAgreement">
 						<input type="checkbox" ng-model='registerAgreement' />
@@ -275,7 +316,7 @@
 							<p>北京普缇客科技有限公司版权所有，在现有法律法规允许的范围内，保留最终的解释权利。</p>
 						</div>
 						<div class="detailBtn">
-							<button>同意并继续</button>
+							<button ng-click='agreement()'>同意并继续</button>
 						</div>
 					</div>
 					<div class="mask"></div>
