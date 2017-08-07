@@ -1,4 +1,9 @@
+if(app == ''){
+	app=angular.module("myapp",[]);	
+};
+app.controller("myctrl",function(){
 
+})
 // 单选按钮
 	$('.select').click(function(){
 		$(this).parents('.listTitle').next('.listBody').find('.checkt').prop('checked',true);
