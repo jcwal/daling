@@ -8,8 +8,10 @@ class HeaderAction extends Action {
     		if($loginInfo['status'] == 1){
     			if($data['withoutLogin'] == true){
     				cookie('username',$data['username'],604800);
+                    session('username',$data['username']);
     			}else{
     				cookie('username',$data['username'],0);
+                    session('username',$data['username']);
     			};
     			
     		};
@@ -23,8 +25,10 @@ class HeaderAction extends Action {
 	}
 	public function logout(){
 		cookie('username',null);
-		$value = cookie('username');
-		if(!empty($value)){
+        session('username',null);
+		$valueC = cookie('username');
+        $valueS = session('username');
+		if(!empty($valueC) || !empty($valueS)){
 			$logoutInfo['status'] = 0;
 			$logoutInfo['info'] = '服务器错误，请重试';
 			$this->ajaxReturn($logoutInfo);
