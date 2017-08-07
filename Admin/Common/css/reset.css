@@ -17,6 +17,9 @@ ul{
 	display: block;
 	clear: both;
 } 
+.clearFloat{
+	zoom:1;
+}
 article,aside,canvas,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section,summary { 
     display:block;

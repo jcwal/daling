@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -13,7 +13,7 @@
 		<div id="header">
 			<div class="header">
 		    	<h2 class="header_title">达令后台管理系统</h2>
-		    	<span class="header_user">欢迎你,{$Think.session.username}</span>
+		    	<span class="header_user">欢迎你,<?php echo (session('username')); ?></span>
 		    </div>
 			<div class="panel">
 				<div class="panel_item">
