@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/index.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/sweetalert.css">
+		<script src="__ROOT__/Index/Common/js/sweetalert.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
@@ -20,7 +22,7 @@
 	<div class="top">
 		<div class="topWrap">
 			<div class="consumerInfo">
-				<a href="#">消费者告知书</a>
+				<a href="__APP__/Index/book">消费者告知书</a>
 			</div>
 			<ul class="loginBar">
 				<li class="login">
@@ -28,6 +30,28 @@
 				</li>
 				<li class="register">
 					<a href="javascript:void(0)">注册</a>
+				</li>
+				<li class="tel">
+					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
+					<a >400-080-1888</a>
+				</li>
+				<li class="download">
+					<a href="javascript:void(0)">下载达令app</a>
+				</li>
+			</ul>
+			<ul class="loginedBar">
+				<li class="welcome">
+					欢迎您，<span></span>
+					<a href="javascript:void(0)">[退出]</a>
+				</li>
+				<li class="order">
+					<a href="javascript:void(0)">我的订单</a>
+				</li>
+				<li class="trolley">
+					<a href="javascript:void(0)">购物车</a>
+				</li>
+				<li class="collect">
+					<a href="javascript:void(0)">我的收藏</a>
 				</li>
 				<li class="tel">
 					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
@@ -76,6 +100,10 @@
 						<span class="verifyHint" ng-hide='verifyHintL()'>
 							*请输入验证码
 						</span>
+					</div>
+					<div class="withoutLogin">
+						<input type="checkbox"  ng-model='withoutLogin' />
+						七天之内自动登陆<span>(公共场所勿选)</span>
 					</div>
 					<button id="submitLogin" ng-click='loginSub()' ng-class='classLogin()' ng-disabled='judgeLogin()' >登陆</button>
 				</div>

@@ -20,6 +20,11 @@
     color: #666;
     font-size: 12px;
 }
+.navigator .header .top .topWrap .consumerInfo a:hover{
+    color:red;
+    text-decoration: underline;
+}
+/*登陆前*/
 .navigator .header .top .topWrap .loginBar{
 	position: absolute;
     right: 40px;
@@ -27,7 +32,8 @@
     line-height: 32px;
     font-size: 12px;
 }
-.navigator .header .top .topWrap .loginBar li{
+.navigator .header .top .topWrap .loginBar li,
+.navigator .header .top .topWrap .loginedBar li{
 	float: left;
 	color: #666;
 	margin: 5px 0 0 10px;
@@ -37,19 +43,31 @@
 	height: 20px;
 	line-height: 20px;
 }
-.navigator .header .top .topWrap .loginBar li:not(.tel) a:hover{
+.navigator .header .top .topWrap .loginBar li:not(.tel) a:hover,
+.navigator .header .top .topWrap .loginedBar li:not(.tel) a:hover{
 	text-decoration: underline;
 	color:red;
 }
-.navigator .header .top .topWrap .loginBar .tel img{
+.navigator .header .top .topWrap .loginBar .tel img,
+.navigator .header .top .topWrap .loginedBar .tel img{
 	float: left;
 }
-.navigator .header .top .topWrap .loginBar .tel a{
+.navigator .header .top .topWrap .loginBar .tel a,
+.navigator .header .top .topWrap .loginedBar .tel a{
 	float: left;
 	display: inline-block;
 }
-.navigator .header .top .topWrap .loginBar .download{
+.navigator .header .top .topWrap .loginBar .download,
+.navigator .header .top .topWrap .loginedBar .download{
 	border:0;
+}
+/*登陆后*/
+.navigator .header .top .topWrap .loginedBar{
+    position: absolute;
+    right: 40px;
+    display: inline-block;
+    line-height: 32px;
+    display: none;
 }
 /*头部-登陆和注册*/
 .navigator .header .loginRegisterWrap{
@@ -181,6 +199,20 @@
     width: 100%;
     font-size: 15px;
     display: none;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .withoutLogin{
+    font-size: 14px;
+    opacity: 0.7;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .withoutLogin input{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm .withoutLogin span{
+    color:red;
 }
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .loginForm div,
 .navigator .header .loginRegisterWrap .loginRegisterInner .loginRegisterPanel .registerForm div{
