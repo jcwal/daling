@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+	    <meta name="keywords" content="达令,达令™,鹿晗,海淘,礼物店,跨境购,代购,全球购,跨境电商,海外直邮,达令礼物店,达令APP,达令官网">
+    	<meta name="description" content="达令™一手全球好货,每天甄选高品质时尚潮货,进口零食,美妆,创意生活用品.潮流买手带您跨境全球购,达令APP教您神马值得买.鹿晗投资,品牌授权,海关监督,免税直邮.Darling爱达令!">
 		<title>达令</title>
+		<link rel="shortcut icon" href="__ROOT__/Index/Common/images/index/favicon.ico"/>
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
 		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
