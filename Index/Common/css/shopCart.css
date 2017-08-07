@@ -169,11 +169,6 @@
 	margin-top:20px;
 }
 
-/*.cartContainer .onlineCart .fullCart .listBody .listInner ul{
-	background: url("../");
-}*/
-
-
 .cartContainer .onlineCart .fullCart .listTitle input,
 .cartContainer .onlineCart .fullCart .listBody ul li:nth-child(1) input{
 	width:14px;
@@ -241,6 +236,9 @@
 .cartContainer .onlineCart .fullCart .listBody ul li>.proRelate{
 	line-height: 20px;
 }
+.cartContainer .onlineCart .fullCart .listBody ul li>.proRelate:hover{
+	text-decoration: underline;
+}
 /*商品单价*/
 .cartContainer .onlineCart .fullCart .listBody ul li:nth-child(3){
 	margin-left: 46px;
@@ -272,7 +270,7 @@
 	font-weight: bold;
 	border-right:none 0;
 	margin-right: 0;
-	/*display: block;*/
+	display: block;
 }
 /*商品件数*/
 .cartContainer .onlineCart .fullCart .listBody ul li>.count{

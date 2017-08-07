@@ -1,10 +1,4 @@
-var app=angular.module("myapp",[]);
-app.controller("myctrl",function($scope){
-// 	$scope.reduce=function($index){
-// 		if($scope.)
-// 	}
-	
-})
+
 // 单选按钮
 	$('.select').click(function(){
 		$(this).parents('.listTitle').next('.listBody').find('.checkt').prop('checked',true);
