@@ -1,0 +1,583 @@
+.da-checkout {
+	width: 1020px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+/*logo部分*/
+.da-checkout .centerWrap a{
+	float:left;
+	width:280px;
+	margin-right: 20px;
+	height:40px;
+	background: url('../images/header/logo.png') no-repeat;  
+}
+/*订单栏*/
+.da-checkout .centerWrap .logoFlow{
+    border: 1px solid #e5e5e5;
+    height: 38px;
+    width: 615px;
+    float: right;
+    margin-top: 10px;
+}
+.da-checkout .centerWrap .logoFlow ul li{
+    width:205px;
+    height:40px;
+    line-height: 40px;
+    float:left;
+    position: relative;
+    font-size: 14px;
+    color:#cacaca;
+}
+.da-checkout .centerWrap .logoFlow ul li:nth-child(1){
+	z-index: 1;
+    top: -1px;
+    left: -1px;
+	color: #d8827e;
+    background-color:#fe9994;
+}
+.da-checkout .centerWrap .logoFlow ul li:nth-child(2){
+	/*z-index: 1;*/
+    top: -1px;
+    left: -1px;
+	color: #fff;
+    background-color:#f25e5a;
+}
+/*查看购物车箭头*/
+.da-checkout .centerWrap .logoFlow ul li:nth-child(1) .flowList{
+	width:0;
+	height:0;
+	border-width: 20px 11px;
+	border-style: solid;
+	right: -22px;
+	position: absolute;	
+	border-color:transparent transparent transparent #fe9994;
+	display: block;
+}
+.da-checkout .centerWrap .logoFlow ul li:nth-child(2) .flowList{
+	width:0;
+	height:0;
+	border-width: 20px 11px;
+	border-style: solid;
+	right: -22px;
+	position: absolute;	
+	border-color:transparent transparent transparent #f25e5a;
+	display: block;
+}
+/*订单栏编号*/
+.da-checkout .centerWrap .logoFlow ul li .flowCircle{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	border-radius: 50%;
+	background-color: #cacaca;
+	color:#fff;
+	text-align: center;
+	line-height: 20px;
+	margin:0 10px 0 52px;
+	font-family: arial;
+	font-weight: 700;
+}
+.da-checkout .centerWrap .logoFlow ul li:nth-child(1) .flowCircle{
+	background-color: #d8827e;
+	color:#ecc7c5;
+}
+.da-checkout .centerWrap .logoFlow ul li:nth-child(2) .flowCircle{
+	background-color: #fff;
+	color:#f25e5a;
+}
+.da-checkout .centerWrap .logoFlow ul li .flowTo{
+	width:7px;
+	height:21px;
+	vertical-align: middle;
+	position: absolute;
+	left:auto;
+	right:0;
+	top:10px;
+	background:url(../images/footer/ico_arrow.png) -64px -85px no-repeat; 
+}
+/*填写核对订单信息*/
+.da-checkout .checkout-title {
+	font-size: 16px;
+    line-height: 36px;
+    padding-left: 20px;
+    padding-top: 40px;
+    font-weight: 700;
+}
+.da-checkout .checkout-main {
+    padding: 20px 19px;
+    border: 1px solid #e5e5e5;
+}
+.da-checkout .checkout-main .checkout-buyer {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.da-checkout .checkout-main .checkout-buyer .title {
+	font-size: 14px;
+    line-height: 34px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+/*切换收货地址*/
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option {
+	height: 30px;
+    line-height: 30px;
+    width: 239px;
+    float: right;
+    position: relative;
+}
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option .toggole-address {
+    padding-left: 22px;
+}
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option a {
+	display: inline-block;
+}
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option a p {
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
+    /*margin-left: -10px;*/
+}
+.da-checkout .ico-u-4-3 {
+    border-color: transparent transparent #666;
+    top: 12px;
+}
+.da-checkout .ico-d-4-3 {
+	border-color: #666 transparent transparent;
+    top: 14px;
+}
+.da-checkout .ico-u-4-3,.ico-d-4-3 {
+   	position: absolute;
+    border-style: solid;
+    right: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+/*使用新地址*/
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option .add-address {
+	height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 12px;
+}
+.da-checkout .checkout-main .checkout-buyer .title .buyer-option .add-address .ico-add {
+    background: url(../images/indent/ico_symbol.png) -25px -35px no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    margin-top: -2px;
+}
+.da-checkout .checkout-main .checkout-buyer .buyer-info {
+    margin-left: 20px;
+    height: auto;
+    overflow: hidden;
+    /*height: 150px;*/
+}
+.da-checkout .checkout-main .checkout-buyer .buyer-info1 {
+    height: 150px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .mask {
+	width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .4;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .have-title {
+    margin-top: -185.5px;
+    margin-left: -298px;
+    padding: 0;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .da-dialog-inner {
+    position: fixed;
+    border: 2px solid #5C5C5C;
+    background: #fff;
+    z-index: 202;
+    top: 50%;
+    left: 50%;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .da-dialog-title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 18px;
+    background-color: #f2f2f2;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/aside/login-close.png);
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form {
+	width: 596px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-tip {
+	background-color: #fffaf7;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #f99f60;
+    margin: 20px 20px 0;
+    padding-left: 10px;
+    color: #e14958;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-tip .ico-tip {
+    margin-right: 10px;
+}
+.da-checkout .ico-tip {
+    background-image: url(../images/productDetail/ico.png)!important;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    background-position: -30px -88px;
+    width: 8px;
+    height: 14px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-ti strong {
+    font-weight: 700;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-form-body {
+    margin-top: 20px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-form-body li {
+    padding-bottom: 20px;
+}
+.da-checkout form .ctrl {
+    position: relative;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .address-form .address-form-body .item {
+    width: 82px;
+    display: inline-block;
+    text-align: right;
+    line-height: 30px;
+}
+.da-checkout .address-form .address-form-body input {
+    padding: 0 5px;
+}
+.da-checkout .address-form .address-form-body .input158 {
+   	width: 148px;
+}
+.da-checkout .address-form .address-form-body input,.address-form .address-form-body select {
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+}
+.da-checkout .address-form .address-form-body .data {
+    display: inline-block;
+}
+.da-checkout .address-form .address-form-body .ctrl {
+   position: relative;
+}
+.da-checkout .address-form .address-form-body select {
+    height: 24px;
+    padding: 4px 0;
+    width: 150px;
+}
+.da-checkout .address-form .address-form-body .input438 {
+	width: 428px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .btn-area {
+	border-top: solid 1px #999;
+    height: 60px;
+    line-height: 60px;
+    text-align: right
+}
+.da-checkout button {
+    overflow: visible;
+    background-color: #e14958;
+    border: 1px solid #e14958;
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+    align-items: center;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .btn-area button {
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .btn-area .button-cancel {
+	background-color: transparent;
+    border: 0;
+    color: #666;
+    margin-right: 30px;
+}
+.da-checkout .checkout-main .checkout-buyer .da-dialog .btn-area .button-sure {
+    width: 140px;
+    margin-right: 20px;
+}
+/*订单信息*/
+.da-checkout .checkout-main .checkout-items .checkout-order {
+    padding-top: 10px;
+    padding-bottom: 38px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .title{
+    font-size: 14px;
+    line-height: 34px;
+    padding-bottom: 7px;
+    font-weight: 700;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .title .back-cart {
+	float: right;
+    font-size: 14px;
+    color: #3333d6;
+    padding-right: 38px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table {
+    border: 1px solid #e5e5e5;
+    margin-left: 30px;
+    width: 920px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .thead{
+    background-color: #f7f7f7;
+    height: 39px;
+    line-height: 39px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .th{
+   	float: left;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .item{
+   	width: 512px;
+    	font-size: 14px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .price{
+    width: 116px;
+    text-align: center;
+    font-size: 14px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .number{
+    width: 130px;
+    text-align: center;
+    font-size: 14px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .total{
+   	overflow: hidden;
+    float: none;
+    font-size: 14px;;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .total p {
+	text-align: right;
+    padding-right: 26px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-table .td {
+	float: left;
+    padding-top: 20px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .item a {
+	float: left;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .item .img {
+    width: 78px;
+    height: 78px;
+    float: left;
+    border: 1px solid #e5e5e5;
+    margin-right: 20px;
+    margin-left: 34px;
+    background-position: center center;
+    background-size: cover;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .item .url {
+	background-image: url(../images/productDetail/product.jpg);
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .item p {
+	font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .item a {
+	float: left;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .tr .total p {
+    padding-right: 32px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .order-sum {
+	    position: relative;
+    padding-top: 20px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .tip {
+	height: 38px;
+    line-height: 38px;
+    padding-left: 34px;
+    border-top: solid 1px #e5e5e5;
+}
+.da-checkout .checkout-main .checkout-items .checkout-order .tip em{
+    font-style: normal;
+    margin-right: 10px;
+} 
+.da-checkout .checkout-main .checkout-items .coupon-card {
+    margin: 0 auto;
+    border-bottom: solid 1px #e5e5e5;
+    padding-bottom: 25px;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card div {
+	padding: 33px 20px 10px 0;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card p {
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card p a {
+	color: #00f;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card span {
+	padding-left: 30px;
+	display: none;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card span .coupon-card-text {
+	width: 180px;
+    height: 20px;
+    border: 1px solid #e5e5e5;
+    text-indent: 7px;
+}
+.da-checkout .checkout-main .checkout-items .coupon-card span .coupon-card-btn {
+	width: 50px;
+    height: 24px;
+    border: 1px solid #e5e5e5;
+    background: 0 0;
+    border-radius: 3px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay {
+    margin-top: 15px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .tip{
+    padding: 16px 0 15px;
+}
+.f14 {
+	font-size: 14px;
+}
+.bold {
+	font-weight: 700;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box {
+    padding: 10px 0 0 30px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 {
+    padding-bottom: 22px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 .each{
+  	float: left;
+    margin-right: 40px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 .each .current{
+    border: 1px solid #f25e5a;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 .each .pic-payway {
+    /*border: 1px solid #d9d9d9;*/
+   	margin: 0 auto;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 138px;
+    height: 43px;
+    line-height: 41px;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 .each .current p{
+    border: 1px solid #f25e5a;
+}
+.da-checkout .checkout-main .checkout-items .checkout-pay .checkout-pay-box .pay-way-1 .each .current p .ico-small-right{
+	background: url(../images/indent/ico-right.png) -66px -19px no-repeat;
+    /*display: none;*/
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.da-checkout .checkout-result {
+	border: 1px solid #e5e5e5;
+    margin-top: -1px;
+    width: 1018px;
+}
+.da-checkout .checkout-result .collect-info{
+	border-bottom: solid 1px #e5e5e5;
+    font-size: 14px;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+td {
+	padding: 0;
+}
+.da-checkout .checkout-result .collect-info td:first-child {
+    border-right: solid 1px #e5e5e5;
+}
+.da-checkout .checkout-result .receiver {
+    width: 560px;
+    padding: 22px 30px;
+}
+.da-checkout .checkout-result .receiver p {
+    line-height: 30px;
+}
+.da-checkout .checkout-result .money-box {
+	padding: 22px 30px;
+}
+.da-checkout .checkout-result .money-box p {
+    line-height: 30px;
+    position: relative;
+    width: 316px;
+}
+.da-checkout .checkout-result .money-box .money-posi {
+    position: absolute;
+    right: 0;
+}
+.da-checkout .rede1 {
+    color: #e14958;
+}
+.da-checkout .checkout-result .checkout-bar {
+	width: 100%;
+}
+.da-checkout .checkout-result .checkout-bar .checkout-total{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+    height: 59px;
+    line-height: 59px;
+    text-align: right;
+}
+.da-checkout .checkout-result .checkout-bar .checkout-total .price{
+	font-size: 24px;
+	width: 118px;
+	display: inline-block;
+	text-align: left;
+} 
+.da-checkout .checkout-result .checkout-bar .checkout-total button{
+    width: 138px;
+    height: 59px;
+    line-height: 59px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #f25e5a;
+    background-color: #f25e5a;
+    vertical-align: top;
+} 
+.floating {
+	position: fixed;
+    background-color: #f2f2f2;
+    border-top: solid 1px #999;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+}
