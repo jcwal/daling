@@ -1,4 +1,7 @@
-var app = angular.module("myapp",[]);
+if(app == ''){
+    app=angular.module("myapp",[]); 
+};
+
 var distance = 0;
 app.controller("mycontroller",function ($scope) {
 	//购买数量加加和减减
