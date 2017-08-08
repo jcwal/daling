@@ -16,8 +16,8 @@
 	margin:0 auto;
 }
 #header .panel .panel_item{
-	margin:100px 27%;
-
+	margin:200px auto;
+	text-align: center;
 }
 #header .panel .panel_item a{
 	display: inline-block;
@@ -30,4 +30,21 @@
 }
 a:hover{
 	text-decoration: none;
+}
+/*登出*/
+#header{
+	position: relative;
+}
+#header .logout{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 14px;
+	color:green;
+	font-weight: 500;
+}
+#header .logout:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
 }

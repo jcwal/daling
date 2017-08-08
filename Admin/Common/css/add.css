@@ -1,5 +1,9 @@
+.content{
+	position: relative;
+}
 .content>h2{
-	margin:35px 45%;
+	margin:35px auto;
+	text-align: center;
 }
 .content .form-horizontal .form-group{
 	padding-bottom:15px;
@@ -9,4 +13,17 @@
 }
 .content .form-horizontal .form-group .category{
 	/*width:120px;*/
+}
+.logout{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 14px;
+	color:green;
+	font-weight: 500;
+}
+.logout:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
 }
