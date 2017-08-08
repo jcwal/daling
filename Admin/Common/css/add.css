@@ -1,0 +1,12 @@
+.content>h2{
+	margin:35px 45%;
+}
+.content .form-horizontal .form-group{
+	padding-bottom:15px;
+}
+.content .form-horizontal .form-group input{
+	height:40px;
+}
+.content .form-horizontal .form-group .category{
+	/*width:120px;*/
+}
