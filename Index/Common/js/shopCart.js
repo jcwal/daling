@@ -85,17 +85,19 @@ $('.btn').click(function(){
 
 	// 删除选中
 	$('.delectPro').click(function(){
-		var $everyCheck=$(".checkt").filter(function(index){
+		var everyCheck=$(".checkt").filter(function(index){
 			return $(this).prop('checked')==true;
 		});
-		$everyCheck.each(function(index,value){
+		everyCheck.each(function(index,value){
 			$(this).parents(".fullCart").remove();
-		})
-		if($(".fullCart").length==0){
-			$(".emptyCart").toggle();
-		}
+		})	
 		totalCheck();
 		totalPrice();
+		if($(".checkt").length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		};
 	});
 
 	// 删除单个商品
@@ -103,6 +105,13 @@ $('.btn').click(function(){
 		$(this).parents(".fullCart").remove();
 		totalCheck();
 		totalPrice();
+		var singleDel=$(".checkt");
+		if(singleDel.length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		}
+		
 	})
 
  

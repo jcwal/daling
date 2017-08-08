@@ -288,6 +288,9 @@
 	border-right: solid 1px #e5e5e5;
 	border-left:none 0;
 }
+.cartContainer .onlineCart .fullCart .listBody ul li>.btn:hover{
+	cursor:pointer;
+}
 /*单类商品总价*/
 .cartContainer .onlineCart .fullCart .listBody ul li:nth-child(5){
 	margin-left: 20px;
@@ -304,10 +307,10 @@
 	line-height: 20px;
 	float:none;
 }
-.cartContainer .onlineCart .fullCart .listBody ul li:nth-child(6) #delect{
-	display: inline-block;
+.cartContainer .onlineCart .fullCart .listBody ul li:nth-child(6) .singleDel:hover{
+	cursor:pointer;
+	text-decoration: underline;
 }
-
 /*换购区*/
 .cartContainer .exchange{
 	position: relative;
