@@ -1,5 +1,9 @@
-
-
+if(app == ''){
+    app=angular.module("myapp",[]); 
+};
+ app.controller("myctrl",function($scope){
+    
+ });
 $(document).ready(function(){
 	// 点击极致美护框下拉列表呈现
   $("#proMenu").click(function(){
@@ -37,9 +41,6 @@ $(document).ready(function(){
     })
  
 });
- var app=angular.module("myapp",[]);
- app.controller("myctrl",function($scope){
-  	
- })
+
   		
 

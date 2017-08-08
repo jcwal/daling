@@ -1,0 +1,50 @@
+/*达令后台管理系统*/
+#header .header>.header_title{
+	margin-left: 40px;
+}
+/*用户*/
+#header .header>.header_user{
+	display: block;
+	height:60px;
+	float:right;
+	margin:-30px 150px 0 0;
+	font-size: 16px;
+}
+/*添加/修改商品*/
+#header .panel{
+	width:auto;
+	margin:0 auto;
+}
+#header .panel .panel_item{
+	margin:200px auto;
+	text-align: center;
+}
+#header .panel .panel_item a{
+	display: inline-block;
+	width:300px;
+	height:200px;
+	font-size:40px;
+	text-align: center;
+	line-height: 200px;
+	color:#fff;
+}
+a:hover{
+	text-decoration: none;
+}
+/*登出*/
+#header{
+	position: relative;
+}
+#header .logout{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 14px;
+	color:green;
+	font-weight: 500;
+}
+#header .logout:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+}
