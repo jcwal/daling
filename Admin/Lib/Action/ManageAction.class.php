@@ -8,22 +8,6 @@ class ManageAction extends Action {
     		header("Location:../");	
     	};	
     }
-    public function add(){
-    	$username = session('manager');
-    	if(!empty($username)){
-    		$this->display('add');
-    	}else{
-    		header("Location:../");	
-    	};	
-    }
-    public function modify(){
-    	$username = session('manager');
-    	if(!empty($username)){
-    		$this->display('modify');
-    	}else{
-    		header("Location:../");	
-    	};	
-    }
     public function logout(){
         session('manager',null);
         $username = session('manager');
