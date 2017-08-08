@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>订单确认</title>
+		<meta name="keywords" content="达令,达令™,鹿晗,海淘,礼物店,跨境购,代购,全球购,跨境电商,海外直邮,达令礼物店,达令APP,达令官网">
+    		<meta name="description" content="达令™一手全球好货,每天甄选高品质时尚潮货,进口零食,美妆,创意生活用品.潮流买手带您跨境全球购,达令APP教您神马值得买.鹿晗投资,品牌授权,海关监督,免税直邮.Darling爱达令!">
+		<link rel="shortcut icon" href="__ROOT__/Index/Common/images/index/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/sweetalert.css">
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/indent.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
+		<script type="text/javascript">
+			var app = '';
+		</script>
+	</head>
+	<body ng-app="myapp" onload="_init_area()">
+		<!--订单查询内容-->
+		<div class="da-checkout" id="checkout">
+			<!-- logo以及订单栏 -->
+			<div class="centerWrap">
+				<a href="#" class="logo"></a>
+				<!-- 订单栏流程 -->
+				<div class="logoFlow">
+					<ul>
+						<li>
+							<span class="flowList"></span>
+							<span class="flowCircle">1</span>
+							查看购物车	
+						</li>
+						<li>
+							<span class="flowList"></span>
+							<span class="flowCircle">2</span>
+							<!--<span class="flowTo"></span>-->
+							确认订单信息
+						</li>
+						<li>
+							<span class="flowList"></span>
+							<span class="flowCircle">3</span>
+							成功提交订单
+						</li>
+						
+					</ul>
+				</div>
+				<div class="clearFloat"></div>
+			</div>
+			<!--填写核对订单信息-->
+			<div class="checkout-title">填写核对订单信息</div>
+			<div class="checkout-main">
+				<!--买家信息-->
+				<div class="checkout-buyer">
+					<div class="title clearFloat">
+						<div class="buyer-option">
+							<a href="javascript:;" class="toggole-address clearFloat">
+								<p>
+									<span class="text">收起收货地址</span>
+									<span class="ico-u-4-3"></span>
+								</p>
+							</a>
+							<a href="javascript:;" class="add-address">
+								<span class="ico-add"></span>使用新地址
+							</a>
+						</div>收货人信息
+					</div>
+					<div class="buyer-info clearFloat ">
+						<ul></ul>
+					</div>
+					<!--填写收货信息-->
+					<div class="da-dialog address-dialog" style="display: none;">
+						<div class="mask"></div>
+						<div class="da-dialog-inner have-title">
+							<div class="da-dialog-title">
+								<a href="javascript:;" class="close"></a>
+								<p>使用新地址</p>
+							</div>
+							<form class="address-form">
+								<div class="address-tip">
+									<span class="ico-tip"></span>
+									<strong>温馨提示：收件人请使用与身份证号对应的真实姓名，否则您购买的商品将无法通过海关检查。</strong>
+								</div>
+								<div class="address-form-body">
+									<ul>
+										<li>
+											<label class="ctrl consignee">
+												<span class="item">*收件人：</span>
+												<input type="text" class="input158"/>
+											</label>
+											<label class="id-card ctrl">
+												<span class="item">身份证号：</span>
+												<input type="text" class="input158"/>
+											</label>
+										</li>
+										<li>
+											<span class="item">*收货地址：</span>
+											<span class="data ctrl region">
+												<!--<select></select>
+												<select></select>
+												<select></select>-->
+												<select id="s_province" name="s_province"></select>  
+											    <select id="s_city" name="s_city" ></select>  
+											    <select id="s_county" name="s_county"></select>
+											</span>
+										</li>
+										<li>
+											<label class="ctrl detail">
+												<span class="item">*详细地址：</span>
+												<span class="data">
+													<input type="text" class="input438"/>
+												</span>
+											</label>
+										</li>
+										<li>
+											<label class="ctrl phone-mob">
+												<span class="item">*手机号码：</span>
+												<span class="data">
+													<input type="text" class="input158"/>
+												</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</form>
+							<div class="btn-area">
+								<button class="button-cancel">取消</button>
+								<button class="button-sure">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--订单信息-->
+				<div class="checkout-items">
+					<div class="checkout-order">
+						<div class="title">订单商品信息
+							<a href="#" class="back-cart">返回修改购物车</a>
+						</div>
+						<div class="order-table">
+							<ul class="thead clearFloat">
+								<li class="th item">
+									<p>商品名称</p>
+								</li>
+								<li class="th price">
+									<p>单价(元)</p>
+								</li>
+								<li class="th number">
+									<p>数量</p>
+								</li>
+								<li class="th total">
+									<p>小计(元)</p>
+								</li>
+							</ul>
+							<ul class="tr clearFloat">
+								<li class="td item">
+									<a href="#" class="clearFloat">
+										<div class="img cover-img url"></div>
+									</a>
+									<p>
+										<a href="#" class="clearFloat">[荷兰飞利浦PHILIPS]</a>
+										<a href="#" class="clearFloat">[荷兰飞利浦PHILIPS]飞利浦PHILIPS电吹风HP8220/05(白红)</a>
+									</p>
+								</li>
+								<li class="td price">
+									<p>¥ 139.00</p>
+								</li>
+								<li class="td number">
+									<p>x 3</p>
+								</li>
+								<li class="td total">
+									<p>¥ 417.00</p>
+								</li>
+							</ul>
+							<div class="order-sum clearFloat">
+								<div class="tip">
+									<em>国内运费: ¥0.00</em>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--使用优惠劵-->
+					<div class="coupon-card">
+						<div>使用优惠券</div>
+						<p>有优惠券兑换码？
+							<a href="javascript:;">[点击输入兑换码]</a>
+						</p>
+						<span>
+							劵码：<input type="text" class="coupon-card-text"/>
+							密码：<input type="text" class="coupon-card-text"/>
+							<input type="button" value="激活" class="coupon-card-btn"/>
+						</span>
+					</div>
+					<!--支付方式-->
+					<div class="checkout-pay">
+						<p class="tip">
+							<span class="f14 bold">支付方式</span> * 推荐使用在线支付，更方便快捷
+						</p>
+						<div class="checkout-pay-box">
+							<div class="pay-way-1 clearFloat">
+								<div class="each clearFloat">
+									<label class="pic-payway current">
+										<p>
+											<span class="ico-small-right"></span>网上支付
+										</p>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkout-result">
+				<div class="collect-info">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<div class="receiver">
+										<p>收货信息：
+											<span>张三</span>
+											<span>18888888888</span>
+											<span>北京市-北京市-东城区</span>
+											<span>海淀大街3号(11-2号地)8、9层</span>
+										</p>
+										<p>支付方式：
+											<span>在线支付</span>
+										</p>
+									</div>
+								</td>
+								<td>
+									<div class="money-box">
+										<p class="clearFloat">商品总金额：
+											<span class="money-posi">+ ¥
+												<span>887.00</span>
+											</span>
+										</p>
+										<p class="clearFloat">促销优惠金额：
+											<span class="rede1 money-posi">+ ¥
+												<span>887.00</span>
+											</span>
+										</p>
+										<p class="clearFloat">优惠券金额：
+											<span class="rede1 money-posi">+ ¥
+												<span>887.00</span>
+											</span>
+										</p>
+										<p class="clearFloat">国内运费：
+											<span class="money-posi">+ ¥
+												<span>887.00</span>
+											</span>
+										</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--提交订单-->
+				<div class="checkout-bar">
+					<div class="checkout-total">应付总额：
+						<span class="rede1">¥
+							<span class="price">887.00</span>
+						</span>
+						<button>提交订单</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--订单查询内容end-->
+		
+		<div class="footer">
+			<include file='Public:footer' />
+		</div>
+	</body>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/indent.js"></script>
+</html>
+<!--/**
+ *                             _ooOoo_
+ *                            o8888888o
+ *                            88" . "88
+ *                            (| -_- |)
+ *                            O\  =  /O
+ *                         ____/`---'\____
+ *                       .'  \\|     |//  `.
+ *                      /  \\|||  :  |||//  \
+ *                     /  _||||| -:- |||||-  \
+ *                     |   | \\\  -  /// |   |
+ *                     | \_|  ''\---/''  |   |
+ *                     \  .-\__  `-`  ___/-. /
+ *                   ___`. .'  /--.--\  `. . __
+ *                ."" '<  `.___\_<|>_/___.'  >'"".
+ *               | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *               \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *          ======`-.____`-.___\_____/___.-`____.-'======
+ *                             `=---='
+ *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *                     佛祖保佑        永无BUG
+ *            佛曰:
+ *                   写字楼里写字间，写字间里程序员；
+ *                   程序人员写程序，又拿程序换酒钱。
+ *                   酒醒只在网上坐，酒醉还来网下眠；
+ *                   酒醉酒醒日复日，网上网下年复年。
+ *                   但愿老死电脑间，不愿鞠躬老板前；
+ *                   奔驰宝马贵者趣，公交自行程序员。
+ *                   别人笑我忒疯癫，我笑自己命太贱；
+ *                   不见满街漂亮妹，哪个归得程序员？
+*/-->
