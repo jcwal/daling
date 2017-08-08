@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/reset.css" />
 		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/manage.css" />
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/sweetalert.css">
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/sweetalert.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Admin/Common/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Admin/Common/js/bootstrap.min.js"></script>
 	</head>
@@ -13,7 +15,8 @@
 		<div id="header">
 			<div class="header">
 		    	<h2 class="header_title">达令后台管理系统</h2>
-		    	<span class="header_user">欢迎你,{$Think.session.username}</span>
+		    	<span class="header_user">欢迎你,{$Think.session.manager}</span>
+		    	<span class="logout">[退出系统]</span>
 		    </div>
 			<div class="panel">
 				<div class="panel_item">
@@ -23,4 +26,32 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		$('.logout').on('click',function(){
+			$.ajax({
+				method:'get',
+				url:'__ROOT__/admin.php/Manage/logout',
+				success:function(data){
+					if(data.status == 1){
+						window.location.href = '__ROOT__/admin.php/Index';
+					}else{
+						swal({
+							title: data['info'],
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					};
+				},
+				error:function(err){
+					swal({
+						title: err,
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				},
+			});
+		});
+	</script>
 </html>

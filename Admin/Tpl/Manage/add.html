@@ -16,6 +16,7 @@
 	<body ng-app='myapp' ng-controller='addController'>
 		<div class="content">
 			<h2>添加商品</h2>
+			<span class="logout">[退出系统]</span>
 			<div class="form-horizontal">
 				<div class="form-group">
 					<label for="bookname" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品名：</label>
@@ -87,4 +88,32 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="__ROOT__/Admin/Common/js/add.js"></script>
+	<script type="text/javascript">
+		$('.logout').on('click',function(){
+			$.ajax({
+				method:'get',
+				url:'__ROOT__/admin.php/Manage/logout',
+				success:function(data){
+					if(data.status == 1){
+						window.location.href = '__ROOT__/admin.php/Index';
+					}else{
+						swal({
+							title: data['info'],
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					};
+				},
+				error:function(err){
+					swal({
+						title: err,
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				},
+			});
+		});
+	</script>
 </html>

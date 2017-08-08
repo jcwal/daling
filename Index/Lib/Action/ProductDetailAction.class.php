@@ -4,7 +4,4 @@ class ProductDetailAction extends Action {
 	public function index(){
 		$this->display('productDetail');
 	}
-//	public function item(){
-//		echo 111;
-//	}
 }
