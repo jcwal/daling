@@ -14,14 +14,4 @@ class IndexAction extends Action {
 		};
 		$this->ajaxReturn($loginInfo);
 	}
-
-    // 添加商品
-    public function add(){
-
-        
-        $this->display('')
-    }
-
-
-
 }
