@@ -3,7 +3,6 @@
 	<head>
 		<title>商品列表</title>
 		<meta charset="utf-8" />
-		
 		<meta name="keywords" content="达令,达令™,鹿晗,海淘,礼物店,跨境购,代购,全球购,跨境电商,海外直邮,达令礼物店,达令APP,达令官网">
     	<meta name="description" content="达令™一手全球好货,每天甄选高品质时尚潮货,进口零食,美妆,创意生活用品.潮流买手带您跨境全球购,达令APP教您神马值得买.鹿晗投资,品牌授权,海关监督,免税直邮.Darling爱达令!">
 		<link rel="shortcut icon" href="__ROOT__/Index/Common/images/index/favicon.ico"/>
@@ -777,10 +776,9 @@
 			"display",'none',
 			)
 			});
-
 		// 点击多选按钮，当前列消失，多选项display：block,
 		function selectMore(){
-	      $(".selectMore").click(function(){
+	      // $(".selectMore").click(function(){
 	      		$(this).siblings("a").toggle();
 	      		$(this).next("button").toggle();
 	      		$(this).prev("dd").toggle();
@@ -788,18 +786,18 @@
 	      		$(this).prev("dd").children(".proMul").css(
 	      			'display','block',
 	      			);
-	      })
+	      // })
   		};
   		// 点击更多按钮，多选框display:block同时移除所有input
   	function listMore(){
-	    $(".listMore").click(function(){
+	    // $(".listMore").click(function(){
 	    	$(this).html("收起");
 	    	$(this).siblings("dd").toggle();
 	    	$(this).siblings("dd").children("label").children("input").remove();
 	    	$(this).siblings("dd").children(".proMul").css(
 	    		'display','none',
 	    		);
-	    })
+	    // })
   }
 
 	
