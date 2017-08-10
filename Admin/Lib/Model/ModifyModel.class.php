@@ -69,7 +69,7 @@ class ModifyModel extends Model{
 		$res = $product->where("id=$pid")->save($textData);
 		foreach ($fileData as $k => $v) {
 			if($k == 'comment'){
-				move_uploaded_file($v['tmp_name'], "product/comment/{$pid}."."json");
+				move_uploaded_file($v['tmp_name'], "product/comment/{$pid}/{$pid}."."json");
 			}else if($k == 'showPic'){
 
 				$type = strrchr($v['name'] , '.');

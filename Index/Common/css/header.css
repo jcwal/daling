@@ -468,6 +468,7 @@
     right: 40px;
     font-size: 16px;
     color:#fff;
+    cursor: pointer;
 }
 .navigator .header .center .centerWrap .searchForm .searchBar .searchHot{
     top: 50px;
@@ -485,6 +486,10 @@
 	white-space: nowrap;
     color: #666;
     text-decoration: none;
+}
+.navigator .header .center .centerWrap .searchForm .searchBar .searchHot li a:hover{
+    color:red;
+    text-decoration: underline;
 }
 .navigator .header .center .centerWrap .searchForm .trolley{
     position: absolute;
