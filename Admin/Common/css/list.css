@@ -1,0 +1,50 @@
+.content{
+	width: 95%;
+	margin: 50px auto;
+	position: relative;
+}
+.logout{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 50px;
+	color:green;
+	font-weight: 500;
+}
+.logout:hover{
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.content>h2{
+	margin:35px auto;
+	text-align: center;
+}
+.page{
+    float: right;
+    margin-right: 30px;
+}
+.page span{
+	display: inline-block;
+	width: 25px;	
+	height: 25px;
+	background: lightgray;
+	text-align: center;
+	line-height: 25px;
+	color:green;
+	margin-right: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.page span:hover{
+	color:red;
+}
+.page .prePage,
+.page .nextPage{
+	color:white;
+
+}
+
+
+
+
