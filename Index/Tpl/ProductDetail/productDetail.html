@@ -8,16 +8,16 @@
 		<link rel="shortcut icon" href="__ROOT__/Index/Common/images/index/favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/sweetalert.css">
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/sweetalert.min.js"></script>
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/productDetail.css" />
-		<link rel="stylesheet" href="__ROOT__/Index/common/css/swiper-3.4.2.min.css" />
-		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/common/js/swiper-3.4.2.min.js"></script>
-		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery.fly.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/productDetail.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/Common/css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery.fly.min.js"></script>
 		<script type="text/javascript">
 			var app = '';
 			var srcs = "__ROOT__/Index/Common/images/productDetail/product.jpg";
@@ -30,7 +30,7 @@
 		
 		
 		<!--商品展示-->
-		<div class="productDetail" ng-controller="mycontroller">
+		<div class="productDetail" ng-controller="mycontroller" >
 			<div class="detail_link">
 				<ul>
 					<li>
@@ -62,7 +62,7 @@
 						<!--商品图片-->
 						<div class="main_show">
 							<div class="main_show_photo">
-								<img src="http://img.cdn.daling.com/data/files/mobile/2015/10/09/14443745634172.jpg" alt="" />
+								<img ng-src="{{img}}" alt="" />
 							</div>
 							<div class="share">
 								<div class="fx">
@@ -145,7 +145,7 @@
 								<div class="tag_right">
 									
 									<a href="javascript:;" >立即购买</a>
-									<a href="javascript:;" id="Bt2">添加到购物车</a>￥
+									<a href="javascript:;" id="Bt1">添加到购物车</a>￥
 									<span>139.00</span>
 								</div>	
 								<ul class="afterfl">
@@ -178,15 +178,7 @@
 									<dl>
 										<dt>商品参数</dt>
 										<dd>
-											<span>品 牌：[荷兰飞利浦PHILIPS]</span>
-											<span>材 质：PVC等 </span>
-											<span>尺 寸：电线长度1.5m</span>
-											<span>商品毛重：0.663kg</span>
-											<span>颜 色：白红</span>
-											<span>产品档位：六档</span>
-											<span>电源线长度：1.5米</span>
-											<span>额定功率：1600w </span>
-											<span>风嘴类型：集风嘴, 卷发扩散风嘴（附件）</span>
+											<span ng-bind="data.productParamter" style=";word-wrap:break-word;white-space:normal;"></span>
 										</dd>
 									</dl>
 								</div>
@@ -195,11 +187,12 @@
 									<dl>
 										<dt>商品信息</dt>
 										<dd>
-											<img src="http://img.cdn.daling.com/data/files/mobile/2016/01/21/14533709096532.jpg" alt="" />
+											<img ng-src="{{imgs}}" alt="" />
 										</dd>
 									</dl>
 								</div>
 								<!--用户评论-->
+								<div id="userComment">
 								<div class="content_info_3">
 									<dl>
 										<dt>用户评论</dt>
@@ -254,10 +247,10 @@
 											<div>
 												<div class="comment-table">
 													<ul>
-														<li class="afterfl">
+														<li class="afterfl" ng-repeat="(k,v) in commentObj.common1">
 															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
+																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg"/>
+																<p>{{v['common_1.name ']}}</p>
 															</div>
 															<div class="data afterfl">
 																<div class="infos afterfl">
@@ -271,211 +264,12 @@
 																		</span>
 																	</div>
 																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
+																		<span>{{v['common_1.addtime']}}</span>
 																	</div>
 																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
+																<p class="text">{{v['common_1.content ']}}</p>
 															</div>
 														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>达令_1a826459641</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														<li class="afterfl">
-															<div class="face">
-																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg" alt="" />
-																<p>爱鹿一生520</p>
-															</div>
-															<div class="data afterfl">
-																<div class="infos afterfl">
-																	<div class="rate">评分：
-																		<span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																			<span class="icon-star"></span>
-																		</span>
-																	</div>
-																	<div class="time">评论时间：
-																		<span>2017-07-23 10:42:54</span>
-																	</div>
-																</div>
-																<p class="text">风速还好，声音也不是很大，总之各方面都挺好，就是不知道干发的速度快不快！</p>
-															</div>
-														</li>
-														
 													</ul>
 												</div>
 												<div class="pagination afterfl">
@@ -493,6 +287,7 @@
 											</div>
 										</dd>
 									</dl>
+								</div>
 								</div>
 								<!--售后服务-->
 								<div class="content_info_4 afterfl">
@@ -517,56 +312,68 @@
 						<ul style="height: 400px;overflow: hidden;">
 							<li class="active">
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">1</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 							<li class="active">
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">2</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">3</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">4</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">5</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<div class="img-ct cover-img"></div>
-									<p class="goods-price">¥66.00
-										<span class="old-price">¥00.00</span>
+									<div class="cover-img">
+										<img ng-src="{{img}}" alt="" class="img-ct"/>
+									</div>
+									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
 									</p>
-									<p class="goods-title">6</p>
+									<p class="goods-title" ng-bind="data.productName"></p>
 								</a>
 							</li>
 						</ul>
