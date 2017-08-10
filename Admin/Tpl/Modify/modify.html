@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>达令——修改商品</title>
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/modify.css" />
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/sweetalert.css">
+		<script src="__ROOT__/Admin/Common/js/sweetalert.min.js"></script>	
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/bootstrap.min.js"></script>
+	</head>
+	<body ng-app='myapp' ng-controller='modifyController'>
+		<div class="content">
+			<h2>修改商品</h2>
+			<span class="logout">[退出系统]</span>
+			<div class="form-horizontal">
+				<div class="form-group">
+					<label for="bookname" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品名：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type='text' placeholder='商品名' class='form-control' ng-model='productName' />				
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="introduce" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">原价：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="原价" class="form-control" ng-model='originPrice' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="author" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣价：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="折扣价" class="form-control" ng-model='discountPrice' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="press" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣率：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="折扣率" class="form-control" ng-model='discountRate' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="publicationDate" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">促销信息：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="促销信息" class="form-control" ng-model="saleInfo" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="price" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">收藏数量：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="收藏数量" class="form-control" ng-model='collectNumber' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="price" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品详细参数：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="商品详细参数：" class="form-control" ng-model='productParamter' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="price" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">关键字(用 、 分隔)：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="text" placeholder="关键字(用 、 分隔)" class="form-control" ng-model='keywords' />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">覆盖替换评论文件(json格式)：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="file" id="comment" name="bookpic"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">覆盖替换商品展示图片：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="file" id="showPic" name="bookpic"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">覆盖替换商品信息图片(支持多张图片上传)：</label>
+					<div class="col-md-8 col-sm-8">
+						<input type="file" id="infoPic" name="bookpic" multiple="true" />
+					</div>
+				</div>
+				<div class="form-group">
+					
+					<div class="col-md-1 col-md-offset-3 col-sm-1 col-sm-offset-2 ">
+						<input type="button"  class="btn btn-default" value="提交修改" id="sub" ng-click="sub()"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var paramter = window.location.search;
+		var pid = paramter.substring(paramter.lastIndexOf('=')+1, paramter.length);
+		var app = angular.module('myapp',[]);
+		app.controller('modifyController',function($scope,$http){
+			$scope.productName = '';
+			$scope.originPrice = '';
+			$scope.discountPrice = '';
+			$scope.discountRate = '';
+			$scope.saleInfo = '';
+			$scope.collectNumber = '';
+			$scope.keywords = '';
+			$scope.productParamter = '';
+			$http({
+				method:'get',
+				url:`__ROOT__/admin.php/Modify/modifyInit?pid=${pid}`,
+				header:{},
+			}).success(function(data){
+				if(data.status == 1){
+					$scope.productName = data.res.productName;
+					$scope.originPrice = data.res.originPrice;
+					$scope.discountPrice = data.res.discountPrice;
+					$scope.discountRate = data.res.discountRate;
+					$scope.saleInfo = data.res.saleInfo;
+					$scope.collectNumber = data.res.collectNumber;
+					$scope.keywords = data.res.keywords;
+					$scope.productParamter = data.res.productParamter;
+				}else{
+					swal({
+						title: data['info'],
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				};
+			}).error(function(err){
+				swal({
+					title: err,
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			});
+			$scope.sub = function(){
+				$http({
+					method:'post',
+					url:'__ROOT__/admin.php/Modify/modifyProduct',
+					headers: {
+						'Content-Type': undefined
+					},
+					data:{
+						pid:pid,
+						productName:$scope.productName,
+						originPrice:$scope.originPrice,
+						discountPrice:$scope.discountPrice,
+						discountRate:$scope.discountRate,
+						saleInfo:$scope.saleInfo,
+						collectNumber:$scope.collectNumber,
+						keywords:$scope.keywords,
+						productParamter:$scope.productParamter,
+						comment:$('#comment').get(0)['files'][0],
+						showPic:$('#showPic').get(0)['files'][0],
+						infoPic:$('#infoPic').get(0)['files'],
+					},
+					transformRequest: (data, headersGetter) => {
+						let formData = new FormData();
+						
+						angular.forEach(data, function (value, key) {
+
+							formData.append(key, value);
+						});
+					
+						for(i=0;i<data.infoPic.length;i++){
+							formData.append("infoPic[" + i + "]",data.infoPic[i]);
+						};
+
+						return formData;
+
+					}
+				}).success(function(data){
+					if(data['status'] == 1){
+						swal(data['info'], "", "success");
+					}else{
+						swal({
+							title: data['info'],
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					}
+				}).error(function(err){
+					swal({
+						title: err,
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				});
+			};
+
+		});
+		$('.logout').on('click',function(){
+			$.ajax({
+				method:'get',
+				url:'__ROOT__/admin.php/Manage/logout',
+				success:function(data){
+					if(data.status == 1){
+						window.location.href = '__ROOT__/admin.php/Index';
+					}else{
+						swal({
+							title: data['info'],
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					};
+				},
+				error:function(err){
+					swal({
+						title: err,
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				},
+			});
+		});
+		// $('#sub').on('click',function(){
+		// 	$.ajax({
+		// 		method:'post',
+		// 		url:'__ROOT__/admin.php/Modify/modifyFile',
+		// 		data:{
+
+		// 		}
+		// 	});
+		// });
+	</script>
+</html>
