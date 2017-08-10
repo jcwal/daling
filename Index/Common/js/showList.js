@@ -17,17 +17,17 @@ $(document).ready(function(){
 		$(".proMenuList").css(
 		"display",'none',
 		)
-		})
+		});
+
   // 点击多选按钮，当前列消失，多选项display：block,
-  
       $(".selectMore").click(function(){
       		$(this).siblings("a").toggle();
       		$(this).next("button").toggle();
       		$(this).prev("dd").toggle();
       		// 确定，取消键display:block(点击更多按钮时这两个节点的display:none)
       		$(this).prev("dd").children(".proMul").css(
-      			'display','block',
-      			);
+          'display','block',
+          );
       })
  
   // 点击更多按钮，多选框display:block同时移除所有input
