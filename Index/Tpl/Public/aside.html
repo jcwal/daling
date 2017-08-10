@@ -1,4 +1,4 @@
-<aside class="aside">
+<aside class="aside" ng-controller="mycontroller">
 	<div class="aside_nav">
 		<!--购物车-->
 		<div class="aside_shopp">
@@ -6,7 +6,7 @@
 			<div class="aside_wire"></div>
 			<div class="aside_car"></div>
 			<div class="aside_text">购<br />物<br />车</div>
-			<div class="aside_number">2</div>
+			<div class="aside_number" ng-bind="addCartNum"></div>
 		</div>
 		<!--横线-->
 		<div class="aside_wire"></div>
