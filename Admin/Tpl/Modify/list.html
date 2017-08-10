@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>达令——商品库列表</title>
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/list.css" />
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/sweetalert.css">
+		<script src="__ROOT__/Admin/Common/js/sweetalert.min.js"></script>	
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="__ROOT__/Admin/Common/js/bootstrap.min.js"></script>
+	</head>
+	<body ng-app='myapp' ng-controller='listController'>
+		<div class="table-responsive content">
+			<h2>商品列表</h2>
+			<span class="logout">[退出系统]</span>
+			<table class="content table table-bordered table-hover .table-condensed" >
+				<tr>
+					<th>商品名称</th>
+					<th>折扣价</th>
+					<th>原价</th>
+					<th>折扣率</th>
+					<th>促销信息</th>
+					<th>收藏数量</th>
+					<th>商品详细参数</th>
+					<th>关键字</th>
+					<th>评论集</th>
+					<th>商品展示图</th>
+					<th>商品信息图</th>
+					<th>操作</th>
+				</tr>
+				<tr ng-repeat= '(k,v) in initInfo'>
+					<td style="width:300px;"><a href="__APP__/Modify/modify?pid={{v.id}}">{{v.productName}}</a></td>
+					<td>{{v.discountPrice}}</td>
+					<td>{{v.originPrice}}</td>
+					<td>{{v.discountRate}}</td>
+					<td>{{v.saleInfo}}</td>
+					<td>{{v.collectNumber}}</td>
+					<td>{{v.productParamter}}</td>
+					<td>{{v.keywords}}</td>
+					<td><a href="__ROOT__/{{v.commentUrl}}">评论</a></td>
+					<td><a href="__ROOT__/{{v.productShowPicUrl}}">展示图</a></td>
+					<td><a href="__ROOT__/{{v.productInfoPicUrl}}">信息图</a></td>
+					<td style="width:50px;"><a href="javascript:void(0)" ng-click="delete(v.id)">删除</a></td>
+				</tr>
+			</table>
+			
+			<div class="page">
+				<span class="prePage" ng-click="prePage()">←</span>
+            	<span ng-repeat='(k,v) in totalInfo' ng-click="changePage(k)">{{k+1}}</span>
+            	<span class="nextPage" ng-click="nextPage()">→</span>
+            </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('myapp',['ngSanitize']);
+		app.controller('listController',function($scope,$http){
+			$scope.initInfo = '';
+			$scope.pages = 0;
+			$scope.nowPage = 0;
+			$http({
+				method:'get',
+				url:'__APP__/Modify/listInit',
+				header:{},
+			}).success(function(data){
+				if(data['status'] == 1){
+					$scope.pages = data.pages;
+					$scope.totalInfo = data.res;
+					$scope.initInfo = data.res[0];
+				}else{
+					swal({
+						title: data['info'],
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				}
+				
+			}).error(function(err){
+				swal({
+					title: err,
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			});
+			$scope.changePage = function(page){
+				$scope.nowPage = page;
+				$scope.initInfo = $scope.totalInfo[page];
+			};
+			$scope.prePage = function(){
+				if($scope.nowPage <= 0){
+					$scope.nowPage = 0;
+				}else{
+					$scope.nowPage --;
+				};
+				$scope.initInfo = $scope.totalInfo[$scope.nowPage];
+			};
+			$scope.nextPage = function(){
+				if($scope.nowPage < $scope.pages - 1){
+					$scope.nowPage ++;
+				};
+				$scope.initInfo = $scope.totalInfo[$scope.nowPage];
+			};
+			$scope.delete = function(pid){
+				var pid = pid;
+				swal({
+					title: "确定删除该商品信息么？",
+					text: "注意！删除后数据无法恢复！",
+					type: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "red",
+					confirmButtonText: "确定删除",
+					cancelButtonColor: "green",
+					cancelButtonText: "取消",
+					closeOnConfirm: true
+					},
+					function(isConfirm){
+						if (isConfirm) {
+							$http({
+								method:'get',
+								url:`__APP__/Modify/delete?pid=${pid}`,
+								header:{},
+							}).success(function(data){
+								if(data['status'] == 1){
+									$scope.totalInfo = data.res;
+									$scope.initInfo = data.res[0];
+									swal(data['info'], "", "success");
+								}else{
+									swal({
+										title: data['info'],
+										text: '',
+										type: "error",
+										confirmButtonText: "确认"
+									});
+								}
+								
+							}).error(function(err){
+								swal({
+									title: err,
+									text: '',
+									type: "error",
+									confirmButtonText: "确认"
+								});
+							});
+						};
+				});
+				
+			};
+		});
+		$('.logout').on('click',function(){
+			$.ajax({
+				method:'get',
+				url:'__ROOT__/admin.php/Manage/logout',
+				success:function(data){
+					if(data.status == 1){
+						window.location.href = '__ROOT__/admin.php/Index';
+					}else{
+						swal({
+							title: data['info'],
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					};
+				},
+				error:function(err){
+					swal({
+						title: err,
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				},
+			});
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</html>
