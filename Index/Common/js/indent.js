@@ -4,19 +4,6 @@ if(app == ''){
 $(".checkout-bar").addClass("floating");
 var barHeight = 0;
 var OffsetTops = 0;
-//$(window).scroll(function(){
-//	var distance = $("body").scrollTop();
-//	var OffsetTops = $(".checkout-bar").offset().top;
-//	console.log(OffsetTops)
-//	var OffsetHeight = parseInt($(".checkout-bar").css("height"));
-//	var equal = OffsetTops+distance;
-//	var equals = OffsetTops+OffsetHeight
-//	if( equal > equals ) {
-//		$(".checkout-bar").removeClass("floating");
-//	}else{
-//		$(".checkout-bar").addClass("floating");
-//	}
-//})
 //使用新的地址
 $(".add-address").on("click",function(){
 	$(".da-dialog").fadeIn()
@@ -39,15 +26,22 @@ $(".coupon-card a").on("click",function(){
 });
 // 向上滑动时提交订购固定
 $(window).scroll(function(){
+	console.log("--?",$(".surebar").offset().top);
+	var suretop = $(".surebar").offset().top;
 	barHeight = $(".checkout-bar").height();
 	OffsetTops = $(".checkout-bar").offset().top;
+	var screenHeight = window.innerHeight;
+	console.log(OffsetTops);
 	var distance = $(this).scrollTop();
-	var equal = OffsetTops + barHeight;
-	if (OffsetTops+distance > equal) {
+	console.log("总距离",OffsetTops+distance);
+	if(screenHeight+distance-barHeight>suretop){
+		console.log("大于");
 		$(".checkout-bar").removeClass("floating");
 	}else{
+		console.log("小于");
 		$(".checkout-bar").addClass("floating");
 	}
+	console.log("--",distance);
 })
 // 省级联动
 function Dsy(){

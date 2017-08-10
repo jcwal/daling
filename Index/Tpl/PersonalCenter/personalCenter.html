@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的订单</title>
+		<meta name="keywords" content="达令,达令™,鹿晗,海淘,礼物店,跨境购,代购,全球购,跨境电商,海外直邮,达令礼物店,达令APP,达令官网">
+    		<meta name="description" content="达令™一手全球好货,每天甄选高品质时尚潮货,进口零食,美妆,创意生活用品.潮流买手带您跨境全球购,达令APP教您神马值得买.鹿晗投资,品牌授权,海关监督,免税直邮.Darling爱达令!">
+		<link rel="shortcut icon" href="__ROOT__/Index/Common/images/index/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="__ROOT__/Index/Common/css/sweetalert.css">
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/reset.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/header.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/aside.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/footer.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/personalCenter.css" />
+		<link rel="stylesheet" href="__ROOT__/Index/common/css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="http://libs.visualtec.cn/angular1/angular.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/common/js/jquery.fly.min.js"></script>
+		<script type="text/javascript">
+			var app = '';
+			var srcs = "__ROOT__/Index/Common/images/productDetail/product.jpg";
+		</script>
+	</head>
+	<body ng-app="myapp">
+		<div class="navigator">
+			<include file='Public:header' />
+		</div>
+		
+		
+		<!--我的订单/我的收藏-->
+		<div class="da-user clearFloat">
+			<!--左边的导航栏-->
+			<div class="da-user-sideba">
+				<!--个人中心-->
+				<div class="da-user-sidebar-title">个人个人中心</div>
+				<!--列表-->
+				<ul class="da-user-sidebar-list">
+					<li>
+						<a href="#">我的订单</a>
+					</li>
+					<li>
+						<a href="#">评论商品</a>
+					</li>
+					<li>
+						<a href="#">退货/退款</a>
+					</li>
+					<li>
+						<a href="#">我的钱包</a>
+						<ul>
+							<li>
+								<a href="#">我的优惠券</a>
+							</li>
+							<li>
+								<a href="#">我的礼品卡</a>
+							</li>
+							<li>
+								<a href="#">我的达令币</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">我的收藏</a>
+					</li>
+					<li>
+						<a href="#">我的达令</a>
+					</li>
+				</ul>
+			</div>
+			<!--右边内容-->
+			<div class="da-orders da-user-main">
+				<div class="orderForm" style="background: greenyellow;">
+					<h2 class="title">我的订单</h2>
+					<table class="head">
+						<tr>
+							<th class="inFo">订单信息</th>
+							<th class="amount">订单金额</th>
+							<th class="state">
+								<select>
+									<option value="">全部订单</option>
+									<option value="">待付款</option>
+									<option value="">待收货</option>
+									<option value="">退货</option>
+								</select>
+							</th>
+							<th class="op">订单操作</th>
+						</tr>
+						
+					</table>
+					<table class="data-empty">
+						<tr>
+							<td>
+								<strong></strong>
+								<span>您还没有任何订单，快去选购全球好货吧~<br />
+									<a href="#">去购物>></a>
+								</span>
+							</td>
+						</tr>
+						
+					</table>
+				</div>
+				<!--我的收藏-->
+				<div class="Collect" style="background: indianred;">
+					<h2 class="title">我的收藏</h2>
+					<ul class="head">
+						<label>
+							<input type="checkbox"/>只看有货
+						</label>
+					</ul>
+					<div class="content">
+						<table cellspacing="0" cellpadding="0" class="data-empty">
+							<tr>
+								<td align="center" valign="middle">
+									<strong></strong>
+									<span>您还没有收藏任何商品，快去寻找心仪的全球好货吧~<br />
+										<a href="#">去购物>></a>
+									</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--我的达令-->
+				<div class="mydaling" style="background: palegreen;">
+					<h2 class="title">我的达令</h2>
+					<dl class="basic">
+						<dt>基本信息</dt>
+						<dd>
+							<form>
+								<input type="hidden" name="type" value="info"/>
+								<div class="ctrl clearFloat">
+									<label>头像：</label>
+									<div class="avatar-ct">
+										<div class="avatar cover-img"></div>
+										<p class="change">编辑头像</p>
+										<input type="hidden" name="head_pic"/>
+									</div>
+								</div>
+								<div class="ctrl clearFloat">
+									<label>昵称：</label>
+									<input type="text" value="达令_1a9555643f9" name="nick_name"/>
+								</div>
+								<button class="submit-btn" type="submit">保存修改</button>
+							</form>
+						</dd>
+					</dl>
+					<!--收货地址管理-->
+					<dl class="address">
+						<dt>收货地址管理
+							<button>新增地址</button>
+						</dt>
+						<dd class="force-show">
+							<div>
+								<form class="address-form">
+									
+								</form>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+		<!--我的订单/我的收藏end-->
+		
+		
+		<!--<div class="asideBar">-->
+			<include file='Public:aside' />
+		<!--</div>-->
+		<div class="footer">
+			<include file='Public:footer' />
+		</div>
+	</body>
+	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	
+	
+</html>
+<!--/**
+ *                             _ooOoo_
+ *                            o8888888o
+ *                            88" . "88
+ *                            (| -_- |)
+ *                            O\  =  /O
+ *                         ____/`---'\____
+ *                       .'  \\|     |//  `.
+ *                      /  \\|||  :  |||//  \
+ *                     /  _||||| -:- |||||-  \
+ *                     |   | \\\  -  /// |   |
+ *                     | \_|  ''\---/''  |   |
+ *                     \  .-\__  `-`  ___/-. /
+ *                   ___`. .'  /--.--\  `. . __
+ *                ."" '<  `.___\_<|>_/___.'  >'"".
+ *               | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *               \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *          ======`-.____`-.___\_____/___.-`____.-'======
+ *                             `=---='
+ *          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *                     佛祖保佑        永无BUG
+ *            佛曰:
+ *                   写字楼里写字间，写字间里程序员；
+ *                   程序人员写程序，又拿程序换酒钱。
+ *                   酒醒只在网上坐，酒醉还来网下眠；
+ *                   酒醉酒醒日复日，网上网下年复年。
+ *                   但愿老死电脑间，不愿鞠躬老板前；
+ *                   奔驰宝马贵者趣，公交自行程序员。
+ *                   别人笑我忒疯癫，我笑自己命太贱；
+ *                   不见满街漂亮妹，哪个归得程序员？
+*/-->

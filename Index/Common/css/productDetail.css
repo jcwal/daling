@@ -393,6 +393,11 @@
 	border-top: 3px solid #999;
 	position: relative;
 }
+#li1 {
+	border: 1px solid #999;
+	border-top: 3px solid #999;
+	border-bottom: 1px solid #fff;
+}
 .productDetail .main .main_left .detail-content .tag ul .li_1{
 	border: 1px solid #fff;
 	border-top: 3px solid #fff;
@@ -722,7 +727,9 @@
     position: fixed;
     z-index: 9999;
 }
-
+.liked {
+	background-position: 0 -2px;
+}
 
 /*// ┏┓　　　┏┓
 // ┏┛┻━━━┛┻┓
