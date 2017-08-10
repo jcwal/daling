@@ -3,7 +3,19 @@ if(app == ''){
 };
 
 var distance = 0;
-app.controller("mycontroller",function ($scope) {
+app.controller("mycontroller",function ($scope,$http) {
+	$scope.id="";
+	//返回后台数据
+	$http({
+		method:'get',
+		url:'../index.php/productDetail/getData?pid=1',
+		header:{},
+	}).success(function(data){
+		console.log(data)
+		$scope.data = data;
+	}).error(function(err){
+		alert(err);
+	})
 	//购买数量加加和减减
 	$scope.num = 1;
 	$scope.add = function () {
@@ -14,9 +26,35 @@ app.controller("mycontroller",function ($scope) {
 			$scope.num --;
 		}
 	}
+	//点击购物车
+	$scope.addCartNum = 0;
+	$scope.addCart = function () {
+		$scope.addCartNum ++
+		console.log("点击我了")
+	}
+	
 	
 })
 
+//点击收藏变红
+$("#red").on("click",function(){
+	num++
+	if (num%2 == 1) {
+		$(".sc a span").css({
+			backgroundPositionX:"0px",
+			backgroundPositionY:"-2px"
+		})
+		
+		$("#num").html(356);
+	}else {
+		$(".sc a span").css({
+			backgroundPositionX:"-23px",
+			backgroundPositionY:"-2px"
+		})
+		$("#num").html(355);
+	}
+	
+})
 $(window).scroll(function(){
 	//滚动到一定距离的时候把商品信息 用户评论 固定在网页头部
 	//距离
@@ -48,6 +86,10 @@ $(window).scroll(function(){
 			borderColor: "#999",
 			borderBottomColor: "#fff"
 		})
+		$("#li1").css({
+			borderColor: "#fff",
+			
+		})
 	}else{
 		$("#li1").removeClass("li_1")
 		$("#li1 .ico span").css("display","block")
@@ -56,6 +98,11 @@ $(window).scroll(function(){
 			borderColor: "#fff",
 			borderBottomColor: "#999"
 		})
+		$("#li1").css({
+			borderColor: "#999",
+		})
+		removeserve()
+		
 	}
 	
 	
@@ -65,23 +112,29 @@ var shoppTop = $("#tags").offset().top;
 var commentTop = $(".content_info_3").offset().top;
 var servebottom = $(".bottomMessage").offset().top;
 $("#li1").click(function(){
+	$('html,body').animate({scrollTop:shoppTop},'slow');
 	addshopp();
 	removecomment();
 	removeserve();
-	$('html,body').animate({scrollTop:shoppTop},'slow');
 })
 $("#li2").click(function(){
+	$('html,body').animate({scrollTop:commentTop},'slow');
 	removeshopp();
 	removeserve();
-	addcomment();
-	$('html,body').animate({scrollTop:commentTop},'slow');
+	addcomment();	
+	$("#li1").css({
+		borderColor: "#fff",
+	})
 })
 $("#li3").click(function(){
+	$('html,body').animate({scrollTop:servebottom+1000},'slow');	
 	removeshopp();
 	removecomment();
 	addserve();
-	$('html,body').animate({scrollTop:servebottom+1000},'slow');
-	
+	$("#li2").css({
+		borderColor: "#fff",
+	})
+	$("#li2 .ico span").css("display","none");
 })
 //清除商品信息的框
 function removeshopp(){
@@ -172,6 +225,8 @@ flyer.fly({
     
 });
 }
+//取数据库里的数据
+
 
 
 

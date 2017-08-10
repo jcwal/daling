@@ -51,7 +51,7 @@
 						<a href="#">剃须刀/电吹风</a>
 						<span></span>
 					</li>
-					<li>[荷兰飞利浦PHILIPS] 飞利浦PHILIPS电吹风HP8220/05(白红)</li>
+					<li ng-model="data.productName"><div ng-bind="data.productName"></div></li>
 				</ul>
 			</div>
 			<!--商品主要内容-->
@@ -68,7 +68,7 @@
 								<div class="fx">
 									<a href="#"><span></span>分享</a>
 								</div>
-								<div class="sc"><a href=""><span></span>收藏</a></div>
+								<div class="sc"><a href="javascript:;" id="red"><span></span>收藏</a></div>
 								<div class="xf_box">
 									<div class="title">
 										<span class="title_photo"></span>消费者告知书<span class="title_photo2"></span>
@@ -78,16 +78,16 @@
 						</div>
 						<!--商品功能区-->
 						<div class="goods-data">
-							<h1 class="clearfix">[荷兰 · 干发护发也能两全] 飞利浦 飞利浦PHILIPS电吹风HP8220/05(白红)</h1>
+							<h1 class="clearfix" ng-model="data.productName"><div ng-bind="data.productName"></div></h1>
 							<dl class="goods-price afterfl">
 								<dt>达令价</dt>
 								<dd>
 									<div class="afterfl">
-										<div class="fl">￥<span class="f30 bold">139.00</span></div>
+										<div class="fl">￥<span class="f30 bold" ng-model="data.discountPrice"><span ng-bind="data.discountPrice"></span></span></div>
 									</div>
 									<p>海外现时售价
-										<span>¥199.00</span>
-										<span class="price-off">7折</span>
+										<span ng-model="data.originPrice"><span ng-bind="data.originPrice"></span></span>
+										<span class="price-off" ng-model="data.discountRate"><span ng-bind="data.discountRate"></span>折</span>
 									</p>
 								</dd>
 							</dl>
@@ -103,7 +103,7 @@
 										</span>
 									</li>
 									<li>评论：207条</li>
-									<li>收藏：<span>355</span></li>
+									<li>收藏：<span id="num">355</span></li>
 								</ul>
 							</dl>
 							<dl class="goods-number afterfl">
@@ -120,9 +120,9 @@
 									</div>
 								</dd>
 							</dl>
-							<div class="goods-btn afterfl" id="Bt1">
+							<div class="goods-btn afterfl">
 								<a href="#">立即购买</a>
-								<a href="javascript:;">添加到购物车</a>
+								<a href="javascript:;" id="Bt2" ng-click="addCart()">添加到购物车</a>
 							</div>
 							<div class="goods-tips afterfl">
 								<span class="mr20">
