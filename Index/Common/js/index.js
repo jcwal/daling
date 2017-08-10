@@ -2,7 +2,6 @@
 $('.indexSwiper .swiper-wrapper').css('width',function(){
 	return $('.indexSwiper .swiper-wrapper .swiper-slide').length * 1200
 });
-
 var mySwiper = new Swiper('.swiper-container', {
 	autoplay: 3000,
 	direction : 'horizontal',
@@ -28,15 +27,79 @@ if(app == ''){
 };
 app.controller('indexController',function($scope,$http,$interval,$location){
 	//ajax获取数据，初始化页面
+	$scope.initData = '';
 	$http({
 		method:'GET',
 		url:'index.php/Index/initial',
 	}).success(function(data){
-		console.log(data);
+		if(data['status'] == 1){
+			$scope.initData = data;	
+		}else{
+			swal({
+				title: data['info'],
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		};
 	}).error(function(err){
-		console.log(err);
+		swal({
+			title: err,
+			text: '',
+			type: "error",
+			confirmButtonText: "确认"
+		});
 	});
-	
+
+	$scope.exchange = function(){
+		$http({
+			method:'GET',
+			url:'index.php/Index/exchange',
+		}).success(function(data){
+			if(data['status'] == 1){
+				
+			}else{
+				swal({
+					title: data['info'],
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			};
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		});
+	};
+	$scope.joinTrolley = function(pid){
+		var pid = pid;
+		$http({
+			method:'GET',
+			url:`index.php/Index/joinTrolley?pid=${pid}`,
+		}).success(function(data){
+			if(data['status'] == 1){
+				
+			}else{
+				swal({
+					title: data['info'],
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			};
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		});
+	};
 });
 
 
@@ -62,6 +125,8 @@ $('.indexMain .indexBuyAgain .box dl dt').on('mouseenter',function(){
 	$(this).siblings('dd').eq(0).prop('class','clearFloat current');
 });
 //今日闪购
+
+
 
 
 

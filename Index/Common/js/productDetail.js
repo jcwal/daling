@@ -58,8 +58,13 @@ $("#red").on("click",function(){
 $(window).scroll(function(){
 	//滚动到一定距离的时候把商品信息 用户评论 固定在网页头部
 	//距离
+<<<<<<< HEAD
+	distance = $(window).scrollTop();
+//	console.log(distance);
+=======
 	distance = $("body").scrollTop();
 	
+>>>>>>> master
 	if(distance >= shoppTop) {
 		$(".tag").addClass("Stick");
 		$(".tag_1").addClass("Stick1");
@@ -188,7 +193,11 @@ function test(){
     length.eq(num).next().show();
   }
 $(".scroll-up").click(function(){
+<<<<<<< HEAD
+	console.log("我是up")
+=======
 //	console.log("我是up")
+>>>>>>> master
  	num += 2;
     if(num > 4){
       num = 0;
@@ -196,7 +205,11 @@ $(".scroll-up").click(function(){
     test(num);
 })
 $(".scroll-down").click(function(){
+<<<<<<< HEAD
+	console.log("我是down")
+=======
 //	console.log("我是down")
+>>>>>>> master
 	 num -= 2;
     if(num < 0){
       num = 4;

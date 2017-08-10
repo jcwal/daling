@@ -22,19 +22,19 @@
 			<ul class="loginedBar">
 				<li class="welcome">
 					欢迎您，<span></span>
-					<a href="javascript:void(0)">[退出]</a>
+					<a href="javascript:void(0)" ng-click='logoutSub()' >[退出]</a>
 				</li>
 				<li class="order">
-					<a href="javascript:void(0)">我的订单</a>
+					<a href="__APP__/PersonalCenter?order=1&uid={{uid}}">我的订单</a>
 				</li>
 				<li class="trolley">
-					<a href="javascript:void(0)">购物车</a>
+					<a href="__APP__/ShopCart?uid={{uid}}">购物车</a>
 				</li>
 				<li class="collect">
-					<a href="javascript:void(0)">我的收藏</a>
+					<a href="__APP__/PersonalCenter?collect=1&uid={{uid}}">我的收藏</a>
 				</li>
 				<li class="tel">
-					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="" />
+					<img src="__ROOT__/Index/Common/images/header/tel.svg" alt="达令" />
 					<a >400-080-1888</a>
 				</li>
 				<li class="download">
@@ -309,31 +309,23 @@
 	<div class="center">
 		<div class="centerWrap">
 			<a href="#" class="logo"></a>
-			<form action="" method='get' class="searchForm">
+			<div  class="searchForm">
 				<div class="searchBar">
 					<div class="searchBox">
-						<input type="hidden" />
-						<input type="hidden" />
-						<input type="text" class="searchKeyWords" />
-						<input type="submit" value="搜索" class="searchSub" />
+						<input type="text" class="searchKeyWords" ng-model='searchKeyWords' />
+						<input type="button" value="搜索" class="searchSub" ng-click='searchSub(searchKeyWords)' />
 					</div>
 					<ul class="searchHot">
-						<li><a href="#">口红</a></li>
-						<li><a href="#">面膜</a></li>
-						<li><a href="#">耳饰</a></li>
-						<li><a href="#">日系美妆</a></li>
-						<li><a href="#">化妆水</a></li>
-						<li><a href="#">底妆</a></li>
-						<li><a href="#">乳霜</a></li>
-						<li><a href="#">洁面</a></li>
-						<li><a href="#">防嗮</a></li>
+						<li ng-repeat='(k,v) in searchHot'>
+							<a href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" target="_blank">{{v}}</a>
+						</li>
 					</ul>
 				</div>
 				<div class="trolley">
-					<a href="#">我的购物车</a>
+					<a href="__APP__/ShopCart?uid={{uid}}">我的购物车</a>
 					<span>0</span>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 	<div class="bottom">
@@ -351,13 +343,7 @@
 						<dd class="categoryShelter"></dd>
 						<dd class="categorySort">
 							<div class="sortBox">
-								<a href="#">面膜</a>
-								<a href="#">化妆水</a>
-								<a href="#">洁面</a>
-								<a href="#">防嗮</a>
-								<a href="#">面霜/乳液</a>
-								<a href="#">卸妆</a>
-								<a href="#">精华</a>
+								<a ng-repeat='(k,v) in sortBox1' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 							</div>
 						</dd>
 						<dd class="categoryDrop">
@@ -366,68 +352,45 @@
 									极致美护
 								</div>
 								<div class="brand clearFloat">
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=面部护肤&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-1.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=彩妆香氛&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-2.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=个护保健&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-3.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=面部护肤&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand1-4.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="dropDetail clearFloat">
 									<div class="brandAd">
-										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd1.jpg" alt="达令" /></a>	
+										<a href="__APP__/ProductList?keywords=面部护肤&uid={{uid}}"><img src="__ROOT__/Index/Common/images/header/categoryAd1.jpg" alt="达令" /></a>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">面部护肤</a>
+											<a href="__APP__/ProductList?keywords=面部护肤&uid={{uid}}">面部护肤</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">面膜</a>
-											<a href="#">化妆水</a>
-											<a href="#">洁面</a>
-											<a href="#">防嗮</a>
-											<a href="#">面霜/乳液</a>
-											<a href="#">精华</a>
-											<a href="#">眼部护理</a>
-											<a href="#">护肤套装</a>
-											<a href="#">唇部护理</a>
-											<a href="#">精油</a>
-											<a href="#">美妆工具</a>
-											<a href="#">男士专区</a>
+											<a ng-repeat='(k,v) in sortBox1itemDetail1' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">彩妆香氛</a>
+											<a href="__APP__/ProductList?keywords=彩妆香氛&uid={{uid}}">彩妆香氛</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">卸妆</a>
-											<a href="#">女士香水</a>
-											<a href="#">隔离/底妆</a>
-											<a href="#">唇膏口红</a>
-											<a href="#">眼妆/腮红</a>
-											<a href="#">美甲</a>
+											<a ng-repeat='(k,v) in sortBox1itemDetail2' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">个护保健</a>
+											<a href="__APP__/ProductList?keywords=个护保健&uid={{uid}}">个护保健</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">沐浴/体乳</a>
-											<a href="#">洗发/护发</a>
-											<a href="#">口腔护理</a>
-											<a href="#">美体护理</a>
-											<a href="#">手足护理</a>
-											<a href="#">驱蚊凝露</a>
-											<a href="#">女性卫生</a>
-											<a href="#">保健品</a>
+											<a ng-repeat='(k,v) in sortBox1itemDetail3' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 								</div>
@@ -442,13 +405,7 @@
 						<dd class="categoryShelter"></dd>
 						<dd class="categorySort">
 							<div class="sortBox">
-								<a href="#">饼干</a>
-								<a href="#">威化</a>
-								<a href="#">麦片</a>
-								<a href="#">糖果</a>
-								<a href="#">巧克力</a>
-								<a href="#">膨化食品</a>
-								<a href="#">咖啡</a>
+								<a ng-repeat='(k,v) in sortBox2' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 							</div>
 						</dd>
 						<dd class="categoryDrop clearFloat">
@@ -457,85 +414,69 @@
 									全球零食
 								</div>
 								<div class="brand clearFloat">
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=饼干/糕点&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-1.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=咖啡/冲饮&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-2.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=糖果/巧克力&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-3.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=休闲食品&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand2-4.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="dropDetail clearFloat">
 									<div class="brandAd">
-										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd2.jpg" alt="达令" /></a>	
+										<a href="__APP__/ProductList?keywords=坚果/果干&uid={{uid}}"><img src="__ROOT__/Index/Common/images/header/categoryAd2.jpg" alt="达令" /></a>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">饼干/糕点</a>
+											<a href="__APP__/ProductList?keywords=饼干/糕点&uid={{uid}}">饼干/糕点</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">饼干</a>
-											<a href="#">威化</a>
-											<a href="#">糕点</a>
-											<a href="#">曲奇</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail1' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">咖啡/冲饮</a>
+											<a href="__APP__/ProductList?keywords=咖啡/冲饮&uid={{uid}}">咖啡/冲饮</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">蜂蜜</a>
-											<a href="#">麦片</a>
-											<a href="#">咖啡</a>
-											<a href="#">冲引粉奶茶</a>
-											<a href="#">茶/花果茶</a>
-											<a href="#">养生柚子茶</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail2' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">糖果/巧克力</a>
+											<a href="__APP__/ProductList?keywords=糖果/巧克力&uid={{uid}}">糖果/巧克力</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">糖果</a>
-											<a href="#">巧克力</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail3' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">休闲食品</a>
+											<a href="__APP__/ProductList?keywords=休闲食品&uid={{uid}}">休闲食品</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">膨化零食</a>
-											<a href="#">薯片玉米片</a>
-											<a href="#">海味即食</a>
-											<a href="#">果冻/布丁</a>
-											<a href="#">肉松/肉干</a>
-											<a href="#">蜜饯</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail4' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">坚果/果干</a>
+											<a href="__APP__/ProductList?keywords=坚果/果干&uid={{uid}}">坚果/果干</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">坚果</a>
-											<a href="#">果干</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail5' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">饮料/酒水</a>
+											<a href="__APP__/ProductList?keywords=饮料/酒水&uid={{uid}}">饮料/酒水</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">饮料</a>
-											<a href="#">酒</a>
+											<a ng-repeat='(k,v) in sortBox2itemDetail6' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 								</div>
@@ -550,10 +491,7 @@
 						<dd class="categoryShelter"></dd>
 						<dd class="categorySort">
 							<div class="sortBox">
-								<a href="#">水杯/保温杯</a>
-								<a href="#">随身小物件</a>
-								<a href="#">玩偶</a>
-								<a href="#">钥匙挂件</a>
+								<a ng-repeat='(k,v) in sortBox3' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 							</div>
 						</dd>
 						<dd class="categoryDrop clearFloat">
@@ -562,96 +500,61 @@
 									创意生活
 								</div>
 								<div class="brand clearFloat">
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=厨房伴侣&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-1.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=创意礼物&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-2.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=品质生活&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-3.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=温馨家居&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand3-4.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="dropDetail clearFloat">
 									<div class="brandAd">
-										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd3.jpg" alt="达令" /></a>	
+										<a href="__APP__/ProductList?keywords=趣味文具&uid={{uid}}"><img src="__ROOT__/Index/Common/images/header/categoryAd3.jpg" alt="达令" /></a>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">厨房伴侣</a>
+											<a href="__APP__/ProductList?keywords=厨房伴侣&uid={{uid}}">厨房伴侣</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">水杯/保温杯</a>
-											<a href="#">厨房配件</a>
-											<a href="#">厨房清洁</a>
-											<a href="#">水壶/净水壶</a>
-											<a href="#">茶具</a>
-											<a href="#">咖啡具/酒具</a>
-											<a href="#">餐具</a>
+											<a ng-repeat='(k,v) in sortBox3itemDetail1' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">创意礼物</a>
+											<a href="__APP__/ProductList?keywords=创意礼物&uid={{uid}}">创意礼物</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">随身小物件</a>
-											<a href="#">玩偶</a>
-											<a href="#">钥匙挂件</a>
-											<a href="#">其他创意礼品</a>
+											<a ng-repeat='(k,v) in sortBox3itemDetail2' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">品质生活</a>
+											<a href="__APP__/ProductList?keywords=品质生活&uid={{uid}}">品质生活</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">衣物清洁</a>
-											<a href="#">居室清洁</a>
-											<a href="#">卫浴清洁</a>
-											<a href="#">伞/雨具</a>
-											<a href="#">除臭/芳香</a>
-											<a href="#">收纳用品</a>
-											<a href="#">卫浴用品</a>
-											<a href="#">驱蚊/防蚊</a>
-											<a href="#">纸品湿巾</a>
-											<a href="#">汽车用品</a>
-											<a href="#">宠物用品</a>
-											<a href="#">健身器材</a>
-											<a href="#">户外用品</a>
-											<a href="#">家居服</a>
+											<a ng-repeat='(k,v) in sortBox3itemDetail3' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">温馨家居</a>
+											<a href="__APP__/ProductList?keywords=温馨家居&uid={{uid}}">温馨家居</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">床品套件</a>
-											<a href="#">抱枕靠垫</a>
-											<a href="#">被子/毯子</a>
-											<a href="#">毛巾浴巾</a>
-											<a href="#">创意家居</a>
-											<a href="#">香薰/蜡烛</a>
-											<a href="#">装饰摆件</a>
-											<a href="#">墙贴/装饰贴</a>
-											<a href="#">相框/照片墙</a>
-											<a href="#">钟表</a>
-											<a href="#">其他家居用品</a>
+											<a ng-repeat='(k,v) in sortBox3itemDetail4' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">趣味文具</a>
+											<a href="__APP__/ProductList?keywords=趣味文具&uid={{uid}}">趣味文具</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">记事本</a>
-											<a href="#">笔</a>
-											<a href="#">文具收纳</a>
-											<a href="#">其他办公文具</a>
+											<a ng-repeat='(k,v) in sortBox3itemDetail5' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 								</div>
@@ -666,14 +569,7 @@
 						<dd class="categoryShelter"></dd>
 						<dd class="categorySort">
 							<div class="sortBox">
-								<a href="#">奢侈品</a>
-								<a href="#">配饰</a>
-								<a href="#">箱包</a>
-								<a href="#">项链</a>
-								<a href="#">手链</a>
-								<a href="#">耳饰</a>
-								<a href="#">戒指</a>
-								<a href="#">太阳镜</a>
+								<a ng-repeat='(k,v) in sortBox4' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 							</div>
 						</dd>
 						<dd class="categoryDrop clearFloat">
@@ -682,117 +578,77 @@
 									时尚配饰
 								</div>
 								<div class="brand clearFloat">
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=时尚配饰&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-1.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=包袋&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-2.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=轻奢&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-3.jpg" alt="达令" />
 									</a>
-									<a href="#">
+									<a href="__APP__/ProductList?keywords=脚链&uid={{uid}}">
 										<img src="__ROOT__/Index/Common/images/header/categoryBrand4-4.jpg" alt="达令" />
 									</a>
 								</div>
 								<div class="dropDetail clearFloat">
 									<div class="brandAd">
-										<a href="#"><img src="__ROOT__/Index/Common/images/header/categoryAd4.jpg" alt="达令" /></a>	
+										<a href="__APP__/ProductList?keywords=饰品&uid={{uid}}"><img src="__ROOT__/Index/Common/images/header/categoryAd4.jpg" alt="达令" /></a>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">时尚配饰</a>
+											<a href="__APP__/ProductList?keywords=时尚配饰&uid={{uid}}">时尚配饰</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">奢侈品</a>
-											<a href="#">配饰</a>
-											<a href="#">箱包</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail1' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">饰品</a>
+											<a href="__APP__/ProductList?keywords=饰品&uid={{uid}}">饰品</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">项链</a>
-											<a href="#">手链</a>
-											<a href="#">耳饰</a>
-											<a href="#">戒指</a>
-											<a href="#">太阳镜</a>
-											<a href="#">腕表</a>
-											<a href="#">发饰</a>
-											<a href="#">“鹿”小物</a>
-											<a href="#">随身小物件</a>
-											<a href="#">毛衣链</a>
-											<a href="#">其它配饰</a>
-											<a href="#">镜架</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail2' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">脚链</a>
+											<a href="__APP__/ProductList?keywords=脚链&uid={{uid}}">脚链</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">脚链</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail3' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">轻奢</a>
+											<a href="__APP__/ProductList?keywords=轻奢&uid={{uid}}">轻奢</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">轻奢大包</a>
-											<a href="#">轻奢小包</a>
-											<a href="#">轻奢钱包</a>
-											<a href="#">轻奢手包</a>
-											<a href="#">轻奢手包</a>
-											<a href="#">轻奢手表</a>
-											<a href="#">轻奢眼镜</a>
-											<a href="#">轻奢饰品</a>
-											<a href="#">轻奢腰带</a>
-											<a href="#">轻奢配件</a>
-											<a href="#">轻奢鞋履</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail4' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">包袋</a>
+											<a href="__APP__/ProductList?keywords=包袋&uid={{uid}}">包袋</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">双肩包</a>
-											<a href="#">单肩包</a>
-											<a href="#">手提包</a>
-											<a href="#">钱包</a>
-											<a href="#">拉杆箱</a>
-											<a href="#">功能包</a>
-											<a href="#">零钱包</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail5' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">服饰配件</a>
+											<a href="__APP__/ProductList?keywords=服饰配件&uid={{uid}}">服饰配件</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">丝巾</a>
-											<a href="#">帽子</a>
-											<a href="#">袜子</a>
-											<a href="#">手套</a>
-											<a href="#">贴身衣物</a>
-											<a href="#">腰带</a>
-											<a href="#">其它服配</a>
-											<a href="#">围巾</a>
-											<a href="#">围巾</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail6'  href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 									<div class="item">
 										<div class="itemTitle">
-											<a href="#">鞋履</a>
+											<a href="__APP__/ProductList?keywords=鞋履&uid={{uid}}">鞋履</a>
 										</div>
 										<div class="itemDetail">
-											<a href="#">运动鞋</a>
-											<a href="#">拖鞋</a>
-											<a href="#">鞋</a>
-											<a href="#">钱包</a>
+											<a ng-repeat='(k,v) in sortBox4itemDetail7' href="__APP__/ProductList?keywords={{v}}&uid={{uid}}" style="float:left;">{{v}}</a>
 										</div>	
 									</div>
 								</div>
@@ -803,13 +659,10 @@
 
 			</div>
 			<ul class="naviBar clearFloat">
-				<li><a href="#">首页</a></li>
-				<li><a href="#">极致美护</a></li>
-				<li><a href="#">全球零食</a></li>
-				<li><a href="#">创意生活</a></li>
-				<li><a href="#">时尚配饰</a></li>
-				<li><a href="#">尖货女装</a></li>
-				<li><a href="#">3C家电</a></li>
+				<li><a href="__ROOT__">首页</a></li>
+				<li ng-repeat='(k,v) in naviBar' >
+					<a href="__APP__/ProductList?keywords={{v}}&uid={{uid}}">{{v}}</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -817,6 +670,22 @@
 <script type="text/javascript">
 	if(app == ''){
 		app=angular.module("myapp",[]);	
+	};
+	//查找指定cookie的方法	
+	function findCookie(cookieName){
+		var regExp = new RegExp('\\b'+cookieName+'\\b','g');
+		var cookieIndex = document.cookie.search(regExp);
+		if(cookieIndex != -1){
+			var cookieStart = cookieIndex + cookieName.length + 1;
+			var cookieEnd = document.cookie.indexOf(';',cookieIndex+cookieName.length+1);
+			if(cookieEnd == -1){
+				cookieEnd = document.cookie.length;
+			};
+			var cookieUsername = unescape(document.cookie.substring(cookieStart,cookieEnd));
+			return cookieUsername;
+		}else{
+			return null
+		};
 	};
 	app.controller('headerController',function($scope,$http){
 		$scope.usernameLogin = '';
@@ -828,6 +697,35 @@
 		$scope.passwordRegisterReapeat = '';
 		$scope.verifyRegister = '';
 		$scope.registerAgreement = false;
+		$scope.searchHot = ['口红','面膜','耳饰','日系美妆','化妆水','底妆','乳霜','洁面','防嗮'];
+		$scope.naviBar = ['极致美护','全球零食','创意生活','时尚配饰','尖货女装','3C家电'];
+		$scope.sortBox1 = ['面膜','化妆水','洁面','防嗮','面霜/乳液','卸妆','精华'];
+		$scope.sortBox1itemDetail1 = ['面膜','化妆水','洁面','防嗮','面霜/乳液','卸妆','精华','眼部护理','护肤套装','唇部护理','精油','美妆工具','男士专区'];
+		$scope.sortBox1itemDetail2 = ['卸妆','女士香水','隔离/底妆','唇膏口红','眼妆/腮红','美甲'];
+		$scope.sortBox1itemDetail3 = ['沐浴/体乳','洗发/护发','口腔护理','美体护理','手足护理','女性卫生','保健品'];
+		$scope.sortBox2 = ['饼干','威化','麦片','糖果','巧克力','膨化食品','咖啡'];
+		$scope.sortBox2itemDetail1 = ['饼干','威化','糕点','曲奇'];
+		$scope.sortBox2itemDetail2 = ['蜂蜜','麦片','咖啡','冲引粉奶茶','茶/花果茶','养生柚子茶'];
+		$scope.sortBox2itemDetail3 = ['糖果','巧克力'];
+		$scope.sortBox2itemDetail4 = ['膨化零食','薯片玉米片','海味即食','果冻/布丁','肉松/肉干','蜜饯'];
+		$scope.sortBox2itemDetail5 = ['坚果','果干'];
+		$scope.sortBox2itemDetail6 = ['饮料','酒'];
+		$scope.sortBox3 = ['水杯/保温杯','随身小物件','玩偶','钥匙挂件'];
+		$scope.sortBox3itemDetail1 = ['水杯/保温杯','厨房配件','厨房清洁','水壶/净水壶','茶具','咖啡具/酒具','餐具'];
+		$scope.sortBox3itemDetail2 = ['随身小物件','玩偶','钥匙挂件','其他创意礼品'];
+		$scope.sortBox3itemDetail3 = ['衣物清洁','居室清洁','卫浴清洁','伞/雨具','除臭/芳香','收纳用品','卫浴用品','驱蚊/防蚊','纸品湿巾','汽车用品','宠物用品','健身器材','户外用品','家居服'];
+		$scope.sortBox3itemDetail4 = ['床品套件','抱枕靠垫','被子/毯子','毛巾浴巾','创意家居','香薰/蜡烛','装饰摆件','墙贴/装饰贴','相框/照片墙','钟表','其他家居用品'];
+		$scope.sortBox3itemDetail5 = ['记事本','笔','文具收纳','其他办公文具'];
+		$scope.sortBox4 = ['奢侈品','配饰','箱包','项链','手链','耳饰','戒指','太阳镜'];
+		$scope.sortBox4itemDetail1 = ['奢侈品','配饰','箱包'];
+		$scope.sortBox4itemDetail2 = ['项链','手链','耳饰','戒指','太阳镜','腕表','发饰','“鹿”小物','随身小物件','毛衣链','其它配饰','镜架'];
+		$scope.sortBox4itemDetail3 = ['脚链'];
+		$scope.sortBox4itemDetail4 = ['轻奢大包','轻奢小包','轻奢钱包','轻奢手包','轻奢男包','轻奢手表','轻奢眼镜','轻奢饰品','轻奢腰带','轻奢配件','轻奢鞋履'];
+		$scope.sortBox4itemDetail5 = ['双肩包','单肩包','手提包','钱包','拉杆箱','功能包','零钱包'];
+		$scope.sortBox4itemDetail6 = ['丝巾','帽子','袜子','手套','贴身衣物','腰带','其它服配','围巾','毛巾'];
+		$scope.sortBox4itemDetail7 = ['运动鞋','拖鞋','鞋'];
+		$scope.uid = findCookie('uid');
+		$scope.searchKeyWords = '';
 		$scope.loginSub = function(){
 			$http({
 				method:'post',
@@ -843,6 +741,7 @@
 				}
 			}).success(function(data){
 				if(data['status'] == 1){
+					$scope.uid = data['uid'];
 					$('.navigator .header .loginRegisterWrap').hide();
 					$('.navigator .header .top .topWrap .loginBar').hide();
 					$('.navigator .header .top .topWrap .loginedBar').show();
@@ -879,6 +778,7 @@
 				}
 			}).success(function(data){
 				if(data['status'] == 1){
+					$scope.uid = data['uid'];
 					swal(data['info'], "恭喜您成为达令会员", "success");
 					$('.navigator .header .loginRegisterWrap').hide();
 					$('.navigator .header .top .topWrap .loginBar').hide();
@@ -901,6 +801,46 @@
 					confirmButtonText: "确认"
 				});
 			});
+		};
+		$scope.logoutSub = function(){
+			$http({
+				type:'get',
+				url:'__APP__/Header/logout',
+			}).success(function(data){
+				if(data['status'] == 1){
+					$scope.uid = '';
+					$('.navigator .header .top .topWrap .loginBar').show();
+					$('.navigator .header .top .topWrap .loginedBar').hide();
+					$('#usernameLogin').val('');
+					$('#passwordLogin').val('');
+					$('#verifyLogin').val('');
+					$('#usernameRegister').val('');
+					$('#passwordRegister').val('');
+					$('#passwordRegisterReapeat').val('');
+					$('#verifyRegister').val('');
+				}else{
+					swal({
+						title: data['info'],
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				};
+			
+			}).error(function(err){
+				swal({
+					title: err,
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			});
+		};
+		$scope.searchSub = function(keywords){
+			if(keywords != ''){
+				var uid = $scope.uid;
+				window.location.href = `__APP__/ProductList?keywords=${keywords}&uid=${uid}`;
+			};
 		};
 		$scope.classLogin = function(){
 			if($scope.usernameLogin != '' && $scope.passwordLogin != '' && $scope.verifyLogin != '' && $scope.usernameLogin.length == 11){
@@ -952,22 +892,7 @@
 		};
 	});
 	window.onload=function(){
-		//查找指定cookie的方法
-		function findCookie(cookieName){
-			var regExp = new RegExp('\\b'+cookieName+'\\b','g');
-			var cookieIndex = document.cookie.search(regExp);
-			if(cookieIndex != -1){
-				var cookieStart = cookieIndex + cookieName.length + 1;
-				var cookieEnd = document.cookie.indexOf(';',cookieIndex+cookieName.length+1);
-				if(cookieEnd == -1){
-					cookieEnd = document.cookie.length;
-				};
-				var cookieUsername = unescape(document.cookie.substring(cookieStart,cookieEnd));
-				return cookieUsername;
-			}else{
-				return null
-			};
-		};
+		
 		if(findCookie('username') == null){
 			//没有cookie用户退出登陆或没有登陆
 			$('.navigator .header .top .loginBar').show();
@@ -1058,41 +983,6 @@
 		});
 		$('.navigator .header .loginRegisterWrap .agreementDetail .closeAgreement').on('click',function(){
 			$('.navigator .header .loginRegisterWrap .agreementDetail').hide();
-		});
-		//退出登陆
-		$('.navigator .header .top .topWrap .loginedBar .welcome a').on('click',function(){
-			$.ajax({
-				type:'get',
-				url:'__APP__/Header/logout',
-				success:function(data){
-					if(data['status'] == 1){
-						$('.navigator .header .top .topWrap .loginBar').show();
-						$('.navigator .header .top .topWrap .loginedBar').hide();
-						$('#usernameLogin').val('');
-						$('#passwordLogin').val('');
-						$('#verifyLogin').val('');
-						$('#usernameRegister').val('');
-						$('#passwordRegister').val('');
-						$('#passwordRegisterReapeat').val('');
-						$('#verifyRegister').val('');
-					}else{
-						swal({
-							title: data['info'],
-							text: '',
-							type: "error",
-							confirmButtonText: "确认"
-						});
-					}
-				},
-				error:function(err){
-					swal({
-						title: err,
-						text: '',
-						type: "error",
-						confirmButtonText: "确认"
-					});
-				},
-			});
 		});
 	};
 	
