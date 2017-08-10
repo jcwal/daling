@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>达令——添加商品</title>
-		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/reset.css" />
+	   
+	   	<link rel="stylesheet" href="__ROOT__/Admin/Common/css/reset.css" />
 		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="__ROOT__/Admin/Common/css/add.css" />
 		<link rel="stylesheet" type="text/css" href="__ROOT__/Admin/Common/css/sweetalert.css">
@@ -19,69 +20,75 @@
 			<span class="logout">[退出系统]</span>
 			<div class="form-horizontal">
 				<div class="form-group">
-					<label for="bookname" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品名：</label>
+					<label for="productName" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品名：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type='text' placeholder='商品名' class='form-control' id='bookname' name='bookname' />				
+						<input ng-model="productName" type='text' placeholder='商品名' class='form-control' id='productName' name='productName'  />				
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="introduce" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">原价：</label>
+					<label for="originPrice" class="col-md-2 col-md-offset-1 col-sm-2 control-label category" >原价：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="原价" class="form-control" id="introduce" name="introduce" />
+						<input ng-model="originPrice" type="text" placeholder="原价" class="form-control" id="originPrice" name="originPrice" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="author" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣价：</label>
+					<label for="discountPrice" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣价：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="折扣价" class="form-control" id="author" name="author" />
+						<input ng-model="discountPrice" type="text" placeholder="折扣价" class="form-control" id="discountPrice" name="discountPrice" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="press" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣率：</label>
+					<label for="discountRate" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">折扣率：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="折扣率" class="form-control" id="press" name="press" />
+						<input ng-model="discountRatefile" type="text" placeholder="折扣率" class="form-control" id="discountRate" name="discountRate" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="publicationDate" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">促销信息：</label>
+					<label for="saleInfo" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">促销信息：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="促销信息" class="form-control" id="publicationDate" name="publicationDate" />
+						<input ng-model="saleInfo" type="text" placeholder="促销信息" class="form-control" id="saleInfo" name="saleInfo" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="price" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">默认收藏数量：</label>
+					<label for="collectNumber" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">默认收藏数量：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="收藏数量" class="form-control" id="price" name="price" />
+						<input ng-model="collectNumber" type="text" placeholder="收藏数量" class="form-control" id="collectNumber" name="collectNumber" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="price" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">关键字(用 、 分隔)：</label>
+					<label for="productParamter" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品详细信息：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="text" placeholder="关键字(用 、 分隔)" class="form-control" id="price" name="price" />
+						<input  type="text" placeholder="商品详细信息" class="form-control" id="productParamter" name="productParamter" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">默认评论文件(json格式)：</label>
+					<label for="keywords" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">关键字(用 、 分隔)：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="file" id="bookpic" name="bookpic" onchange="sub()" />
+						<input  type="text" placeholder="关键字(用 、 分隔)" class="form-control" id="keywords" name="keywords" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品展示图片：</label>
+					<label for="commentUrl" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">默认评论文件(json格式)：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="file" id="bookpic" name="bookpic" onchange="sub()" />
+						<input type="file" id="commentUrl" name="commentUrl" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="bookpic" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品信息图片：</label>
+					<label for="productShowPicUrl" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品展示图片：</label>
 					<div class="col-md-8 col-sm-8">
-						<input type="file" id="bookpic" name="bookpic" onchange="sub()" />
+						<input  type="file" id="productShowPicUrl" name="productShowPicUrl"  />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="productInfoPicUrl" class="col-md-2 col-md-offset-1 col-sm-2 control-label category">商品信息图片：</label>
+					<div class="col-md-8 col-sm-8">
+						<input  type="file" id="productInfoPicUrl" name="productInfoPicUrl" multiple />
 					</div>
 				</div>
 				<div class="form-group">
 					
 					<div class="col-md-1 col-md-offset-3 col-sm-1 col-sm-offset-2 ">
-						<input type="button"  class="btn btn-default" value="添加" ng-click="addData()"/>
+						<input  type="button"  class="btn btn-default" value="添加" ng-click="addData()"/>
 					</div>
 				</div>
 			</form>
