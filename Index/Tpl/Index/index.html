@@ -18,6 +18,7 @@
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/swiper-3.4.2.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular.min.js"></script>
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery.fly.min.js"></script>
 		<script type="text/javascript">
 			var app = '';
 		</script>
@@ -70,7 +71,7 @@
 									<a href="__APP__/ProductDetail?pid={{v.id}}">
 										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
-									<span class="joinTrolley" ng-click='joinTrolley(v.id)'>
+									<span class="joinTrolley" ng-click='joinTrolley(v.id,$event,v.productShowPicUrl)'>
 										加入购物车
 										<span></span>
 									</span>
@@ -105,7 +106,7 @@
 									<a href="__APP__/ProductDetail?pid={{v.id}}">
 										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
-									<span class="joinTrolley" ng-click='joinTrolley(v.id)'>
+									<span class="joinTrolley" ng-click='joinTrolley(v.id,$event,v.productShowPicUrl)'>
 										加入购物车
 										<span></span>
 									</span>
@@ -582,11 +583,11 @@
 									<div class="text">
 										<div class="countdown">
 											距离闪购结束
-											<span class="hour">12</span>
+											<span class="hour">{{hour}}</span>
 											<span class="colon">:</span>
-											<span class="min">00</span>
+											<span class="min">{{minute}}</span>
 											<span class="colon">:</span>
-											<span class="sec">00</span>
+											<span class="sec">{{secound}}</span>
 										</div>
 										<div class="textUp">
 											<span class="text1">
@@ -636,7 +637,7 @@
 										</div>
 										<div class="textDown">
 											<button class="collect" ng-click='collect(v.id)'>收藏</button>
-											<button class="joinTrolley" ng-click='joinTrolley(v.id)' >加入购物车</button>
+											<button class="joinTrolley" ng-click='joinTrolley(v.id,$event,v.productShowPicUrl)' >加入购物车</button>
 										</div>
 									</div>
 								</li>

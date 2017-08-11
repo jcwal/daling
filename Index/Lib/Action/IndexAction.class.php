@@ -18,12 +18,12 @@ class IndexAction extends Action {
 	public function joinTrolley(){
 		$idData['pid'] = $_GET['pid'];
 		$idData['uid'] = $_GET['uid'];
-		if(!empty($idData['uid'])){
+		if($idData['uid'] != 'null'){
 			$Index = D("Index");
 			$trolleyData = $Index->joinTrolley($idData);
 		}else{
-			session($idData['pid'],1);
-			if(session($idData['pid'])){
+			cookie($idData['pid'],'1');
+			if(cookie($idData['pid'])){
 				$trolleyData['status'] = 1;
 			}else{
 				$trolleyData['status'] = 0;

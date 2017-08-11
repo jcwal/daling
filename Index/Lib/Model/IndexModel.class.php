@@ -16,6 +16,15 @@ class IndexModel extends Model{
 		$initData['darkHorse'] = $product->limit(42,6)->select();
 		$initData['sale']['today'] = $product->limit(22,4)->select();
 		$initData['sale']['tomorrow'] = $product->limit(40,5)->select();
+		$starttimestr = "08:00:00";
+		$endtimestr = "20:00:00";
+		$starttime = strtotime($starttimestr);
+		$endtime = strtotime($endtimestr);
+		$total = $endtime-$starttime;
+		$beginToday=mktime(8,0,0,date('m'),date('d'),date('Y'));
+		$now = strtotime(date('H:i:s'));
+		$remain = $total-($now-$beginToday);
+		$initData['sale']['time'] = $remain;
 		if($initData['new']['up']){
 			$initData['status'] = 1;
 			$initData['info'] = '初始化成功';

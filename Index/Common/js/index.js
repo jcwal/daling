@@ -25,7 +25,7 @@ var mySwiper = new Swiper('.swiper-container', {
 if(app == ''){
 	app=angular.module("myapp",[]);	
 };
-app.controller('indexController',function($scope,$http,$interval,$location){
+app.controller('indexController',function($scope,$http,$interval,$filter){
 	//ajax获取数据，初始化页面
 	$scope.initData = '';
 	$http({
@@ -34,6 +34,17 @@ app.controller('indexController',function($scope,$http,$interval,$location){
 	}).success(function(data){
 		if(data['status'] == 1){
 			$scope.initData = data;
+			var time = (data.sale.time)*1000;
+			var now = (data.sale.time)*1000;
+			$scope.hour = $filter('date')(time, "hh"); 
+			$scope.minute = $filter('date')(time, "mm"); 
+			$scope.secound = $filter('date')(time, "ss"); 
+			var timer = $interval(function(){
+				now = now-1000;
+				$scope.hour = $filter('date')(now, "hh"); 
+				$scope.minute = $filter('date')(now, "mm"); 
+				$scope.secound = $filter('date')(now, "ss"); 
+			},1000);
 			//买了又买	
 			setTimeout(function(){
 				$('.indexMain .indexBuyAgain .box .beauty dd').eq(0).prop('class','clearFloat current ng-scope');
@@ -81,9 +92,12 @@ app.controller('indexController',function($scope,$http,$interval,$location){
 			});
 		});
 	};
-	$scope.joinTrolley = function(pid){
+	$scope.joinTrolley = function(pid,event,src){
 		var pid = pid;
 		var uid = findCookie('uid');
+		var e = event;
+		var src = src;
+		addCart(e,src);
 		$http({
 			method:'GET',
 			url:`index.php/Index/joinTrolley?pid=${pid}&uid=${uid}`,
@@ -196,6 +210,22 @@ function findCookie(cookieName){
 	}else{
 		return null
 	};
+};
+function addCart(event,src) {
+	var distance = $("body").scrollTop();
+	var offset = $('.aside_shopp').offset(), flyer = $('<img class="u-flyer" src='+src+' />');
+	flyer.fly({
+	    start: {
+	        left: event.pageX,
+	        top: (event.pageY)-distance
+	    },
+	    end: {	    		
+	        left: offset.left,
+	        top: (offset.top)-distance,
+	        width: 0,
+	        height: 0
+	    }
+	});
 };
 
 
