@@ -5,10 +5,16 @@ class IndexAction extends Action {
 	}
 	public function initial(){
 		$Index = D("Index");
-    	$arr = $Index->initial();
-		$this->ajaxReturn($arr);
+    	$initData = $Index->initial();
+		$this->ajaxReturn($initData);
 	}
 	public function book(){
 		$this->display('book');
+	}
+	public function exchange(){
+
+	}
+	public function joinTrolley(){
+
 	}
 }

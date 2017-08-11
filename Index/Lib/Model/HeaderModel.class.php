@@ -6,6 +6,7 @@ class HeaderModel extends Model{
 		$one = $user->where("username='$username'")->find();
 		if(!empty($one)){
 			if($one['password'] == md5($data['password'])){
+				$loginInfo['uid'] = $one['id'];
 				$loginInfo['info'] = '登陆成功';
 				$loginInfo['status'] = 1;
 			}else{
@@ -23,21 +24,22 @@ class HeaderModel extends Model{
 		$username = $data['username'];
 		$one = $user->where("username='$username'")->find();
 		if(!empty($one)){
-			$loginInfo['info'] = '用户名已存在';
-			$loginInfo['status'] = 3;
+			$registerInfo['info'] = '用户名已存在';
+			$registerInfo['status'] = 3;
 		}else{
 			$addData['username'] = $data['username'];
 			$addData['password'] = md5($data['password']);
 			$res = $user->add($addData);
 			if($res){
-				$loginInfo['info'] = '注册成功';
-				$loginInfo['status'] = 1;
+				$registerInfo['uid'] = $res;
+				$registerInfo['info'] = '注册成功';
+				$registerInfo['status'] = 1;
 			}else{
-				$loginInfo['info'] = '系统错误，请重试';
-				$loginInfo['status'] = 2;
+				$registerInfo['info'] = '系统错误，请重试';
+				$registerInfo['status'] = 2;
 			};
 		};
 		
-		return $loginInfo;
+		return $registerInfo;
 	}
 }

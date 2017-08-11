@@ -8,10 +8,17 @@ app.controller("mycontroller",function ($scope,$http) {
 	//返回后台数据
 	$http({
 		method:'get',
-		url:'../index.php/productDetail/getData?pid=1',
+		url:'../index.php/productDetail/getData?pid=178',
 		header:{},
 	}).success(function(data){
-		console.log(data)
+		$scope.img="../"+data.productShowPicUrl;
+		$scope.imgs="../"+data.productInfoPicUrl;
+		$scope.commentObj = data.commentObj;
+//		console.log(data);
+//		console.log(data.productShowPicUrl);
+//		console.log(data.productInfoPicUrl);
+//		console.log(data.commentObj);
+//		console.log(data.productParamter)
 		$scope.data = data;
 	}).error(function(err){
 		alert(err);
@@ -26,14 +33,7 @@ app.controller("mycontroller",function ($scope,$http) {
 			$scope.num --;
 		}
 	}
-	//点击购物车
-	$scope.addCartNum = 0;
-	$scope.addCart = function () {
-		$scope.addCartNum ++
-		console.log("点击我了")
-	}
-	
-	
+	//点击购物车	
 })
 
 //点击收藏变红
@@ -58,8 +58,13 @@ $("#red").on("click",function(){
 $(window).scroll(function(){
 	//滚动到一定距离的时候把商品信息 用户评论 固定在网页头部
 	//距离
+<<<<<<< HEAD
 	distance = $(window).scrollTop();
 //	console.log(distance);
+=======
+	distance = $("body").scrollTop();
+	
+>>>>>>> master
 	if(distance >= shoppTop) {
 		$(".tag").addClass("Stick");
 		$(".tag_1").addClass("Stick1");
@@ -112,13 +117,13 @@ var shoppTop = $("#tags").offset().top;
 var commentTop = $(".content_info_3").offset().top;
 var servebottom = $(".bottomMessage").offset().top;
 $("#li1").click(function(){
-	$('html,body').animate({scrollTop:shoppTop},'slow');
+	$('html,body').animate({scrollTop:shoppTop},1);
 	addshopp();
 	removecomment();
 	removeserve();
 })
 $("#li2").click(function(){
-	$('html,body').animate({scrollTop:commentTop},'slow');
+	$('html,body').animate({scrollTop:commentTop},1);
 	removeshopp();
 	removeserve();
 	addcomment();	
@@ -127,7 +132,7 @@ $("#li2").click(function(){
 	})
 })
 $("#li3").click(function(){
-	$('html,body').animate({scrollTop:servebottom+1000},'slow');	
+	$('html,body').animate({scrollTop:servebottom},1);	
 	removeshopp();
 	removecomment();
 	addserve();
@@ -188,7 +193,11 @@ function test(){
     length.eq(num).next().show();
   }
 $(".scroll-up").click(function(){
+<<<<<<< HEAD
 	console.log("我是up")
+=======
+//	console.log("我是up")
+>>>>>>> master
  	num += 2;
     if(num > 4){
       num = 0;
@@ -196,7 +205,11 @@ $(".scroll-up").click(function(){
     test(num);
 })
 $(".scroll-down").click(function(){
+<<<<<<< HEAD
 	console.log("我是down")
+=======
+//	console.log("我是down")
+>>>>>>> master
 	 num -= 2;
     if(num < 0){
       num = 4;
@@ -225,7 +238,7 @@ flyer.fly({
     
 });
 }
-//取数据库里的数据
+
 
 
 

@@ -656,7 +656,7 @@
 	width: 140px;
 	height: 140px;
 	margin-bottom: 4px;
-	background-image:url("http://img.cdn.daling.com/data/files/zin/2016/08/23/FA163E0C4D3EG8NC0C45IG079AO.jpg");
+	/*background-image:url("http://img.cdn.daling.com/data/files/zin/2016/08/23/FA163E0C4D3EG8NC0C45IG079AO.jpg");*/
 }
 .productDetail .main .main_right .sidebar-buying li .cover-img {
 	background-position: center center;
@@ -718,6 +718,7 @@
 	margin-left: 165px;
 	position:absolute;	
 }
+
 .u-flyer {
     display: block;
     width: 50px;

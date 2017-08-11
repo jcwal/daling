@@ -57,7 +57,7 @@
 							</span>
 						</div>
 						<div class="right">
-							<a class="exchange" href='#'>
+							<a class="exchange" href='javascript:void(0)' ng-click='exchange()'>
 								换一批
 							</a>
 							<span></span>
@@ -65,12 +65,12 @@
 					</h2>
 					<div class="box">
 						<ul class="up">
-							<li>
+							<li ng-repeat="(k,v) in initData.new.up">
 								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
-									<span class="joinTrolley">
+									<span class="joinTrolley" ng-click='joinTrolley(v.id)'>
 										加入购物车
 										<span></span>
 									</span>
@@ -78,128 +78,62 @@
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>59.00
+											￥<span>{{v.discountPrice}}
 											</span>
 										</span>
 										<span class="originPirce">
-											￥<span>69.00</span>
+											￥<span>{{v.originPrice}}</span>
 										</span>
 										<span class="collect">
-											<span>52</span>人收藏
+											<span>{{v.collectNumber}}</span>人收藏
 										</span>
 									</div>
 									<div class="textDown">
 										<span class="discount">
-											8折/
+											{{v.discountRate}}折/
 										</span>
-										<a href="#" class="introduce">
-											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
-										</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
-									</a>
-									<span class="joinTrolley">
-										加入购物车
-										<span></span>
-									</span>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>59.00
-											</span>
-										</span>
-										<span class="originPirce">
-											￥<span>69.00</span>
-										</span>
-										<span class="collect">
-											<span>52</span>人收藏
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="discount">
-											8折/
-										</span>
-										<a href="#" class="introduce">
-											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
-										</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
-									</a>
-									<span class="joinTrolley">
-										加入购物车
-										<span></span>
-									</span>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>59.00
-											</span>
-										</span>
-										<span class="originPirce">
-											￥<span>69.00</span>
-										</span>
-										<span class="collect">
-											<span>52</span>人收藏
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="discount">
-											8折/
-										</span>
-										<a href="#" class="introduce">
-											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
-										</a>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic.jpg" alt="达令" />
-									</a>
-									<span class="joinTrolley">
-										加入购物车
-										<span></span>
-									</span>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>59.00
-											</span>
-										</span>
-										<span class="originPirce">
-											￥<span>69.00</span>
-										</span>
-										<span class="collect">
-											<span>52</span>人收藏
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="discount">
-											8折/
-										</span>
-										<a href="#" class="introduce">
-											 [国货精选 · 大量补水，水润柔滑不干燥] 相宜本草 相宜本草四倍多萃润泽柔肤水 
+										<a href="__APP__/ProductDetail?pid={{v.id}}" class="introduce">
+											 {{v.productName}} 
 										</a>
 									</div>
 								</div>
 							</li>
 						</ul>
-						<ul class="down">
-							<li class="left">
+						<ul class="down" >
+							<li ng-repeat="(k,v) in initData.new.down" ng-class="v==0?left:right" >
+								<div class="pic">
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
+									</a>
+									<span class="joinTrolley" ng-click='joinTrolley(v.id)'>
+										加入购物车
+										<span></span>
+									</span>
+								</div>
+								<div class="text">
+									<div class="textUp">
+										<span class="discount">
+											￥<span>{{v.discountPrice}}
+											</span>
+										</span>
+										<span class="originPirce">
+											￥<span>{{v.originPrice}}</span>
+										</span>
+										<span class="collect">
+											<span>{{v.collectNumber}}</span>人收藏
+										</span>
+									</div>
+									<div class="textDown">
+										<span class="discount">
+											{{v.discountRate}}折/
+										</span>
+										<a href="__APP__/ProductDetail?pid={{v.id}}" class="introduce">
+											 {{v.productName}}
+										</a>
+									</div>
+								</div>
+							</li>
+							<!-- <li class="right">
 								<div class="pic">
 									<a href="#">
 										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
@@ -231,40 +165,7 @@
 										</a>
 									</div>
 								</div>
-							</li>
-							<li class="right">
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
-									</a>
-									<span class="joinTrolley">
-										加入购物车
-										<span></span>
-									</span>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>98.00
-											</span>
-										</span>
-										<span class="originPirce">
-											￥<span>119.00</span>
-										</span>
-										<span class="collect">
-											<span>64</span>人收藏
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="discount">
-											8折/
-										</span>
-										<a href="#" class="introduce">
-											 可爱动物造型餐具4件套 (花色 )
-										</a>
-									</div>
-								</div>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</section>
@@ -1596,6 +1497,6 @@
 			<include file='Public:footer' />
 		</div>
 	</body>
-	<script type="text/javascript" src="__ROOT__/Index/common/js/index.js"></script>
-	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/index.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/aside.js"></script>
 </html>
