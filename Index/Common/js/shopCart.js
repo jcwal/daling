@@ -1,9 +1,10 @@
 if(app == ''){
 	app=angular.module("myapp",[]);	
 };
-app.controller("myctrl",function(){
-
-})
+var uid = findCookie('uid');
+if(uid){
+	$('.collect').hide();
+};
 // 单选按钮
 	$('.select').click(function(){
 		$(this).parents('.listTitle').next('.listBody').find('.checkt').prop('checked',true);
@@ -114,4 +115,75 @@ $('.btn').click(function(){
 		
 	})
 
+app.controller('myctrl',function($scope,$http){
+	var pid = findCookie('temp_pid');
+	var uid = findCookie('uid');
+	$http({
+		method:'GET',
+		url:`ShopCart/init?uid=${uid}&pid=${pid}`,
+		header:{}
+	}).success(function(data){
+		if(data['status'] == 1){
+			$scope.initData = data;
+			$scope.count = 1;
+		}else{
+			swal({
+				title: data['info'],
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		};
+	}).error(function(err){
+		swal({
+			title: err,
+			text: '',
+			type: "error",
+			confirmButtonText: "确认"
+		});
+	});
+	
+	var isRecordR = false;
+	var isRecordA = false;
+	$scope.reduce = function(e){
+		var count = $(e.target).siblings('.count').text();	
+		if(count>0){
+			count--;
+			$(e.target).siblings('.count').text(count);
+			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+		}else{
+			$(e.target).siblings('.count').text(0);
+			// $(e.target).parent().next().find('.TotPrice').text(0);
+		};
+		
+	};
+	$scope.add = function(e){
+		var count = $(e.target).siblings('.count').text();
+		count++;
+		$(e.target).siblings('.count').text(count);	
+		// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+	};
+	$scope.delete = function(pid){
+		
+	};
+	$scope.loginBtn = function(){
+		$('.navigator .header .loginRegisterWrap').show();
+		$('.navigator .header .loginRegisterWrap .loginForm').show();
+	};
+});
+function findCookie(cookieName){
+	var regExp = new RegExp('\\b'+cookieName+'\\b','g');
+	var cookieIndex = document.cookie.search(regExp);
+	if(cookieIndex != -1){
+		var cookieStart = cookieIndex + cookieName.length + 1;
+		var cookieEnd = document.cookie.indexOf(';',cookieIndex+cookieName.length+1);
+		if(cookieEnd == -1){
+			cookieEnd = document.cookie.length;
+		};
+		var cookieUsername = unescape(document.cookie.substring(cookieStart,cookieEnd));
+		return cookieUsername;
+	}else{
+		return null
+	};
+};
  

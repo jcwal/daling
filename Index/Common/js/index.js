@@ -21,6 +21,18 @@ var mySwiper = new Swiper('.swiper-container', {
 		})
 	},
 })
+var pLength = findCookie('temp_pid');
+var uid = findCookie('uid');
+var pCount = 0;
+
+if(uid){
+	pCount
+}else{
+	if(pLength){
+		pCount = pLength.split(',').length-1;
+	};
+};
+$('.centerWrap .trolley span').text(pCount);
 //初始化页面
 if(app == ''){
 	app=angular.module("myapp",[]);	
@@ -67,14 +79,15 @@ app.controller('indexController',function($scope,$http,$interval,$filter){
 			confirmButtonText: "确认"
 		});
 	});
-
+	var count = 0;
 	$scope.exchange = function(){
+		count++;
 		$http({
 			method:'GET',
-			url:'index.php/Index/exchange',
+			url:`index.php/Index/exchange?count=${count}`,
 		}).success(function(data){
 			if(data['status'] == 1){
-				
+				$scope.initData.new = data['new'];
 			}else{
 				swal({
 					title: data['info'],
@@ -92,9 +105,9 @@ app.controller('indexController',function($scope,$http,$interval,$filter){
 			});
 		});
 	};
+	
 	$scope.joinTrolley = function(pid,event,src){
 		var pid = pid;
-		var uid = findCookie('uid');
 		var e = event;
 		var src = src;
 		addCart(e,src);
@@ -103,7 +116,8 @@ app.controller('indexController',function($scope,$http,$interval,$filter){
 			url:`index.php/Index/joinTrolley?pid=${pid}&uid=${uid}`,
 		}).success(function(data){
 			if(data['status'] == 1){
-				console.log(data);
+				pCount ++;
+				$('.centerWrap .trolley span').text(pCount);
 			}else{
 				swal({
 					title: data['info'],

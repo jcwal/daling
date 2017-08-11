@@ -13,7 +13,10 @@ class IndexAction extends Action {
 		$this->display('book');
 	}
 	public function exchange(){
-
+		$count = $_GET['count'];
+		$Index = D("Index");
+		$exchangeData = $Index->exchange($count);
+		$this->ajaxReturn($exchangeData);
 	}
 	public function joinTrolley(){
 		$idData['pid'] = $_GET['pid'];
@@ -22,8 +25,10 @@ class IndexAction extends Action {
 			$Index = D("Index");
 			$trolleyData = $Index->joinTrolley($idData);
 		}else{
-			cookie($idData['pid'],'1');
-			if(cookie($idData['pid'])){
+			$cookies = cookie('temp_pid');
+			$cookies = $cookies.','.$idData['pid'];
+			cookie('temp_pid',$cookies);
+			if(cookie('temp_pid')){
 				$trolleyData['status'] = 1;
 			}else{
 				$trolleyData['status'] = 0;

@@ -64,4 +64,18 @@ class IndexModel extends Model{
 		};
 		return $collectData;
 	}
+	public function exchange($count){
+		$product = M('product');
+		$count = $count;
+		$exchangeData['new']['up'] = $product->order('id DESC')->limit($count*6,4)->select();
+		$exchangeData['new']['down'] = $product->order('id DESC')->limit($count*6+4,2)->select();
+		if($exchangeData['new']['up']){
+			$exchangeData['status'] = 1;
+			$exchangeData['info'] = '换一批成功';
+		}else{
+			$exchangeData['status'] = 0;
+			$exchangeData['info'] = '服务器故障，请刷新网页';
+		}
+		return $exchangeData;
+	}
 }
