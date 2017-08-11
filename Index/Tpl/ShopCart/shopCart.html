@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-
 	<title>购物车</title>
 	<meta name="keywords" content="达令,达令™,鹿晗,海淘,礼物店,跨境购,代购,全球购,跨境电商,海外直邮,达令礼物店,达令APP,达令官网">
 	<meta name="description" content="达令™一手全球好货,每天甄选高品质时尚潮货,进口零食,美妆,创意生活用品.潮流买手带您跨境全球购,达令APP教您神马值得买.鹿晗投资,品牌授权,海关监督,免税直邮.Darling爱达令!">
@@ -86,16 +85,17 @@
 					</tbody>
 				</table>
 				<!-- 非空购物车 -->
-				<div class="fullCart" >
+				<div class="fullCart" ng-repeat='(k,v) in initData.data'>
 					<!-- 购物车商品列表头部 -->
 					<div class="listTitle"> 
 						<!-- <input type="checkbox" class="choice select" /> -->
-						<span class="discount">满减
+						<span class="discount">{{v.saleInfo}}
 							<span></span>
+						
 						</span>
 						<span>超级满减团99减30 </span>
 						<span>再够34.00元 可减34.00元</span>
-						<a href="">去凑单>> </a>
+						<a href="__APP__/ProductList/showList?keywords=全球零食">去凑单>> </a>
 					</div>
 					<!-- 购物车商品信息 -->
 					<div class="listBody">
@@ -106,85 +106,35 @@
 							<!-- 商品信息 -->
 							<li>
 								<a href="">
-									<img src="" alt="" class="productImg" />
+									<img ng-src="{{v.productShowPicUrl}}" alt="达令" class="productImg" />
 								</a>
 								<a href="" class="proRelate">
-									<span id="productName">[森田药妆]</span><br/>
-									<span id="productIntro">森田玻尿酸复合原液面膜</span>
+									<span id="productName">{{v.productName.substring(v.productName.indexOf('['),v.productName.indexOf(']')+1)}}</span><br/>
+									<span id="productIntro">{{v.productName.substring(v.productName.indexOf(']')+1,v.productName.length)}}</span>
 								</a>
 							</li>
 							<!-- 商品单价 -->
 							<li>
 								<p>￥
-									<span class="proPrice">100.00</span>
+									<span class="proPrice">{{v.discountPrice}}</span>
 								</p>
 							</li>
 							<!-- 商品件数 -->
 							<li>
-								<span class="btn reduce">-</span>	
-								<span class="count">1</span>
-								<span class="btn add">+</span>
+								<span class="btn reduce" ng-click='reduce($event)'>-</span>	
+								<span class="count">{{count}}</span>
+								<span class="btn add" ng-click='add($event)'>+</span>
 								<div class="clearFloat"></div>
 							</li>
 							<!-- 单个商品总价 -->
-							<li>￥<span class="TotPrice">0.00</span></li>
-							<li><span class="singleDel">删除</span></li>
+							<li>￥<span class="TotPrice">{{count*v.discountPrice}}</span></li>
+							<li><span class="singleDel" ng-click='delete(v.id)' >删除</span></li>
 						</ul>
 						<div class="clearFloat"></div>
 					</div>
 				</div> 
 
-				<div class="fullCart">
-					<!-- 购物车商品列表头部 -->
-					<div class="listTitle"> 
-						<!-- <input type="checkbox" class="choice select"/> -->
-						<span class="discount">满减
-							<span></span>
-						</span>
-						<span>超级满减团99减30 </span>
-						<span>再够34.00元 可减34.00元</span>
-						<a href="">去凑单>> </a>
-					</div>
-					<!-- 购物车商品信息 -->
-					<div class="listBody">
-						<div class="listInner">
-							<ul>
-								<li>
-									<input type="checkbox" class="choice checkt"/>
-								</li>
-								<!-- 商品信息 -->
-								<li>
-									<a href="">
-										<img src="" alt="" class="productImg" />
-									</a>
-									<a href="" class="proRelate">
-										<span id="productName">[森田药妆]</span><br/>
-										<span id="productIntro">森田玻尿酸复合原液面膜</span>
-									</a>
-								</li>
-								<!-- 商品单价 -->
-								<li>
-									<p>￥
-										<span>78.00</span>
-									</p>
-								</li>
-								<!-- 商品件数 -->
-								<li>
-									<span class="btn reduce">-</span>	
-									<span class="count">1</span>
-									<span class="btn add">+</span>
-									<div class="clearFloat"></div>
-								</li>
-								<!-- 单个商品总价 -->
-								<li>￥
-									<span class="TotPrice">0.00</span>
-								</li>
-								<li><span class="singleDel">删除</span></li>
-							</ul>
-						</div>
-							<div class="clearFloat"></div>
-					</div>
-				</div>	
+				
 				<!-- 换购区 -->
 				<div class="exchange" style="display: none">
 					<div class="exHeader">
@@ -207,7 +157,7 @@
 					</li>
 				</ul>
 				<ul class="bottomRight">
-					<li><a href="##">去结算</a></li>
+					<li><a href="__APP__/Indent">去结算</a></li>
 					<li>
 						<p class="wholePrice">
 							<span>总金额：</span> 
@@ -229,7 +179,7 @@
 				</div>
 				<div class="register">
 					<p>登陆后才能查看收藏的全球好货哦~</p>
-					<p><a href="##"> 登录> </a></p>
+					<p><a href="javascript:void(0)" ng-click='loginBtn()'> 登录> </a></p>
 				</div>
 				
 			</div>
