@@ -65,7 +65,7 @@
 					</h2>
 					<div class="box">
 						<ul class="up">
-							<li ng-repeat="(k,v) in initData.new.up">
+							<li ng-repeat="(k,v) in initData.new.up" ng-mouseenter='newEnter($event)' ng-mouseleave='newLeave($event)' >
 								<div class="pic">
 									<a href="__APP__/ProductDetail?pid={{v.id}}">
 										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
@@ -100,7 +100,7 @@
 							</li>
 						</ul>
 						<ul class="down" >
-							<li ng-repeat="(k,v) in initData.new.down" ng-class="v==0?left:right" >
+							<li ng-repeat="(k,v) in initData.new.down" ng-mouseenter='newEnter($event)' ng-mouseleave='newLeave($event)'>
 								<div class="pic">
 									<a href="__APP__/ProductDetail?pid={{v.id}}">
 										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
@@ -133,39 +133,6 @@
 									</div>
 								</div>
 							</li>
-							<!-- <li class="right">
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic2.jpg" alt="达令" />
-									</a>
-									<span class="joinTrolley">
-										加入购物车
-										<span></span>
-									</span>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>98.00
-											</span>
-										</span>
-										<span class="originPirce">
-											￥<span>119.00</span>
-										</span>
-										<span class="collect">
-											<span>64</span>人收藏
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="discount">
-											8折/
-										</span>
-										<a href="#" class="introduce">
-											 可爱动物造型餐具4件套 (花色 )
-										</a>
-									</div>
-								</div>
-							</li> -->
 						</ul>
 					</div>
 				</section>
@@ -184,19 +151,19 @@
 					</h3>
 					<div class="box">
 						<ul>
-							<li><a href="#">
+							<li><a href="__APP__/ProductList?keywords=泰国馆&uid={{initData.uid}}">
 								<img src="__ROOT__/Index/Common/images/index/thailand.jpg" alt="达令" />
 							</a></li>
-							<li><a href="#">
+							<li><a href="__APP__/ProductList?keywords=澳大利亚馆&uid={{initData.uid}}">
 								<img src="__ROOT__/Index/Common/images/index/australian.jpg" alt="达令" />
 							</a></li>
-							<li><a href="#">
+							<li><a href="__APP__/ProductList?keywords=日本馆&uid={{initData.uid}}">
 								<img src="__ROOT__/Index/Common/images/index/japan.jpg" alt="达令" />
 							</a></li>
-							<li><a href="#">
+							<li><a href="__APP__/ProductList?keywords=法国馆&uid={{initData.uid}}">
 								<img src="__ROOT__/Index/Common/images/index/france.jpg" alt="达令" />
 							</a></li>
-							<li><a href="#">
+							<li><a href="__APP__/ProductList?keywords=韩国馆&uid={{initData.uid}}">
 								<img src="__ROOT__/Index/Common/images/index/korea.jpg" alt="达令" />
 							</a></li>
 						</ul>
@@ -220,28 +187,29 @@
 						</div>
 						<div class="list">
 							<ul class="item1 clearFloat">
-								<li>
+								<li ng-repeat="(k,v) in initData.good.all">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -252,28 +220,32 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								
+							</ul>
+							<ul class="item2 clearFloat">
+								<li ng-repeat="(k,v) in initData.good.beauty">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -284,28 +256,32 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								
+							</ul>
+							<ul class="item3 clearFloat">
+								<li ng-repeat="(k,v) in initData.good.snack">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -316,28 +292,32 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								
+							</ul>
+							<ul class="item4 clearFloat">
+								<li ng-repeat="(k,v) in initData.good.create">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -348,28 +328,32 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								
+							</ul>
+							<ul class="item5 clearFloat">
+								<li ng-repeat="(k,v) in initData.good.pop">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -380,28 +364,32 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								
+							</ul>
+							<ul class="item6 clearFloat">
+								<li ng-repeat="(k,v) in initData.good.digital">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic3.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
 											<span class="discount">
-												￥<span>46.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥<span>180.00</span>
+											</span>
+												￥<span>{{v.originPrice}}</span>
 											</span>
 										</div>
 										<div class="textMid">
-											<a href="#">
-												[品质生活 · 迷你女士剃毛器] 锦仕 迷你女士剃毛器全身脱毛器(11*3CM 粉色)
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
+												{{v.productName}}
 											</a>
 										</div>
 										<div class="textDown">
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												<span class="userImg"></span>
 												<span class="userComment">
 													<span class="detail">“挺不错的，主要是方便”</span>
@@ -412,6 +400,7 @@
 										</div>
 									</div>
 								</li>
+								
 							</ul>
 						</div>
 					</div>
@@ -422,194 +411,34 @@
 						买了又买
 					</h3>
 					<div class="box clearFloat">
-						<dl>
+						<dl class="beauty">
 							<dt>极致美护</dt>
-							<dd class="clearFloat current">
-								<span class="tag">TOP1</span>
+							<dd ng-class="clearFloat" ng-repeat="(k,v) in initData.buyAgain.beauty" ng-mouseenter='buyEnter($event);$event.stopPropagation();' ng-mouseleave='leave($event);$event.stopPropagation();' >
+								<span class="tag">TOP{{k+1}}</span>
 								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											{{v.productName}}
 										</a>
 									</div>
 									<div class="textMid">
 										<span class="discount">
-											￥<span>128.00</span>
+											￥<span>{{v.discountPrice}}</span>
 										</span>
 										<span class="originPrice">
-											￥199.00
+											￥{{v.originPrice}}
 										</span>
 									</div>
 									<div class="textDown">
 										<span class="state">
-											共 23161 购买
+											共 {{v.collectNumber}} 购买
 											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP2</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP3</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP4</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP5</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP6</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												回头率2% >>
 											</a>
 										</span>
@@ -617,194 +446,34 @@
 								</div>
 							</dd>
 						</dl>
-						<dl>
+						<dl class="snack">
 							<dt>全球零食</dt>
-							<dd class="clearFloat current">
-								<span class="tag">TOP1</span>
+							<dd  ng-repeat="(k,v) in initData.buyAgain.snack" ng-mouseenter='buyEnter($event);$event.stopPropagation();' ng-mouseleave='leave($event);$event.stopPropagation();' >
+								<span class="tag">TOP{{k+1}}</span>
 								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											{{v.productName}}
 										</a>
 									</div>
 									<div class="textMid">
 										<span class="discount">
-											￥<span>128.00</span>
+											￥<span>{{v.discountPrice}}</span>
 										</span>
 										<span class="originPrice">
-											￥199.00
+											￥{{v.originPrice}}
 										</span>
 									</div>
 									<div class="textDown">
 										<span class="state">
-											共 23161 购买
+											共 {{v.collectNumber}} 购买
 											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP2</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP3</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP4</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP5</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP6</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												回头率2% >>
 											</a>
 										</span>
@@ -812,194 +481,34 @@
 								</div>
 							</dd>
 						</dl>
-						<dl>
+						<dl class="create">
 							<dt>创意生活</dt>
-							<dd class="clearFloat current">
-								<span class="tag">TOP1</span>
+							<dd ng-class="clearFloat" ng-repeat="(k,v) in initData.buyAgain.create" ng-mouseenter='buyEnter($event);$event.stopPropagation();' ng-mouseleave='leave($event);$event.stopPropagation();' >
+								<span class="tag">TOP{{k+1}}</span>
 								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											{{v.productName}}
 										</a>
 									</div>
 									<div class="textMid">
 										<span class="discount">
-											￥<span>128.00</span>
+											￥<span>{{v.discountPrice}}</span>
 										</span>
 										<span class="originPrice">
-											￥199.00
+											￥{{v.originPrice}}
 										</span>
 									</div>
 									<div class="textDown">
 										<span class="state">
-											共 23161 购买
+											共 {{v.collectNumber}} 购买
 											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP2</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag">TOP3</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP4</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP5</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
-												回头率2% >>
-											</a>
-										</span>
-									</div>
-								</div>
-							</dd>
-							<dd class="clearFloat">
-								<span class="tag gray">TOP6</span>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic5.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<a href="#">
-											[ · 肌肤“大扫除”必备] DMC 欣兰冻膜面膜(225g)
-										</a>
-									</div>
-									<div class="textMid">
-										<span class="discount">
-											￥<span>128.00</span>
-										</span>
-										<span class="originPrice">
-											￥199.00
-										</span>
-									</div>
-									<div class="textDown">
-										<span class="state">
-											共 23161 购买
-											<br />
-											<a href="#">
+											<a href="__APP__/ProductDetail?pid={{v.id}}">
 												回头率2% >>
 											</a>
 										</span>
@@ -1016,174 +525,24 @@
 					</h3>
 					<div class="box">
 						<ul class="clearFloat">
-							<li>
+							<li ng-repeat="(k,v) in initData.darkHorse">
 								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
+									<a href="__APP__/ProductDetail?pid={{v.id}}">
+										<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 									</a>
 								</div>
 								<div class="text">
 									<div class="textUp">
 										<span class="discount">
-											￥<span>39.90</span>
+											￥<span>{{v.discountPrice}}</span>
 										</span>
 										<span class="originPrice">
-											￥<span>48.60</span>
+											￥<span>{{v.originPrice}}</span>
 										</span>
 									</div>
 									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
-										</a>
-									</div>
-									<div class="textDown">
-										<span class="recommend">
-											推荐理由：
-											<br />
-											<span>“清凉一夏好味道”</span>
-										</span>
-										<span class="bg"></span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>39.90</span>
-										</span>
-										<span class="originPrice">
-											￥<span>48.60</span>
-										</span>
-									</div>
-									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
-										</a>
-									</div>
-									<div class="textDown">
-										<span class="recommend">
-											推荐理由：
-											<br />
-											<span>“清凉一夏好味道”</span>
-										</span>
-										<span class="bg"></span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>39.90</span>
-										</span>
-										<span class="originPrice">
-											￥<span>48.60</span>
-										</span>
-									</div>
-									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
-										</a>
-									</div>
-									<div class="textDown">
-										<span class="recommend">
-											推荐理由：
-											<br />
-											<span>“清凉一夏好味道”</span>
-										</span>
-										<span class="bg"></span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>39.90</span>
-										</span>
-										<span class="originPrice">
-											￥<span>48.60</span>
-										</span>
-									</div>
-									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
-										</a>
-									</div>
-									<div class="textDown">
-										<span class="recommend">
-											推荐理由：
-											<br />
-											<span>“清凉一夏好味道”</span>
-										</span>
-										<span class="bg"></span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>39.90</span>
-										</span>
-										<span class="originPrice">
-											￥<span>48.60</span>
-										</span>
-									</div>
-									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
-										</a>
-									</div>
-									<div class="textDown">
-										<span class="recommend">
-											推荐理由：
-											<br />
-											<span>“清凉一夏好味道”</span>
-										</span>
-										<span class="bg"></span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="pic">
-									<a href="#">
-										<img src="__ROOT__/Index/Common/product-images/indextestpic6.jpg" alt="达令" />
-									</a>
-								</div>
-								<div class="text">
-									<div class="textUp">
-										<span class="discount">
-											￥<span>39.90</span>
-										</span>
-										<span class="originPrice">
-											￥<span>48.60</span>
-										</span>
-									</div>
-									<div class="textMid">
-										<a href="#">
-											[中国 · 清凉一夏好味道] 利宾纳 黑加仑子汁原味果汁饮品(黑加仑子原味 330ml*4袋)
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											{{v.productName}}
 										</a>
 									</div>
 									<div class="textDown">
@@ -1213,11 +572,11 @@
 					</h2>
 					<div class="box">
 						<div class="salelist">
-							<ul >
+							<ul ng-repeat="(k,v) in initData.sale.today">
 								<li class="clearFloat">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic7.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
@@ -1231,147 +590,24 @@
 										</div>
 										<div class="textUp">
 											<span class="text1">
-												5.3折<a href="#">[日本 · 丰满嘟唇更立体] Makemania 透亮乳粉色唇蜜(9g)</a>
+												{{v.discountRate}}折<a href="__APP__/ProductDetail?pid={{v.id}}">{{v.productName}}</a>
 											</span>
 											<span class="text2">
-												透亮乳粉色唇蜜(9g)
+												{{v.productName.substr(16,10)}}
 											</span>
 										</div>
 										<div class="textMid">
 											<span class="discount">
-												￥<span>44.90</span>
+												￥<span>{{v.discountPrice}}</span>
 											</span>
 											<span class="originPrice">
-												￥169.00
+												￥{{v.originPrice}}
 											</span>
 										</div>
 										<div class="textDown">
-											<a href="#">立即抢购</a>
+											<a href="__APP__/ProductDetail?pid={{v.id}}">立即抢购</a>
 											<span class="countBuy">
-												<span>32</span>人购买
-											</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<ul >
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic7.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="countdown">
-											距离闪购结束
-											<span class="hour">12</span>
-											<span class="colon">:</span>
-											<span class="min">00</span>
-											<span class="colon">:</span>
-											<span class="sec">00</span>
-										</div>
-										<div class="textUp">
-											<span class="text1">
-												5.3折<a href="#">[日本 · 丰满嘟唇更立体] Makemania 透亮乳粉色唇蜜(9g)</a>
-											</span>
-											<span class="text2">
-												透亮乳粉色唇蜜(9g)
-											</span>
-										</div>
-										<div class="textMid">
-											<span class="discount">
-												￥<span>44.90</span>
-											</span>
-											<span class="originPrice">
-												￥169.00
-											</span>
-										</div>
-										<div class="textDown">
-											<a href="#">立即抢购</a>
-											<span class="countBuy">
-												<span>32</span>人购买
-											</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<ul >
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic7.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="countdown">
-											距离闪购结束
-											<span class="hour">12</span>
-											<span class="colon">:</span>
-											<span class="min">00</span>
-											<span class="colon">:</span>
-											<span class="sec">00</span>
-										</div>
-										<div class="textUp">
-											<span class="text1">
-												5.3折<a href="#">[日本 · 丰满嘟唇更立体] Makemania 透亮乳粉色唇蜜(9g)</a>
-											</span>
-											<span class="text2">
-												透亮乳粉色唇蜜(9g)
-											</span>
-										</div>
-										<div class="textMid">
-											<span class="discount">
-												￥<span>44.90</span>
-											</span>
-											<span class="originPrice">
-												￥169.00
-											</span>
-										</div>
-										<div class="textDown">
-											<a href="#">立即抢购</a>
-											<span class="countBuy">
-												<span>32</span>人购买
-											</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<ul >
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic7.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="countdown">
-											距离闪购结束
-											<span class="hour">12</span>
-											<span class="colon">:</span>
-											<span class="min">00</span>
-											<span class="colon">:</span>
-											<span class="sec">00</span>
-										</div>
-										<div class="textUp">
-											<span class="text1">
-												5.3折<a href="#">[日本 · 丰满嘟唇更立体] Makemania 透亮乳粉色唇蜜(9g)</a>
-											</span>
-											<span class="text2">
-												透亮乳粉色唇蜜(9g)
-											</span>
-										</div>
-										<div class="textMid">
-											<span class="discount">
-												￥<span>44.90</span>
-											</span>
-											<span class="originPrice">
-												￥169.00
-											</span>
-										</div>
-										<div class="textDown">
-											<a href="#">立即抢购</a>
-											<span class="countBuy">
-												<span>32</span>人购买
+												<span>{{v.collectNumber}}</span>人购买
 											</span>
 										</div>
 									</div>
@@ -1384,103 +620,23 @@
 								<p>(明晚 20:00 火爆开售)</p>
 							</div>
 							<ul>
-								<li class="clearFloat">
+								<li class="clearFloat"  ng-repeat="(k,v) in initData.sale.tomorrow">
 									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic8.jpg" alt="达令" />
+										<a href="__APP__/ProductDetail?pid={{v.id}}">
+											<img ng-src="{{v.productShowPicUrl}}" alt="达令" />
 										</a>
 									</div>
 									<div class="text">
 										<div class="textUp">
-											2折
-											<a href="#">[中国HELLO KITTY]大眼卷翘睫毛膏10g+大眼纤长睫毛液</a>
+											{{v.discountRate}}折
+											<a href="__APP__/ProductDetail?pid={{v.id}}">{{v.productName}}</a>
 										</div>
 										<div class="textMid">
-											“拥有纤长浓密的睫毛是许多姑娘们的梦想，一支睫毛增长液和一支睫毛膏就能帮你实现梦想！当实用的化妆品遭遇可爱的Hello Kitty，是不是也能‘萌动’你的心呢？来自HELLO KITTY的睫毛增长液与睫毛膏的组合，相信单凭借外形就能掳获不少妹纸的芳心吧！值得一提的是，它可不光有可爱的外表，内在也很实用哦！大眼生长液可以为毛囊补充营养，促进睫毛生长，给你一双天生大眼！睫毛膏不仅能够刷出浓密的睫毛，更防水防汗，让你妆效更持久！爱HELLO KITTY的妹纸们，千万别错过哦！”
+											{{v.productName+v.productName+v.productName}}
 										</div>
 										<div class="textDown">
-											<button class="collect">收藏</button>
-											<button class="joinTrolley">加入购物车</button>
-										</div>
-									</div>
-								</li>
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic8.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="textUp">
-											2折
-											<a href="#">[中国HELLO KITTY]大眼卷翘睫毛膏10g+大眼纤长睫毛液</a>
-										</div>
-										<div class="textMid">
-											“拥有纤长浓密的睫毛是许多姑娘们的梦想，一支睫毛增长液和一支睫毛膏就能帮你实现梦想！当实用的化妆品遭遇可爱的Hello Kitty，是不是也能‘萌动’你的心呢？来自HELLO KITTY的睫毛增长液与睫毛膏的组合，相信单凭借外形就能掳获不少妹纸的芳心吧！值得一提的是，它可不光有可爱的外表，内在也很实用哦！大眼生长液可以为毛囊补充营养，促进睫毛生长，给你一双天生大眼！睫毛膏不仅能够刷出浓密的睫毛，更防水防汗，让你妆效更持久！爱HELLO KITTY的妹纸们，千万别错过哦！”
-										</div>
-										<div class="textDown">
-											<button class="collect">收藏</button>
-											<button class="joinTrolley">加入购物车</button>
-										</div>
-									</div>
-								</li>
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic8.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="textUp">
-											2折
-											<a href="#">[中国HELLO KITTY]大眼卷翘睫毛膏10g+大眼纤长睫毛液</a>
-										</div>
-										<div class="textMid">
-											“拥有纤长浓密的睫毛是许多姑娘们的梦想，一支睫毛增长液和一支睫毛膏就能帮你实现梦想！当实用的化妆品遭遇可爱的Hello Kitty，是不是也能‘萌动’你的心呢？来自HELLO KITTY的睫毛增长液与睫毛膏的组合，相信单凭借外形就能掳获不少妹纸的芳心吧！值得一提的是，它可不光有可爱的外表，内在也很实用哦！大眼生长液可以为毛囊补充营养，促进睫毛生长，给你一双天生大眼！睫毛膏不仅能够刷出浓密的睫毛，更防水防汗，让你妆效更持久！爱HELLO KITTY的妹纸们，千万别错过哦！”
-										</div>
-										<div class="textDown">
-											<button class="collect">收藏</button>
-											<button class="joinTrolley">加入购物车</button>
-										</div>
-									</div>
-								</li>
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic8.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="textUp">
-											2折
-											<a href="#">[中国HELLO KITTY]大眼卷翘睫毛膏10g+大眼纤长睫毛液</a>
-										</div>
-										<div class="textMid">
-											“拥有纤长浓密的睫毛是许多姑娘们的梦想，一支睫毛增长液和一支睫毛膏就能帮你实现梦想！当实用的化妆品遭遇可爱的Hello Kitty，是不是也能‘萌动’你的心呢？来自HELLO KITTY的睫毛增长液与睫毛膏的组合，相信单凭借外形就能掳获不少妹纸的芳心吧！值得一提的是，它可不光有可爱的外表，内在也很实用哦！大眼生长液可以为毛囊补充营养，促进睫毛生长，给你一双天生大眼！睫毛膏不仅能够刷出浓密的睫毛，更防水防汗，让你妆效更持久！爱HELLO KITTY的妹纸们，千万别错过哦！”
-										</div>
-										<div class="textDown">
-											<button class="collect">收藏</button>
-											<button class="joinTrolley">加入购物车</button>
-										</div>
-									</div>
-								</li>
-								<li class="clearFloat">
-									<div class="pic">
-										<a href="#">
-											<img src="__ROOT__/Index/Common/product-images/indextestpic8.jpg" alt="达令" />
-										</a>
-									</div>
-									<div class="text">
-										<div class="textUp">
-											2折
-											<a href="#">[中国HELLO KITTY]大眼卷翘睫毛膏10g+大眼纤长睫毛液</a>
-										</div>
-										<div class="textMid">
-											“拥有纤长浓密的睫毛是许多姑娘们的梦想，一支睫毛增长液和一支睫毛膏就能帮你实现梦想！当实用的化妆品遭遇可爱的Hello Kitty，是不是也能‘萌动’你的心呢？来自HELLO KITTY的睫毛增长液与睫毛膏的组合，相信单凭借外形就能掳获不少妹纸的芳心吧！值得一提的是，它可不光有可爱的外表，内在也很实用哦！大眼生长液可以为毛囊补充营养，促进睫毛生长，给你一双天生大眼！睫毛膏不仅能够刷出浓密的睫毛，更防水防汗，让你妆效更持久！爱HELLO KITTY的妹纸们，千万别错过哦！”
-										</div>
-										<div class="textDown">
-											<button class="collect">收藏</button>
-											<button class="joinTrolley">加入购物车</button>
+											<button class="collect" ng-click='collect(v.id)'>收藏</button>
+											<button class="joinTrolley" ng-click='joinTrolley(v.id)' >加入购物车</button>
 										</div>
 									</div>
 								</li>
