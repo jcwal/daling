@@ -716,7 +716,7 @@
 					<li>下一页</li>
 				</ul>
 			</div>
-			<div class="ProSection">
+			<div class="ProSection" ng-repeat="(k,v) in list">
 				<div class="proData">
 					<a href=""><img src="__ROOT__/Index/Common/images/footer/proImg.jpg" alt="" /></a>
 					<div class="proMessage">
@@ -778,7 +778,8 @@
 			});
 		// 点击多选按钮，当前列消失，多选项display：block,
 		function selectMore(){
-	      // $(".selectMore").click(function(){
+			console.log(123);
+	      $(".selectMore").click(function(){
 	      		$(this).siblings("a").toggle();
 	      		$(this).next("button").toggle();
 	      		$(this).prev("dd").toggle();
@@ -786,18 +787,18 @@
 	      		$(this).prev("dd").children(".proMul").css(
 	      			'display','block',
 	      			);
-	      // })
+	      })
   		};
   		// 点击更多按钮，多选框display:block同时移除所有input
   	function listMore(){
-	    // $(".listMore").click(function(){
+	    $(".listMore").click(function(){
 	    	$(this).html("收起");
 	    	$(this).siblings("dd").toggle();
 	    	$(this).siblings("dd").children("label").children("input").remove();
 	    	$(this).siblings("dd").children(".proMul").css(
 	    		'display','none',
 	    		);
-	    // })
+	    })
   }
 
 	
