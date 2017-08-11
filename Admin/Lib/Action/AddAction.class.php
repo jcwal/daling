@@ -18,6 +18,7 @@ class AddAction extends Action {
 	    	}
 	    	$str="";
 	    	$sourceName = $_FILES['commentUrl']['name'];
+	    	// print_r($sourceName);die;
 	    	// 获取上传文件后缀名
 			$type=strrchr($sourceName,".");
 			$fileName=$id.$type;
@@ -27,20 +28,23 @@ class AddAction extends Action {
 				$res=move_uploaded_file($tmpPath, "product/comment/{$id}"."/".$fileName);
 				if($res){
 						$str ="product/comment/{$id}"."/".$fileName;
+						print_r($str);
 					}else{
 						echo "存储失败";
 					}
 			}
 	    	$data=$_POST;
 	    	$proCommentData=M("product");
+	    	var_dump($data);die;
 	    	$data['commentUrl']=$str;
 	    	// 添加评论；
 	    	$req=$proCommentData->where("id=$pid")->save($data);
-	    	// $this->ajaxReturn($req);
+	    	$this->ajaxReturn($req);
     	}
     }
     function fileUrl($id){
     	$pid = $id;
+    	print_r($id);
     	$username = session('manager');
 	 	if(!empty($username)){
 	 		// 存放图片的文件夹
@@ -75,10 +79,12 @@ class AddAction extends Action {
 	    			$type=strrchr($sourceName,".");
 	    			$fileName=$id.$type;
 	    			$tmpPath=$value["tmp_name"];
+	    			print_r($fileName);die;
 	    			if(is_uploaded_file($tmpPath)){
 	    				$res=move_uploaded_file($tmpPath, "product/pdShow/{$id}"."/".$fileName);
 	    				if($res){
 	    						$str ="product/pdShow/{$id}"."/".$fileName;
+	    						
 	    					}else{
 	    						echo "存储失败";
 	    					}
