@@ -5,18 +5,109 @@ var uid = findCookie('uid');
 if(uid){
 	$('.collect').hide();
 };
-// 单选按钮
-	$('.select').click(function(){
-		$(this).parents('.listTitle').next('.listBody').find('.checkt').prop('checked',true);
-		totalCheck();
-		totalPrice();
-	})
-	$('.checkt').click(function(){
+app.controller('myctrl',function($scope,$http){
+	var pid = findCookie('temp_pid');
+	var uid = findCookie('uid');
+	$http({
+		method:'GET',
+		url:`ShopCart/init?uid=${uid}&pid=${pid}`,
+		header:{}
+	}).success(function(data){
+		if(data['status'] == 1){
+			$scope.initData = data;
+			$scope.count = 1;
+		}else{
+			swal({
+				title: data['info'],
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		};
+	}).error(function(err){
+		swal({
+			title: err,
+			text: '',
+			type: "error",
+			confirmButtonText: "确认"
+		});
+	});
+	// 购物车页面数量加减
+	var isRecordR = false;
+	var isRecordA = false;
+	$scope.reduce = function(pid,e){
+		var pid = pid;
+		var uid = findCookie('uid');
+		var count = $(e.target).siblings('.count').text();	
+		if(count>1){
+			count--;
+			$(e.target).siblings('.count').text(count);
+			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+		}else{
+			$(e.target).siblings('.count').text(1);
+			// $(e.target).parent().next().find('.TotPrice').text(0);
+		};
+		$http({
+			method:'GET',
+			url:`ShopCart/reduce?uid=${uid}&pid=${pid}`,
+			header:{},
+		}).success(function(data){
+			if(data['status'] == 1){
+				swal(data['info'], "", "success");
+			}else{
+				swal({
+					title: data['info'],
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			};
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		})
+	};
+	$scope.add = function(pid,e){
+		var pid = pid;
+		var uid = findCookie('uid');
+		var count = $(e.target).siblings('.count').text();
+		count++;
+		$(e.target).siblings('.count').text(count);	
+		// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+		$http({
+			method:"GET",
+			url:`ShopCart/add?uid=${uid}&pid=${pid}`,
+			header:{}
+		}),success(function(data){
+			if(data['status'] == 1){
+				
+			}else{
+				swal({
+					title: data['info'],
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			};
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		})
+	};
+	// 单选按钮
+	$scope.radioSel=function(pid,event){
 		$(".exchange").toggle();
-		$(this).parents(".listBody").prev(".listTitle").find(".select").prop('checked',true);
 		totalCheck();
 		totalPrice();
-	})
+	}
 	// 全选按钮
 	$(".selectAll").click(function(){
 		$('.choice').prop('checked',function(index,value){
@@ -48,25 +139,74 @@ if(uid){
 			$("#selectAll").prop('checked',false);
 		}
 	}
-	
-	//数量加减
-$('.btn').click(function(){
-	var num=$(this).parent().find(".count").html();
-	var mon=$(this).parent('li').prev("li").find("p span").html();
-	if($(this).html()=='+'){
-		num++;
-	}else{
-		num--;
-	}
-	if(num < 1){
-		num=1;
-	}
-	$(this).parent("li").next().find("span").html(num*mon);
-	$(this).parent().find(".count").html(num);
-	totalPrice();
+	// 删除单个商品
+	$scope.delete = function(pid,ev){
+		// console.log(ev.target);
+		var pid = pid;
+		var uid = findCookie('uid');
+		var evObj=ev.target;
+		$(evObj).parents(".fullCart").remove();
+		totalCheck();
+		totalPrice();
+		var singleDel=$(".checkt");
+		if(singleDel.length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		}
+		// //用户登录
+		$http({
+			method:'GET',
+			url:`ShopCart/delete?pid=${pid}&uid=${uid}`,
+			header:{}
+		}).success(function(data){
+			if(data['status'] == 1){
+				
+			}else{
+				swal({
+					title: data['info'],
+					text: '',
+					type: "error",
+					confirmButtonText: "确认"
+				});
+			};
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		})
+	};
 
-})
-// 总金额
+	// 删除选中商品
+	$scope.delChecked=function(){
+		var everyCheck=$(".checkt").filter(function(index){
+			return $(this).prop('checked')==true;
+		});
+		everyCheck.each(function(index,value){
+			$(this).parents(".fullCart").remove();
+		})
+		totalCheck();
+		totalPrice();
+		if($(".checkt").length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		};
+		// $http({
+		// 	method:'GET',
+		// 	url:`ShopCart/delete?pid=${pid}&uid=${uid}`,
+		// 	header:{}
+		// }).success(function(data){
+		// 	alert(删除成功);
+		// }).error(function(err){
+		// 	alert(err);
+		// })
+
+	}
+	// 总金额
 	function totalPrice(){
 		var money=0;
 		$(".totalPrice").html('0.00');
@@ -84,88 +224,6 @@ $('.btn').click(function(){
 
 	}
 
-	// 删除选中
-	$('.delectPro').click(function(){
-		var everyCheck=$(".checkt").filter(function(index){
-			return $(this).prop('checked')==true;
-		});
-		everyCheck.each(function(index,value){
-			$(this).parents(".fullCart").remove();
-		})	
-		totalCheck();
-		totalPrice();
-		if($(".checkt").length==0){
-			$(".emptyCart").toggle();
-			$(".selectAll").prop("checked",false);
-			$("#selectAll").prop("checked",false);
-		};
-	});
-
-	// 删除单个商品
-	$(".singleDel").click(function(){
-		$(this).parents(".fullCart").remove();
-		totalCheck();
-		totalPrice();
-		var singleDel=$(".checkt");
-		if(singleDel.length==0){
-			$(".emptyCart").toggle();
-			$(".selectAll").prop("checked",false);
-			$("#selectAll").prop("checked",false);
-		}
-		
-	})
-
-app.controller('myctrl',function($scope,$http){
-	var pid = findCookie('temp_pid');
-	var uid = findCookie('uid');
-	$http({
-		method:'GET',
-		url:`ShopCart/init?uid=${uid}&pid=${pid}`,
-		header:{}
-	}).success(function(data){
-		if(data['status'] == 1){
-			$scope.initData = data;
-			$scope.count = 1;
-		}else{
-			swal({
-				title: data['info'],
-				text: '',
-				type: "error",
-				confirmButtonText: "确认"
-			});
-		};
-	}).error(function(err){
-		swal({
-			title: err,
-			text: '',
-			type: "error",
-			confirmButtonText: "确认"
-		});
-	});
-	
-	var isRecordR = false;
-	var isRecordA = false;
-	$scope.reduce = function(e){
-		var count = $(e.target).siblings('.count').text();	
-		if(count>0){
-			count--;
-			$(e.target).siblings('.count').text(count);
-			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
-		}else{
-			$(e.target).siblings('.count').text(0);
-			// $(e.target).parent().next().find('.TotPrice').text(0);
-		};
-		
-	};
-	$scope.add = function(e){
-		var count = $(e.target).siblings('.count').text();
-		count++;
-		$(e.target).siblings('.count').text(count);	
-		// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
-	};
-	$scope.delete = function(pid){
-		
-	};
 	$scope.loginBtn = function(){
 		$('.navigator .header .loginRegisterWrap').show();
 		$('.navigator .header .loginRegisterWrap .loginForm').show();
