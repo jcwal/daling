@@ -1,6 +1,6 @@
 <?php
 class IndexModel extends Model{
-	public function initial(){
+	public function initial($uid){
 		$product = M('product');
 		$initData['new']['up'] = $product->order('id DESC')->limit(0,4)->select();
 		$initData['new']['down'] = $product->order('id DESC')->limit(4,2)->select();
@@ -24,14 +24,22 @@ class IndexModel extends Model{
 		$beginToday=mktime(8,0,0,date('m'),date('d'),date('Y'));
 		$now = strtotime(date('H:i:s'));
 		$remain = $total-($now-$beginToday);
-		$initData['sale']['time'] = $remain;
+		$initData['sale']['time'] = $remain;	
+		$uid = $uid;
+		if($uid){
+			$user = M('user');
+			$one = $user->where("id=$uid")->find();
+			$pid = $one['trolleyPid'];
+			$pCount = $this->countStr($pid);
+			$initData['pCount'] = $pCount;
+		};
 		if($initData['new']['up']){
 			$initData['status'] = 1;
 			$initData['info'] = '初始化成功';
 		}else{
 			$initData['status'] = 0;
 			$initData['info'] = '服务器故障，请刷新网页';
-		}
+		};
 		return $initData;
 	}
 	public function joinTrolley($idData){
@@ -77,5 +85,11 @@ class IndexModel extends Model{
 			$exchangeData['info'] = '服务器故障，请刷新网页';
 		}
 		return $exchangeData;
+	}
+	public function countStr($str){
+		$str = $str;
+		$arr = explode(',',$str);
+		array_shift($arr);
+		return count($arr);
 	}
 }

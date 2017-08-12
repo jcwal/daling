@@ -5,9 +5,11 @@ class IndexAction extends Action {
 	}
 	public function initial(){
 		$Index = D("Index");
-    	$initData = $Index->initial();
+		$uid = $_GET['uid'];
+    	$initData = $Index->initial($uid);
     	$initData['uid'] = session('uid');
 		$this->ajaxReturn($initData);
+
 	}
 	public function book(){
 		$this->display('book');
