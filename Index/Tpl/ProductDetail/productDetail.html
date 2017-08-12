@@ -20,7 +20,8 @@
 		<script type="text/javascript" src="__ROOT__/Index/Common/js/jquery.fly.min.js"></script>
 		<script type="text/javascript">
 			var app = '';
-			var srcs = "__ROOT__/Index/Common/images/productDetail/product.jpg";
+//			var srcs = "__ROOT__/Index/Common/images/productDetail/product.jpg";
+//			var srcs = "__ROOT__/data.productShowPicUrl";
 		</script>
 	</head>
 	<body ng-app="myapp">
@@ -51,7 +52,7 @@
 						<a href="#">剃须刀/电吹风</a>
 						<span></span>
 					</li>
-					<li ng-model="data.productName"><div ng-bind="data.productName"></div></li>
+					<li><div ng-bind="productName"></div></li>
 				</ul>
 			</div>
 			<!--商品主要内容-->
@@ -78,16 +79,16 @@
 						</div>
 						<!--商品功能区-->
 						<div class="goods-data">
-							<h1 class="clearfix" ng-model="data.productName"><div ng-bind="data.productName"></div></h1>
+							<h1 class="clearfix" ng-bind="productName"></h1>
 							<dl class="goods-price afterfl">
 								<dt>达令价</dt>
 								<dd>
 									<div class="afterfl">
-										<div class="fl">￥<span class="f30 bold" ng-model="data.discountPrice"><span ng-bind="data.discountPrice"></span></span></div>
+										<div class="fl">￥<span class="f30 bold" ng-bind="discountPrice"></span></div>
 									</div>
 									<p>海外现时售价
-										<span ng-model="data.originPrice"><span ng-bind="data.originPrice"></span></span>
-										<span class="price-off" ng-model="data.discountRate"><span ng-bind="data.discountRate"></span>折</span>
+										<span ng-bind="originPrice"></span>
+										<span class="price-off"><span ng-bind="discountRate"></span>折</span>
 									</p>
 								</dd>
 							</dl>
@@ -102,7 +103,7 @@
 											<span class="icon-half-star"></span>
 										</span>
 									</li>
-									<li>评论：207条</li>
+									<li>评论：<span ng-bind="count"></span>条</li>
 									<li>收藏：<span id="num">355</span></li>
 								</ul>
 							</dl>
@@ -146,7 +147,7 @@
 									
 									<a href="javascript:;" >立即购买</a>
 									<a href="javascript:;" id="Bt1">添加到购物车</a>￥
-									<span>139.00</span>
+									<span ng-bind="discountPrice"></span>
 								</div>	
 								<ul class="afterfl">
 									<li class="li_1" id="li1">
@@ -159,7 +160,7 @@
 										<span class="ico">
 											<span></span>
 										</span>
-										<a href="javascript:;">用户评论(<span>207</span>)</a>
+										<a href="javascript:;">用户评论(<span ng-bind="count"></span>)</a>
 									</li>
 									<li  class="li_3" id="li3">
 										<span class="ico">
@@ -178,7 +179,7 @@
 									<dl>
 										<dt>商品参数</dt>
 										<dd>
-											<span ng-bind="data.productParamter" style=";word-wrap:break-word;white-space:normal;"></span>
+											<span ng-bind="productParamter" style=";word-wrap:break-word;white-space:normal;"></span>
 										</dd>
 									</dl>
 								</div>
@@ -187,7 +188,7 @@
 									<dl>
 										<dt>商品信息</dt>
 										<dd>
-											<img ng-src="{{imgs}}" alt="" />
+											<img alt="" ng-repeat="ImageArrCount in ImageArr" ng-src="{{imgs}}"/>
 										</dd>
 									</dl>
 								</div>
@@ -220,25 +221,25 @@
 													<li>
 														<span class="line"></span>
 														<label for="">
-															<input type="radio" name="comment"/>全部评价：207 条
+															<input type="radio" name="comment"/>全部评价：<span ng-bind="count"></span> 条
 														</label>
 													</li>
 													<li>
 														<span class="line"></span>
 														<label for="">
-															<input type="radio"  name="comment"/>好评：199 条
+															<input type="radio"  name="comment"/>好评：<span ng-bind="count"></span> 条
 														</label>
 													</li>
 													<li>
 														<span class="line"></span>
 														<label for="">
-															<input type="radio"  name="comment"/>中评：7 条
+															<input type="radio"  name="comment"/>中评：0 条
 														</label>
 													</li>
 													<li>
 														<span class="line"></span>
 														<label for="">
-															<input type="radio"  name="comment"/>差评：1条
+															<input type="radio"  name="comment"/>差评：0 条
 														</label>
 													</li>
 												</ul>
@@ -247,10 +248,10 @@
 											<div>
 												<div class="comment-table">
 													<ul>
-														<li class="afterfl" ng-repeat="(k,v) in commentObj.common1">
+														<li class="afterfl" ng-repeat="(k,v) in items">
 															<div class="face">
 																<img src="http://img.cdn.daling.com/data/files/avator/2016/10/17/14766959758999.jpg"/>
-																<p>{{v['common_1.name ']}}</p>
+																<p>{{v['common_1.name']}}</p>
 															</div>
 															<div class="data afterfl">
 																<div class="infos afterfl">
@@ -267,7 +268,7 @@
 																		<span>{{v['common_1.addtime']}}</span>
 																	</div>
 																</div>
-																<p class="text">{{v['common_1.content ']}}</p>
+																<p class="text">{{v['common_1.content']}}</p>
 															</div>
 														</li>
 													</ul>
@@ -275,13 +276,12 @@
 												<div class="pagination afterfl">
 													<div class="page afterfl">
 														<ul>
-															<li>1</li>
-															<li>2</li>
-															<li>3</li>
-															<li>...</li>
-															<li>21</li>
+															<li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+																<a href="javascript:;" ng-click="selectPage(page)">{{page}}</a>
+															</li>
+															
 														</ul>
-														<a href="">下一页</a>
+														<a href="javascript:;" ng-click="end()" class="end">下一页</a>
 													</div>
 												</div>
 											</div>
@@ -311,69 +311,69 @@
 						</div>
 						<ul style="height: 400px;overflow: hidden;">
 							<li class="active">
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 							<li class="active">
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 							<li>
-								<a href="">
+								<a href="#">
 									<div class="cover-img">
 										<img ng-src="{{img}}" alt="" class="img-ct"/>
 									</div>
-									<p class="goods-price">¥<span ng-bind="data.discountPrice"></span>
-										<span class="old-price">¥<span ng-bind="data.originPrice"></span></span>
+									<p class="goods-price">¥<span ng-bind="discountPrice"></span>
+										<span class="old-price">¥<span ng-bind="originPrice"></span></span>
 									</p>
-									<p class="goods-title" ng-bind="data.productName"></p>
+									<p class="goods-title" ng-bind="productName"></p>
 								</a>
 							</li>
 						</ul>
@@ -396,8 +396,8 @@
 			<include file='Public:footer' />
 		</div>
 	</body>
-	<script type="text/javascript" src="__ROOT__/Index/common/js/productDetail.js"></script>
-	<script type="text/javascript" src="__ROOT__/Index/common/js/aside.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/productDetail.js"></script>
+	<script type="text/javascript" src="__ROOT__/Index/Common/js/aside.js"></script>
 	
 	
 </html>

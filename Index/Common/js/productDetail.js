@@ -1,28 +1,99 @@
+var paramter = window.location.search;
+
+var pid = paramter.substring(paramter.indexOf('=')+1, paramter.length);
 if(app == ''){
     app=angular.module("myapp",[]); 
 };
-
 var distance = 0;
+var shoppTop = $("#tags").offset().top;
+var commentTop = 0;
+var servebottom = 0;
 app.controller("mycontroller",function ($scope,$http) {
 	$scope.id="";
+	
 	//返回后台数据
 	$http({
 		method:'get',
-		url:'../index.php/productDetail/getData?pid=178',
+		url:`ProductDetail/getData?pid=${pid}`,
 		header:{},
 	}).success(function(data){
+		console.log(data);
+		
 		$scope.img="../"+data.productShowPicUrl;
-		$scope.imgs="../"+data.productInfoPicUrl;
+		// $scope.imgs="../"+data.productInfoPicUrl;
+		$scope.Image = data.productInfoPicUrl;
+		$scope.ImageArr = [];
+		$scope.ImageArr = $scope.Image.split(",")
+		console.log($scope.Image);
+		console.log($scope.ImageArr);
+		$scope.ImageArrCount = $scope.ImageArr.length
+		console.log($scope.ImageArrCount);
+		for (var i = 0; i < $scope.ImageArrCount;i++) {
+			$scope.imgs = "../"+$scope.ImageArr[i];
+			console.log($scope.imgs);
+		}
+		
+		//标题
+		$scope.productName = data.productName;
+		//达令价格
+		$scope.discountPrice = data.discountPrice;
+		//原价
+		$scope.originPrice = data.originPrice;
+		//打折
+		$scope.discountRate = data.discountRate;
+		//商品参数
+		$scope.productParamter = data.productParamter;
 		$scope.commentObj = data.commentObj;
-//		console.log(data);
-//		console.log(data.productShowPicUrl);
-//		console.log(data.productInfoPicUrl);
-//		console.log(data.commentObj);
-//		console.log(data.productParamter)
+		console.log(data.productName);
+		$scope.common = data.commentObj.common1;
+		$scope.count = data.commentObj.common1.length;
+		console.log(data)
+		console.log(data.productShowPicUrl);
 		$scope.data = data;
+		// 分页
+		$scope.pageSize = 5;
+		// 分页数
+		$scope.pages = Math.ceil(data.commentObj.common1.length / $scope.pageSize);
+		$scope.newPages = $scope.pages > 5 ? 5 : $scope.pages;
+		$scope.pageList = [];
+		$scope.selPage = 1;
+		$scope.setData = function () {
+			$scope.items = $scope.common.slice(($scope.pageSize * ($scope.selPage - 1)),($scope.selPage * $scope.pageSize));
+		};
+		$scope.items = $scope.common.slice(0,$scope.pageSize);
+		console.log($scope.items)
+		for (var i = 0; i < $scope.newPages; i++){
+			$scope.pageList.push(i + 1);
+		};
+		$scope.selectPage = function (page) {
+			if (page < 1 || page > $scope.pages) return;
+			if (page > 2) {
+				var newpageList = [];
+				for (var i = (page - 3); i<((page + 2) > $scope.pages ? $scope.pages : (page + 2)); i++){
+					newpageList.push(i + 1);
+				}
+				$scope.pageList = newpageList;
+			}
+			$scope.selPage = page;
+            $scope.setData();
+            $scope.isActivePage(page);
+            console.log("选择的页：" + page);
+		};
+		$scope.isActivePage = function (page) {
+                return $scope.selPage == page;
+        };
+		$scope.end = function () {
+			$scope.selectPage($scope.selPage + 1);
+		}
+		setTimeout(function(){
+			
+			commentTop = $(".content_info_3").offset().top;
+			servebottom = $(".bottomMessage").offset().top;
+		}, 1000)
+		
 	}).error(function(err){
 		alert(err);
-	})
+	});
 	//购买数量加加和减减
 	$scope.num = 1;
 	$scope.add = function () {
@@ -34,7 +105,6 @@ app.controller("mycontroller",function ($scope,$http) {
 		}
 	}
 	//点击购物车	
-})
 
 //点击收藏变红
 $("#red").on("click",function(){
@@ -58,13 +128,7 @@ $("#red").on("click",function(){
 $(window).scroll(function(){
 	//滚动到一定距离的时候把商品信息 用户评论 固定在网页头部
 	//距离
-<<<<<<< HEAD
-	distance = $(window).scrollTop();
-//	console.log(distance);
-=======
 	distance = $("body").scrollTop();
-	
->>>>>>> master
 	if(distance >= shoppTop) {
 		$(".tag").addClass("Stick");
 		$(".tag_1").addClass("Stick1");
@@ -93,7 +157,6 @@ $(window).scroll(function(){
 		})
 		$("#li1").css({
 			borderColor: "#fff",
-			
 		})
 	}else{
 		$("#li1").removeClass("li_1")
@@ -107,15 +170,9 @@ $(window).scroll(function(){
 			borderColor: "#999",
 		})
 		removeserve()
-		
 	}
-	
-	
 })
 //商品信息的框，评论的框，售后服务的框互相切换
-var shoppTop = $("#tags").offset().top;
-var commentTop = $(".content_info_3").offset().top;
-var servebottom = $(".bottomMessage").offset().top;
 $("#li1").click(function(){
 	$('html,body').animate({scrollTop:shoppTop},1);
 	addshopp();
@@ -193,11 +250,7 @@ function test(){
     length.eq(num).next().show();
   }
 $(".scroll-up").click(function(){
-<<<<<<< HEAD
-	console.log("我是up")
-=======
 //	console.log("我是up")
->>>>>>> master
  	num += 2;
     if(num > 4){
       num = 0;
@@ -205,41 +258,38 @@ $(".scroll-up").click(function(){
     test(num);
 })
 $(".scroll-down").click(function(){
-<<<<<<< HEAD
-	console.log("我是down")
-=======
 //	console.log("我是down")
->>>>>>> master
 	 num -= 2;
     if(num < 0){
       num = 4;
     }
     test(num);
-	
 })
 //动画效果
-
 $('#Bt1').on('click', addCart);
 $('#Bt2').on('click', addCart);
+var addCartNum = 0;
 function addCart(event) {
-var offset = $('.aside_shopp').offset(), flyer = $('<img class="u-flyer" src='+srcs+' />');
-console.log(offset)
-flyer.fly({
-    start: {
-        left: event.pageX,
-        top: (event.pageY)-distance
-    },
-    end: {
-        left: offset.left,
-        top: (offset.top)-distance,
-        width: 0,
-        height: 0
-    }
-    
-});
+	var offset = $('.aside_shopp').offset(), flyer = $('<img class="u-flyer" src='+$scope.img+' />');
+	console.log(offset)
+	flyer.fly({
+	    start: {
+	        left: event.pageX,
+	        top: (event.pageY)-distance
+	    },
+	    end: {
+	        left: offset.left,
+	        top: (offset.top)-distance,
+	        width: 0,
+	        height: 0
+	    }
+	});
+	addCartNum ++ ;
+	$(".aside_number").html(addCartNum);
+	$(".trolley span").html(addCartNum);
 }
 
-
+})
 
 
 

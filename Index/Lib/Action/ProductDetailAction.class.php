@@ -12,9 +12,13 @@ class ProductDetailAction extends Action {
 		$product=M("product");
 		// 查询一条数据
 		$one = $product->where("id=$pid")->find();
+//		echo $product->getLastSql();die;
 		$commentJson = $one['commentUrl'];
 		$res = json_decode(file_get_contents($commentJson),true);
 		$one['commentObj'] = $res;
+		if(empty($one)){
+			$one = [];
+		}
 		$this->ajaxReturn($one);
 	}
 }

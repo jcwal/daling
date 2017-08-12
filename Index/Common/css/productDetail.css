@@ -602,11 +602,15 @@
 	cursor: pointer;
 	
 }
-.productDetail .main .main_left .detail-content .content .content_info .content_info_3 dl dd .pagination .page ul li:nth-child(1) {
+.productDetail .main .main_left .detail-content .content .content_info .content_info_3 dl dd .pagination .page ul li a{
+	float: left;
+	width: 100%;
+}
+.productDetail .main .main_left .detail-content .content .content_info .content_info_3 dl dd .pagination .page ul .active {
 	background: #E5E5E5;
 	
 }
-.productDetail .main .main_left .detail-content .content .content_info .content_info_3 dl dd .pagination .page a {
+.productDetail .main .main_left .detail-content .content .content_info .content_info_3 dl dd .pagination .page .end {
 	float: left;
 	width: 48px;
 	height: 28px;
