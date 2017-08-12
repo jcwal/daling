@@ -84,6 +84,7 @@ $('.btn').click(function(){
 
 	}
 
+
 	// 删除选中
 	$('.delectPro').click(function(){
 		var everyCheck=$(".checkt").filter(function(index){

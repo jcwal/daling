@@ -1,0 +1,26 @@
+CACHE MANIFEST  
+#v1  
+  
+CACHE:  
+Index/Tpl/Index/index.html  
+Index/Common/css/index.css
+Index/Common/js/index.js
+Index/Common/css/header.css
+Index/Common/css/productDetail.css
+Index/Common/css/shopCart.css
+Index/Common/css/showList.css
+Index/Common/css/reset.css
+Index/Common/js/angular.min.js
+Index/Common/js/aside.js
+Index/Common/js/productDetail.js
+Index/Common/js/jquery-3.2.1.min.js
+Index/Common/js/showList.js
+Index/Common/js/swiper-3.4.2.min.js
+Index/Tpl/Public/header.html  
+Index/Tpl/Public/footer.html  
+Index/Tpl/Public/aside.html
+Index/Tpl/ProductDetail/productDetail.html 
+Index/Tpl/ProductList/showList.html 
+Index/Tpl/ShopCart/shopCart.html  
+NETWORK:  
+*  
