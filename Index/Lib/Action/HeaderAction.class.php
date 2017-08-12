@@ -67,4 +67,10 @@ class HeaderAction extends Action {
 		import('ORG.Util.Image');
     	Image::buildImageVerify(4,1);
 	}
+    public function initial(){
+        $Header = D("Header");
+        $uid = $_GET['uid'];
+        $initData = $Header->initial($uid);
+        $this->ajaxReturn($initData);
+    }
 }

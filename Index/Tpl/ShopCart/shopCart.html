@@ -88,25 +88,23 @@
 				<div class="fullCart" ng-repeat='(k,v) in initData.data'>
 					<!-- 购物车商品列表头部 -->
 					<div class="listTitle"> 
-						<!-- <input type="checkbox" class="choice select" /> -->
 						<span class="discount">{{v.saleInfo}}
-							<span></span>
-						
 						</span>
-						<span>超级满减团99减30 </span>
-						<span>再够34.00元 可减34.00元</span>
+						<!-- <span>超级满减团99减30 </span>
+						<span>再够34.00元 可减34.00元</span> -->
 						<a href="__APP__/ProductList/showList?keywords=全球零食">去凑单>> </a>
 					</div>
 					<!-- 购物车商品信息 -->
 					<div class="listBody">
 						<ul>
 							<li>
-								<input type="checkbox" class="choice checkt" />
+							
+								<input type="checkbox" class="choice checkt" ng-click="radioSel($event)" />
 							</li>
 							<!-- 商品信息 -->
 							<li>
 								<a href="">
-									<img ng-src="{{v.productShowPicUrl}}" alt="达令" class="productImg" />
+									<img ng-src="../{{v.productShowPicUrl}}" alt="达令" class="productImg" />
 								</a>
 								<a href="" class="proRelate">
 									<span id="productName">{{v.productName.substring(v.productName.indexOf('['),v.productName.indexOf(']')+1)}}</span><br/>
@@ -121,14 +119,14 @@
 							</li>
 							<!-- 商品件数 -->
 							<li>
-								<span class="btn reduce" ng-click='reduce($event)'>-</span>	
-								<span class="count">{{count}}</span>
-								<span class="btn add" ng-click='add($event)'>+</span>
+								<span class="btn reduce" ng-click='reduce(v.id,$event)'>-</span>	
+								<span class="count">{{v.count}}</span>
+								<span class="btn add" ng-click='add(v.id,$event)'>+</span>
 								<div class="clearFloat"></div>
 							</li>
 							<!-- 单个商品总价 -->
-							<li>￥<span class="TotPrice">{{count*v.discountPrice}}</span></li>
-							<li><span class="singleDel" ng-click='delete(v.id)' >删除</span></li>
+							<li>￥<span class="TotPrice">{{v.count  *v.discountPrice}}</span></li>
+							<li><span class="singleDel" ng-click='delete(v.id,$event)' >删除</span></li>
 						</ul>
 						<div class="clearFloat"></div>
 					</div>
@@ -152,7 +150,7 @@
 					</li>
 					<li>
 					
-						<a href="javascript:;" class="delectPro">删除选中的商品</a>
+						<a href="javascript:;" class="delectPro" ng-click="delChecked()">删除选中的商品</a>
 						<a href="javascript:;" class="moveTo">移到我的收藏夹</a>
 					</li>
 				</ul>
