@@ -687,7 +687,24 @@
 			return null
 		};
 	};
-	app.controller('headerController',function($scope,$http){
+	app.controller('headerController',function($scope,$http){	
+		var uid = findCookie('uid');
+		$http({
+			method:'GET',
+			url:`__APP__/Header/initial?uid=${uid}`,
+			header:{},
+		}).success(function(data){
+			var pCount = data;
+			$('.centerWrap .trolley span').text(pCount);
+			$('.aside .aside_number').text(pCount);
+		}).error(function(err){
+			swal({
+				title: err,
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		});
 		$scope.usernameLogin = '';
 		$scope.passwordLogin = '';
 		$scope.verifyLogin = '';

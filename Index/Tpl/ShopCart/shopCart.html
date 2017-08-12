@@ -90,9 +90,9 @@
 					<div class="listTitle"> 
 						<span class="discount">{{v.saleInfo}}
 						</span>
-						<!-- <span>超级满减团99减30 </span>
-						<span>再够34.00元 可减34.00元</span> -->
-						<!-- <a href="__APP__/ProductList/showList?keywords=全球零食">去凑单>> </a> -->
+						
+						<a href="__APP__/ProductList/showList?keywords=全球零食">去凑单>> </a>
+
 					</div>
 					<!-- 购物车商品信息 -->
 					<div class="listBody">
@@ -104,7 +104,7 @@
 							<!-- 商品信息 -->
 							<li>
 								<a href="">
-									<img ng-src="{{v.productShowPicUrl}}" alt="达令" class="productImg" />
+									<img ng-src="../{{v.productShowPicUrl}}" alt="达令" class="productImg" />
 								</a>
 								<a href="" class="proRelate">
 									<span id="productName">{{v.productName.substring(v.productName.indexOf('['),v.productName.indexOf(']')+1)}}</span><br/>
@@ -126,6 +126,7 @@
 							</li>
 							<!-- 单个商品总价 -->
 							<li>￥<span class="TotPrice">{{v.count*v.discountPrice}}</span></li>
+
 							<li><span class="singleDel" ng-click='delete(v.id,$event)' >删除</span></li>
 						</ul>
 						<div class="clearFloat"></div>

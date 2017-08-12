@@ -15,7 +15,7 @@ app.controller('myctrl',function($scope,$http){
 	}).success(function(data){
 		if(data['status'] == 1){
 			$scope.initData = data;
-			$scope.count = 1;
+			// $scope.count = 1;
 		}else{
 			swal({
 				title: data['info'],
@@ -47,29 +47,37 @@ app.controller('myctrl',function($scope,$http){
 			$(e.target).siblings('.count').text(1);
 			// $(e.target).parent().next().find('.TotPrice').text(0);
 		};
-		$http({
-			method:'GET',
-			url:`ShopCart/reduce?uid=${uid}&pid=${pid}`,
-			header:{},
-		}).success(function(data){
-			if(data['status'] == 1){
-				swal(data['info'], "", "success");
-			}else{
+		if(count > 1){
+			$http({
+				method:'GET',
+				url:`ShopCart/reduce?uid=${uid}&pid=${pid}`,
+				header:{},
+			}).success(function(data){
+				if(data['status'] == 1){
+					swal(data['info'], "", "success");
+					var listCount=$(e.target).siblings('.count').text();
+					var price = $(e.target).parents("li").prev('li').find('.proPrice').html();
+					var xiaoJi=parseInt(price)*listCount;
+					$(e.target).parents("li").next('li').find('.TotPrice').html(xiaoJi);
+
+				}else{
+					swal({
+						title: data['info'],
+						text: '',
+						type: "error",
+						confirmButtonText: "确认"
+					});
+				};
+			}).error(function(err){
 				swal({
-					title: data['info'],
+					title: err,
 					text: '',
 					type: "error",
 					confirmButtonText: "确认"
 				});
-			};
-		}).error(function(err){
-			swal({
-				title: err,
-				text: '',
-				type: "error",
-				confirmButtonText: "确认"
-			});
-		})
+			})
+		};
+		
 	};
 	$scope.add = function(pid,e){
 		var pid = pid;
@@ -82,9 +90,13 @@ app.controller('myctrl',function($scope,$http){
 			method:"GET",
 			url:`ShopCart/add?uid=${uid}&pid=${pid}`,
 			header:{}
-		}),success(function(data){
+		}).success(function(data){
+			// console.log(data);
 			if(data['status'] == 1){
-				
+				var listCount=$(e.target).siblings('.count').text();
+				var price = $(e.target).parents("li").prev('li').find('.proPrice').html();
+				var xiaoJi=parseInt(price)*listCount;
+				$(e.target).parents("li").next('li').find('.TotPrice').html(xiaoJi);
 			}else{
 				swal({
 					title: data['info'],
@@ -195,16 +207,6 @@ app.controller('myctrl',function($scope,$http){
 			$(".selectAll").prop("checked",false);
 			$("#selectAll").prop("checked",false);
 		};
-		// $http({
-		// 	method:'GET',
-		// 	url:`ShopCart/delete?pid=${pid}&uid=${uid}`,
-		// 	header:{}
-		// }).success(function(data){
-		// 	alert(删除成功);
-		// }).error(function(err){
-		// 	alert(err);
-		// })
-
 	}
 	// 总金额
 	function totalPrice(){
@@ -221,12 +223,7 @@ app.controller('myctrl',function($scope,$http){
 			console.log(xiaoJi);
 		});
 		$(".totalNum").html(tCount);
-
 	}
-
-<<<<<<< HEAD
-=======
-
 	// 删除选中
 	$('.delectPro').click(function(){
 		var everyCheck=$(".checkt").filter(function(index){
@@ -255,65 +252,7 @@ app.controller('myctrl',function($scope,$http){
 			$(".selectAll").prop("checked",false);
 			$("#selectAll").prop("checked",false);
 		}
-		
 	})
-
-app.controller('myctrl',function($scope,$http){
-	var pid = findCookie('temp_pid');
-	var uid = findCookie('uid');
-	$http({
-		method:'GET',
-		url:`ShopCart/init?uid=${uid}&pid=${pid}`,
-		header:{}
-	}).success(function(data){
-		if(data['status'] == 1){
-			$scope.initData = data;
-			$scope.count = 1;
-		}else{
-			swal({
-				title: data['info'],
-				text: '',
-				type: "error",
-				confirmButtonText: "确认"
-			});
-		};
-	}).error(function(err){
-		swal({
-			title: err,
-			text: '',
-			type: "error",
-			confirmButtonText: "确认"
-		});
-	});
-	
-	var isRecordR = false;
-	var isRecordA = false;
-	$scope.reduce = function(e){
-		var count = $(e.target).siblings('.count').text();	
-		if(count>0){
-			count--;
-			$(e.target).siblings('.count').text(count);
-			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
-		}else{
-			$(e.target).siblings('.count').text(0);
-			// $(e.target).parent().next().find('.TotPrice').text(0);
-		};
-		
-	};
-	$scope.add = function(e){
-		var count = $(e.target).siblings('.count').text();
-		count++;
-		$(e.target).siblings('.count').text(count);	
-		// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
-	};
-	$scope.delete = function(pid){
-		
-	};
->>>>>>> master
-	$scope.loginBtn = function(){
-		$('.navigator .header .loginRegisterWrap').show();
-		$('.navigator .header .loginRegisterWrap .loginForm').show();
-	};
 });
 function findCookie(cookieName){
 	var regExp = new RegExp('\\b'+cookieName+'\\b','g');

@@ -116,6 +116,14 @@ if(app == ''){
         };
     })
 
+    $scope.selectMore=function(ev){
+      var _this=ev.target;
+      $(_this).siblings("a").toggle();
+      $(_this).next("button").toggle();
+      $(_this).prev("dd").toggle();
+
+    }
+
     
 
 
