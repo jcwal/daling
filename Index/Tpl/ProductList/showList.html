@@ -49,12 +49,12 @@
 			</div>
 			<div class="proMenuList">
 				<ul>
-					<li class="single" ng-click="myVar='machine'">3C家电</li>
-					<li class="single" ng-click="myVar='clothing'" >尖货女装</li>
-					<li class="single" ng-click="myVar='jewel'">时尚配饰</li>
-					<li class="single" ng-click="myVar='life'">创意生活</li>
-					<li class="single" ng-click="myVar='snacks'">全球零食</li>
-					<li class="single" >极致美护</li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=3C家电&uid=" ng-click="myVar='machine'"></a>3C家电</li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=尖货女装&uid=" ng-click="myVar='clothing'">尖货女装</a></li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=时尚配饰&uid=" ng-click="myVar='jewel'">时尚配饰</a></li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=创意生活&uid=" ng-click="myVar='life'">创意生活</a></li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=全球零食&uid=" ng-click="myVar='snacks'">全球零食</a></li>
+					<li class="single"><a href="__APP__/ProductList/showList?keywords=极致美护&uid=">极致美护</a></li>
 				</ul>
 			</div>	
 			<nav class="showPro" ng-switch="myVar">
@@ -717,19 +717,19 @@
 				</ul>
 			</div>
 			<div class="ProSection">
-				<div class="proData">
-					<a href=""><img src="__ROOT__/Index/Common/images/footer/proImg.jpg" alt="" /></a>
+				<div class="proData" ng-repeat="(k,v) in items">
+					<a href="__APP__/ProductDetail?pid={{v.id}}"><img ng-src='../{{v.productShowPicUrl}}' alt="" /></a>
 					<div class="proMessage">
 						<p id="price">
 							<span class="warn">￥
-								<span class="newPrice">299</span>
+								<span class="newPrice">{{v.discountPrice}}</span>
 							</span>
-							<span class="oldPrice">￥399.00</span>
+							<span class="oldPrice">{{v.originPrice}}</span>
 						</p>
 						
-						<a><span class="warn">7折/</span>[韩国.打造轻薄自然妆感]Sulwhasoo2017限量气垫BB霜喜鹊登芝（粉色 13号浅淘）</a>
+						<a href="__APP__/ProductDetail?pid={{v.id}}"><span class="warn">{{v.discountRate}}/</span>{{v.productName}}</a>
 						<p>
-							<span>76人收藏 &nbsp;|</span>
+							<span>{{v.collectNumber}}人收藏 &nbsp;|</span>
 							<span> &nbsp;3条评论</span>
 						</p>
 					</div>
@@ -738,16 +738,13 @@
 			</div>	
 			<div class="pageBox">
 				<div class="changePage">
-					<a href="##">上一页</a>
+					<a href="##" ng-click="First()" class="upPage">上一页</a>
 					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>...</li>
-						<li>100</li>
+						<!-- 分页 -->
+						<li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}"><a href="javascript:;" ng-click="selectPage(page)">{{page}}</a></li>
 						<div class="clearFloat"></div>
 					</ul>
-					<a href="##">下一页</a>
+					<a href="##" ng-click="Next()" class="downPage">下一页</a>
 					<div class="clearFloat"></div>
 				</div>	
 			</div>
@@ -778,7 +775,8 @@
 			});
 		// 点击多选按钮，当前列消失，多选项display：block,
 		function selectMore(){
-	      // $(".selectMore").click(function(){
+		
+	      $(".selectMore").click(function(){
 	      		$(this).siblings("a").toggle();
 	      		$(this).next("button").toggle();
 	      		$(this).prev("dd").toggle();
@@ -786,18 +784,18 @@
 	      		$(this).prev("dd").children(".proMul").css(
 	      			'display','block',
 	      			);
-	      // })
+	      })
   		};
   		// 点击更多按钮，多选框display:block同时移除所有input
   	function listMore(){
-	    // $(".listMore").click(function(){
+	    $(".listMore").click(function(){
 	    	$(this).html("收起");
 	    	$(this).siblings("dd").toggle();
 	    	$(this).siblings("dd").children("label").children("input").remove();
 	    	$(this).siblings("dd").children(".proMul").css(
 	    		'display','none',
 	    		);
-	    // })
+	    })
   }
 
 	
