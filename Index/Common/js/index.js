@@ -20,19 +20,18 @@ var mySwiper = new Swiper('.swiper-container', {
 			};
 		})
 	},
-})
+});
+//没有登陆时购物车状态
 var pLength = findCookie('temp_pid');
 var uid = findCookie('uid');
 var pCount = 0;
-
-if(uid){
-	pCount
-}else{
+if(!uid){
 	if(pLength){
 		pCount = pLength.split(',').length-1;
+		$('.centerWrap .trolley span').text(pCount);
+		$('.aside .aside_number').text(pCount);
 	};
 };
-$('.centerWrap .trolley span').text(pCount);
 //初始化页面
 if(app == ''){
 	app=angular.module("myapp",[]);	
@@ -42,10 +41,17 @@ app.controller('indexController',function($scope,$http,$interval,$filter){
 	$scope.initData = '';
 	$http({
 		method:'GET',
-		url:'index.php/Index/initial',
+		url:`index.php/Index/initial?uid=${uid}`,
+		header:{},
 	}).success(function(data){
 		if(data['status'] == 1){
 			$scope.initData = data;
+			pCount = data.pCount;
+			if(pCount){
+				$('.centerWrap .trolley span').text(pCount);
+				$('.aside .aside_number').text(pCount);
+			};
+			//秒杀倒计时
 			var time = (data.sale.time)*1000;
 			var now = (data.sale.time)*1000;
 			$scope.hour = $filter('date')(time, "hh"); 
@@ -118,6 +124,7 @@ app.controller('indexController',function($scope,$http,$interval,$filter){
 			if(data['status'] == 1){
 				pCount ++;
 				$('.centerWrap .trolley span').text(pCount);
+				$('.aside .aside_number').text(pCount);
 			}else{
 				swal({
 					title: data['info'],

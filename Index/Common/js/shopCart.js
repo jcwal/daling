@@ -154,7 +154,7 @@ app.controller('myctrl',function($scope,$http){
 			$(".selectAll").prop("checked",false);
 			$("#selectAll").prop("checked",false);
 		}
-		// //用户登录
+		 //用户登录
 		$http({
 			method:'GET',
 			url:`ShopCart/delete?pid=${pid}&uid=${uid}`,
@@ -224,6 +224,92 @@ app.controller('myctrl',function($scope,$http){
 
 	}
 
+<<<<<<< HEAD
+=======
+
+	// 删除选中
+	$('.delectPro').click(function(){
+		var everyCheck=$(".checkt").filter(function(index){
+			return $(this).prop('checked')==true;
+		});
+		everyCheck.each(function(index,value){
+			$(this).parents(".fullCart").remove();
+		})	
+		totalCheck();
+		totalPrice();
+		if($(".checkt").length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		};
+	});
+
+	// 删除单个商品
+	$(".singleDel").click(function(){
+		$(this).parents(".fullCart").remove();
+		totalCheck();
+		totalPrice();
+		var singleDel=$(".checkt");
+		if(singleDel.length==0){
+			$(".emptyCart").toggle();
+			$(".selectAll").prop("checked",false);
+			$("#selectAll").prop("checked",false);
+		}
+		
+	})
+
+app.controller('myctrl',function($scope,$http){
+	var pid = findCookie('temp_pid');
+	var uid = findCookie('uid');
+	$http({
+		method:'GET',
+		url:`ShopCart/init?uid=${uid}&pid=${pid}`,
+		header:{}
+	}).success(function(data){
+		if(data['status'] == 1){
+			$scope.initData = data;
+			$scope.count = 1;
+		}else{
+			swal({
+				title: data['info'],
+				text: '',
+				type: "error",
+				confirmButtonText: "确认"
+			});
+		};
+	}).error(function(err){
+		swal({
+			title: err,
+			text: '',
+			type: "error",
+			confirmButtonText: "确认"
+		});
+	});
+	
+	var isRecordR = false;
+	var isRecordA = false;
+	$scope.reduce = function(e){
+		var count = $(e.target).siblings('.count').text();	
+		if(count>0){
+			count--;
+			$(e.target).siblings('.count').text(count);
+			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+		}else{
+			$(e.target).siblings('.count').text(0);
+			// $(e.target).parent().next().find('.TotPrice').text(0);
+		};
+		
+	};
+	$scope.add = function(e){
+		var count = $(e.target).siblings('.count').text();
+		count++;
+		$(e.target).siblings('.count').text(count);	
+		// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+	};
+	$scope.delete = function(pid){
+		
+	};
+>>>>>>> master
 	$scope.loginBtn = function(){
 		$('.navigator .header .loginRegisterWrap').show();
 		$('.navigator .header .loginRegisterWrap .loginForm').show();
