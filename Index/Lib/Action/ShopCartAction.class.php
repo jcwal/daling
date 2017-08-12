@@ -30,7 +30,7 @@ class ShopCartAction extends Action {
 					};
 				};
 			};
-			if($initData['data']){
+			if($initData['data'] || !$trolleyPidStr){
 				$initData['status'] = 1;
 			}else{
 				$initData['status'] = 0;
