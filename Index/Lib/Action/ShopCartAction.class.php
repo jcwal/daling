@@ -6,8 +6,7 @@ class ShopCartAction extends Action {
 	}
 	public function init(){
 		$pid = $_GET['pid'];
-		$uid = $_GET['uid'];
-		$pidStr = $this->dealStr($pid);
+		$uid = $_GET['uid'];		
 		$product = M('product');
 		if ($uid != 'null') {
 			$user = M('user');
@@ -38,9 +37,24 @@ class ShopCartAction extends Action {
 			};
 		}else{
 			if($pid != 'null'){
+				$pidStr = $this->dealStr($pid);
 				$where = array();
 				$where['id'] = array('in',$pidStr);
 				$initData['data'] = $product->where($where)->select();
+				$repeatArr = $this->dealArr($pidStr);
+				$countArr = $this->dealRepeatCount($repeatArr);
+				for ($i=0; $i < count($initData['data']); $i++) { 
+					$initData['data'][$i]['count'] = 1;
+					foreach ($initData['data'][$i] as $k => $v) {
+						if($k == 'id'){
+							foreach ($countArr as $k1 => $v1) {
+								if($initData['data'][$i][$k] == $k1){
+									$initData['data'][$i]['count'] = ++$v1;
+								};
+							}; 
+						};
+					};
+				};
 				if($initData['data']){
 					$initData['status'] = 1;
 				}else{
@@ -63,10 +77,12 @@ class ShopCartAction extends Action {
 			$user = M('user');
 			$one = $user->where("id=$uid")->find();
 			$trolleyPidArr = $this->dealArr($one['trolleyPid']);	 
-			for ($i=0; $i < count($pidArr); $i++) { 
-				for ($k=0; $k < count($trolleyPidArr); $k++) { 
-					if($pidArr[$i] == $trolleyPidArr[$k]){
-						unset($trolleyPidArr[$k]);
+			for ($i=0; $i < count($trolleyPidArr); $i++) { 
+				for ($k=0; $k < count($pidArr); $k++) { 
+					if($pidArr[$k] == $trolleyPidArr[$i]){
+						array_splice($trolleyPidArr,$i,1);
+						$i--;
+						break;
 					};
 				};
 			};
@@ -84,10 +100,12 @@ class ShopCartAction extends Action {
 		}else{
 			$cookiePid = cookie('temp_pid');
 			$cookiePidArr = $this->dealArr($cookiePid);
-			for ($i=0; $i < count($pidArr); $i++) { 
-				for ($k=0; $k < count($cookiePidArr); $k++) { 
-					if($pidArr[$i] == $cookiePidArr[$k]){
-						unset($cookiePidArr[$k]);
+			for ($i=0; $i < count($cookiePidArr); $i++) { 
+				for ($k=0; $k < count($pidArr); $k++) { 
+					if($pidArr[$k] == $cookiePidArr[$i]){
+						array_splice($cookiePidArr,$i,1);
+						$i--;
+						break;
 					};
 				};
 			};
