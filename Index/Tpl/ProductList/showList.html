@@ -49,14 +49,7 @@
 			</div>
 			<div class="proMenuList">
 				<ul>
-					
-					<a href="__APP__/ProductList/?keywords=3C家电&uid={{uid}}" ng-click="myVar='machine'"><li class="single">3C家电</li></a>
-					
-					<li class="single"><a href="__APP__/ProductList/?keywords=尖货女装&uid={{uid}}" ng-click="myVar='clothing'">尖货女装</a></li>
-					<li class="single"><a href="__APP__/ProductList/?keywords=时尚配饰&uid={{uid}}" ng-click="myVar='jewel'">时尚配饰</a></li>
-					<li class="single"><a href="__APP__/ProductList/?keywords=创意生活&uid={{uid}}" ng-click="myVar='life'">创意生活</a></li>
-					<li class="single"><a href="__APP__/ProductList/?keywords=全球零食&uid={{uid}}" ng-click="myVar='snacks'">全球零食</a></li>
-					<li class="single"><a href="__APP__/ProductList/?keywords=极致美护&uid={{uid}}">极致美护</a></li>
+					<li class="single" ng-repeat="(k,v) in arr" ng-click="listItem(k,v,$event)" myVar={{myVar}}>{{v}}</li>
 				</ul>
 			</div>	
 			<nav class="showPro" ng-switch="myVar">
@@ -80,8 +73,8 @@
 							<label for=""><input type="checkbox" /> 晒不黑的秘密</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -136,8 +129,8 @@
 							<label for=""><input type="checkbox" /> 保湿</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -159,8 +152,8 @@
 							<label for=""><input type="checkbox" /> 东南亚</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -185,8 +178,8 @@
 							<label for=""><input type="checkbox" /> Estee Lauder</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 							
 						</dd>
@@ -205,8 +198,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -231,8 +224,8 @@
 							<label for=""><input type="checkbox" /> 超人气甜品</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -272,8 +265,8 @@
 							<label for=""><input type="checkbox" /> 澳洲</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -300,8 +293,8 @@
 							<label for=""><input type="checkbox" /> 丽芝士纳宝帝</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -320,8 +313,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -345,8 +338,8 @@
 							<label for=""><input type="checkbox" /> 厨房最佳伴侣</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -379,8 +372,8 @@
 							<label for=""><input type="checkbox" /> 其他</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -407,8 +400,8 @@
 							<label for=""><input type="checkbox" /> 新米粒</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -427,8 +420,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -454,8 +447,8 @@
 							<label for=""><input type="checkbox" /> 玩转潮流包包</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -492,8 +485,8 @@
 							<label for=""><input type="checkbox" /> 日本</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -521,8 +514,8 @@
 							<label for=""><input type="checkbox" /> IKEWA</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -541,8 +534,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -571,8 +564,8 @@
 							<label for=""><input type="checkbox" /> 打底裤</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="listMore" ng-click="listMore($event)">更多</button>
@@ -599,8 +592,8 @@
 							<label for=""><input type="checkbox" /> LUNA LIMTED</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -619,8 +612,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -659,8 +652,8 @@
 							<label for=""><input type="checkbox" /> 锦仕</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -679,8 +672,8 @@
 							<label for=""><input type="checkbox" /> 500以上</label>
 							<div class="clearFloat"></div>
 							<div class="proMul">
-								<button class="showProSure">确定</button>
-								<button class="showProCancel">取消</button>
+								<button class="showProSure" ng-click="ensure($event)">确定</button>
+								<button class="showProCancel" ng-click="cancel($event)">取消</button>
 							</div>
 						</dd>
 						<button class="selectMore" ng-click="selectMore($event)">+ &nbsp;多选</button>
@@ -761,46 +754,5 @@
 	</body>
 	
 	<script src="__ROOT__/Index/Common/js/aside.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		// 点击极致美护框下拉列表呈现
-		  $("#proMenu").click(function(){
-				$(".proMenuList").css(
-					"display",'block',
-					)
-			});
-		// 点击列表中内容，下拉列表消失，框中的字换成点击选中内容
-		$("li.single").click(function(){
-			$(".initVal").html($(this).html());
-			$(".proMenuList").css(
-			"display",'none',
-			)
-			});
-		// 点击多选按钮，当前列消失，多选项display：block,
-		function selectMore(){
-		
-	      $(".selectMore").click(function(){
-	      		$(this).siblings("a").toggle();
-	      		$(this).next("button").toggle();
-	      		$(this).prev("dd").toggle();
-	      		// 确定，取消键display:block(点击更多按钮时这两个节点的display:none)
-	      		$(this).prev("dd").children(".proMul").css(
-	      			'display','block',
-	      			);
-	      })
-  		};
-  		// 点击更多按钮，多选框display:block同时移除所有input
-  	function listMore(){
-	    $(".listMore").click(function(){
-	    	$(this).html("收起");
-	    	$(this).siblings("dd").toggle();
-	    	$(this).siblings("dd").children("label").children("input").remove();
-	    	$(this).siblings("dd").children(".proMul").css(
-	    		'display','none',
-	    		);
-	    })
-  }
-
-	
-	</script>
 </html>
 

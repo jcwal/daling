@@ -13,8 +13,5 @@ class ProductListAction extends Action {
 		$where['keywords']=array('like',"%{$keyData}%");
 		$list=$product->where($where)->select();
 		$this->ajaxReturn($list);
-	}
-	
-	
-	
+	}	
 }
