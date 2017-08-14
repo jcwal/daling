@@ -39,15 +39,8 @@ app.controller('myctrl',function($scope,$http){
 		var pid = pid;
 		var uid = findCookie('uid');
 		var count = $(e.target).siblings('.count').text();	
-		if(count>1){
-			count--;
-			$(e.target).siblings('.count').text(count);
-			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
-		}else{
-			$(e.target).siblings('.count').text(1);
-			// $(e.target).parent().next().find('.TotPrice').text(0);
-		};
 		if(count > 1){
+			console.log(1222);
 			$http({
 				method:'GET',
 				url:`ShopCart/reduce?uid=${uid}&pid=${pid}`,
@@ -75,7 +68,15 @@ app.controller('myctrl',function($scope,$http){
 					type: "error",
 					confirmButtonText: "确认"
 				});
-			})
+			});
+		};
+		if(count>1){
+			count--;
+			$(e.target).siblings('.count').text(count);
+			// $(e.target).parent().next().find('.TotPrice').text(count*originTotal);
+		}else{
+			$(e.target).siblings('.count').text(1);
+			// $(e.target).parent().next().find('.TotPrice').text(0);
 		};
 		
 	};

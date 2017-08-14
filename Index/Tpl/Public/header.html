@@ -763,6 +763,26 @@
 					$('.navigator .header .top .topWrap .loginBar').hide();
 					$('.navigator .header .top .topWrap .loginedBar').show();
 					$('.navigator .header .top .topWrap .loginedBar .welcome span').text($scope.usernameLogin.replace(/(.*)..../,'$1****'));
+					if($('#shopCart').length > 0){
+						window.location.href = '__APP__/ShopCart';
+					};
+					var uidLogin = data['uid'];
+					$http({
+						method:'GET',
+						url:`__APP__/Header/initial?uid=${uidLogin}`,
+						header:{},
+					}).success(function(data){
+						var pCount = data;
+						$('.centerWrap .trolley span').text(pCount);
+						$('.aside .aside_number').text(pCount);
+					}).error(function(err){
+						swal({
+							title: err,
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					});
 				}else{
 					swal({
 						title: data['info'],
@@ -780,6 +800,7 @@
 					confirmButtonText: "确认"
 				});
 			});
+
 		};
 		$scope.registerSub = function(){
 			$http({
@@ -835,6 +856,26 @@
 					$('#passwordRegister').val('');
 					$('#passwordRegisterReapeat').val('');
 					$('#verifyRegister').val('');
+					if($('#shopCart').length > 0){
+						window.location.href = '__APP__/ShopCart';
+					};
+					var uidLogout = '';
+					$http({
+						method:'GET',
+						url:`__APP__/Header/initial?uid=null`,
+						header:{},
+					}).success(function(data){
+						var pCount = data;
+						$('.centerWrap .trolley span').text(pCount);
+						$('.aside .aside_number').text(pCount);
+					}).error(function(err){
+						swal({
+							title: err,
+							text: '',
+							type: "error",
+							confirmButtonText: "确认"
+						});
+					});
 				}else{
 					swal({
 						title: data['info'],
